@@ -1,0 +1,25 @@
+<ion-view class="LRoom_color-view">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a href="javascript:history.back()" class="button button-clear icon ion-ios-arrow-back"style="margin-left: 10px;color: #00a0e9;"></a>
+        <div class="h1 title">客厅-调光顶灯</div>
+    </div>
+    <ion-content class="has-header">
+    	<div class="lroom-color-bg">
+    		<div class="lroom-color-displaycolor" style="background-color:{{color.bg}};"></div>
+    		<div class="lroom-color-colorpic">
+    			<input id="lroom-color-input" ng-change="color.colorChange(color.value)" type="color" ng-model="color.value">
+    		</div>
+    		<div class="range range-calm col-80 col-offset-10">
+    			<input class="lroom-color-range-value" ng-change="color.valueChange(color.rangevalue)" type="range" min="0" max="100" ng-model="color.rangevalue">
+    		</div>
+    		<div class="row lroom-color-select-s">
+    			<div ng-click="color.red()" class="col col-offset-10 assertive-bg"></div>
+    			<div ng-click="color.yellow()" class="col lroom-color-select-yellow"></div>
+    			<div ng-click="color.balanced()" class="col balanced-bg"></div>
+    			<div ng-click="color.lightblue()" class="col lroom-color-select-lightblue"></div>
+    			<div ng-click="color.positive()" class="col positive-bg"></div>
+    			<div ng-click="color.pink()" class="col lroom-color-select-pink"></div>
+    		</div>
+    	</div>
+    </ion-content>
+</ion-view>

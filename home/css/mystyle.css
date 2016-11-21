@@ -1,0 +1,1004 @@
+/*默认起始页*/
+/*Home.html*/
+.Home-view .slider-slide img{
+    width: 100%;
+    height: auto;
+}
+.Home-view .slider-pager .icon.ion-record{
+    color: #fff;
+}
+.Home-view ul.left{
+    width: 50%;
+    float: left;
+    padding: 7px;
+}
+.Home-view ul.left>li{
+    margin-bottom: 7px;
+}
+.Home-view ul.left>li img{
+    width: 100%;
+}
+
+.Home-view ul.right{
+    width: 50%;
+    float: right;
+    padding: 7px;
+}
+
+.Home-view ul.right>li img{
+    width: 100%;
+}
+/*安防*/
+/*SecurityManage.html*/
+.SecurityManage-view div,.SecurityManage-view span,.SecurityManage-view p,.SecurityManage-view a,.SecurityManage-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.SecurityManage-view .row{
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 5px;
+}.SecurityManage-view .row+.row{
+    padding: 5px;
+ }
+
+.SecurityManage-view .row .col img{
+    height: 50px;
+}
+.SecurityManage-view .row .col.col-25{
+    text-align: center;
+}
+.SecurityManage-view .row .col.col-20{
+    text-align: center;
+    line-height: 55px;
+    font-size: 17px;
+}
+.SecurityManage-view .row .col button{
+    margin: 0 2px;
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 20px;
+    border-radius: 4px;
+}
+.SecurityManage-view .row .col button.isClick{
+    background: #ccc;
+}
+/*侧栏菜单*/
+.SecurityManage-view .center {
+    width: 100%;
+}
+.SecurityManage-view .center img{
+    width: 100%;
+    padding: 16px;
+}
+.SecurityManage-view .has-footer{
+    /*height: 100px;*/
+    bottom: 100px;
+}
+.SecurityManage-view .sidemenuFoot{
+    height: 100px;
+    background: #00a0e9;
+    padding: 0;
+}
+.SecurityManage-view .sidemenuFoot .row .col-50{
+    text-align: center;
+}
+.SecurityManage-view .sidemenuFoot .row button{
+    background: #00a0e9;
+    padding: 0;
+    border: none;
+}
+.SecurityManage-view .sidemenuFoot img{
+    height: 70px;
+}
+
+/*楼宇管理*/
+/*BuildingManage.html*/
+.BuildingManage-view div,.BuildingManage-view span,.BuildingManage-view p,.BuildingManage-view a,.BuildingManage-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.BuildingManage-view .row .col{
+    text-align: center;
+}
+.BuildingManage-view .row .col img{
+    height: 70px;
+}
+.BuildingManage-view .row .col button{
+    background: transparent;
+    border: none;
+    text-align: center;
+    height: 70px;
+}
+
+.BuildingManage-view .bar.bar-footer{
+    height: 100px;
+    background: #00a0e9;
+}
+
+/*类型管理*/
+/*TypeManage.html*/
+.TypeManage-view div,.TypeManage-view span,.TypeManage-view p,.TypeManage-view a,.TypeManage-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.TypeManage-view .row .col.col-25 img{
+    height: 50px;
+}
+.TypeManage-view .row+.row{
+    padding: 0;
+}
+.TypeManage-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.TypeManage-view .row .col{
+    text-align: center;
+    font-size: 18px;
+}
+
+.TypeManage-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+
+/*灯光*/
+/*Light.html*/
+.Light-view div,.Light-view span,.Light-view p,.Light-view a,.Light-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.Light-view .light_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+.Light-view .row .col{
+    text-align: center;
+}
+.Light-view .row .col.col-25 img{
+    height: 60px;
+}
+.Light-view .row .col button{
+    margin: 0 2px;
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.Light-view .row+.row{
+    padding: 0;
+}
+.Light-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.Light-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+/*客厅-灯带*/
+/*LRoom_light.html*/
+.LRoom_light-view div,.LRoom_light-view span,.LRoom_light-view p,.LRoom_light-view a,.Light-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.LRoom_light-view .item .row .col{
+    text-align: center;
+}
+.LRoom_light-view .item .row .col button{
+    padding: 0;
+    border: none;
+    background: #e4e4e4;
+}
+
+.LRoom_light-view .item .row .col button img{
+    height: 60px;
+}
+.LRoom_light-view .item{
+    background: #e4e4e4;
+    border: none;
+}
+.LRoom_light-view .row .col{
+    text-align: center;
+    font-size: 40px;
+    color: #999;
+}
+.LRoom_light-view .col img{
+    height: 40px;
+}
+
+/*客厅-调光顶灯*/
+/*LRoom_color.html*/
+.LRoom_color-view div,.LRoom_color-view span,.LRoom_color-view p,.LRoom_color-view a,.LRoom_color-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+/*插座*/
+/*Socket.html*/
+.Socket-view div,.Socket-view span,.Socket-view p,.Socket-view a,.Socket-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.Socket-view .Socket_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+
+.Socket-view .row .col{
+    text-align: center;
+}
+.Socket-view .row .col.col-25 img{
+    height: 60px;
+}
+.Socket-view .row .col button{
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 9px;
+    border-radius: 4px;
+}
+.Socket-view .row+.row{
+    padding: 0;
+}
+.Socket-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.Socket-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+
+/*主卧-排气扇*/
+/*MRoom.html*/
+.MRoom-view div,.MRoom-view span,.MRoom-view p,.MRoom-view a,.MRoom-view button,.MRoom-view h3{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.MRoom-view .item{
+    background: #e4e4e4;
+    border: none;
+}
+.MRoom-view .item .row .col-33{
+    text-align: center;
+    line-height: 34px;
+}
+
+.MRoom-view .item .row .col-67 input{
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    width: 140px;
+
+}
+
+.MRoom-view .item .row .col-67 span{
+    float: left;
+    height: 100%;
+    line-height: 34px;
+    margin: 0 3px;
+}
+.MRoom-view .item p{
+    margin-bottom: 5px;
+}
+.MRoom-view .item p span{
+    margin: 0 8px;
+}
+/*窗帘*/
+/*Curtain.html*/
+.Curtain-view div,.Curtain-view span,.Curtain-view p,.Curtain-view a,.Curtain-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.Curtain-view .Curtain_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+
+.Curtain-view .row .col{
+    text-align: center;
+}
+.Curtain-view .row .col.col-25 img{
+    height: 60px;
+}
+.Curtain-view .row .col-20{
+    text-align: center;
+    line-height: 55px;
+    color: #00a0e9;
+    font-size: 20px;
+}
+.Curtain-view .row .col button{
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 3px;
+    border-radius: 4px;
+}
+.Curtain-view .row+.row{
+    padding: 0;
+}
+.Curtain-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.Curtain-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+/*主卧--打开窗帘*/
+/*MR_Curtain.html*/
+
+.MR_Curtain-view div,.MR_Curtain-view span,.MR_Curtain-view p,.MR_Curtain-view a,.MR_Curtain-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.MR_Curtain-view .center{
+    margin-top: 150px;
+}
+.MR_Curtain-view .item{
+    background: #e4e4e4;
+    border: none;
+    text-align: center;
+}
+.MR_Curtain-view .center .item span{
+    font-size: 40px;
+    color: #999;
+}
+
+.MR_Curtain-view .item .item.range.range-dark{
+    background: #e4e4e4;
+    border: none;
+}
+
+.MR_Curtain-view .item .row{
+    border-radius: 30px;
+    border: 4px solid #ccc;
+    padding: 0;
+}
+
+.MR_Curtain-view .item .row .col button{
+    padding: 0 10px;
+    font-size: 25px;
+    border: none;
+    background: transparent;
+}
+
+.MR_Curtain-view .item .row .col p{
+    font-size: 14px;
+    text-align: center;
+
+}
+.MR_Curtain-view .item .row .col button .icon.ion-pause{
+    color:#f7f7f7 ;
+
+}
+
+.MR_Curtain-view .item .row .col button .icon.ion-arrow-right-b,
+.MR_Curtain-view .item .row .col button .icon.ion-arrow-left-b
+{
+    color: #898989;
+}
+/*电器*/
+/*Electric.html*/
+
+.Electric-view div,.Electric-view span,.Electric-view p,.Electric-view a,.Electric-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.Electric-view .Electric_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+
+.Electric-view .row .col{
+    text-align: center;
+}
+.Electric-view .row .col.col-25 img{
+    height: 60px;
+}
+.Electric-view .row .col button{
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 9px;
+    border-radius: 4px;
+}
+.Electric-view .row+.row{
+    padding: 0;
+}
+.Electric-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.Electric-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+/*办公区--电视机*/
+/*W_TV.html*/
+.W_TV-view div,.W_TV-view span,.W_TV-view p,.W_TV-view a,.W_TV-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.W_TV-view .row .col img{
+    height: 65px;
+}
+
+.W_TV-view .row .col button{
+    border: none;
+    background: transparent;
+}
+
+.W_TV-view .center{
+    margin: 0px auto;
+}
+
+.W_TV-view .center .round{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #dddddd;
+    margin: 0 auto;
+    background-image: -moz-linear-gradient( 90deg, rgb(227,227,227) 0%, rgb(210,210,210) 44%, rgb(241,241,241) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(227,227,227) 0%, rgb(210,210,210) 44%, rgb(241,241,241) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(227,227,227) 0%, rgb(210,210,210) 44%, rgb(241,241,241) 100%);
+
+
+}
+.W_TV-view .row+.row{
+    padding: 0;
+    margin: 0;
+}.W_TV-view .center .round .row{
+    padding: 0;
+ }
+.W_TV-view .center .round .row .col{
+    text-align: center;
+}
+.W_TV-view .row .col button .icon{
+    font-size: 35px;
+    color: #898989;
+}
+
+.W_TV-view .center .round .row .col button span{
+    font-size: 25px;
+    color: #898989;
+}
+
+.W_TV-view .center .round .row .col.OK{
+    line-height: 44px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb( 195, 194, 195 );
+    border-radius: 50%;
+    background-image: -moz-linear-gradient( 90deg, rgb(227,227,227) 0%, rgb(199,199,199) 44%, rgb(241,241,241) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(227,227,227) 0%, rgb(199,199,199) 44%, rgb(241,241,241) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(227,227,227) 0%, rgb(199,199,199) 44%, rgb(241,241,241) 100%);
+}
+
+.W_TV-view .center .round .row .col.OK button{
+    width: 100%;
+    margin: 6px 0;
+}
+
+.W_TV-view .row.Num .col{
+    text-align: center;
+    padding: 0;
+}
+
+.W_TV-view .row.Num .col button{
+    padding: 0;
+}
+/*组合命令*/
+/*Group_cmd.html*/
+.Group_cmd-view div,.Group_cmd-view span,.Group_cmd-view p,.Group_cmd-view a,.Group_cmd-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.Group_cmd-view .item{
+    background: #898989;
+    border: none;
+    color: #000;
+    line-height: 29px;
+}
+
+.Group_cmd-view .item button{
+    float: right;
+    padding: 3px 20px;
+    border: 2px solid #eee;
+    border-radius: 16px;
+}
+/*客厅--空调*/
+/*LR_Air.html*/
+.LR_Air-view div,.LR_Air-view span,.LR_Air-view p,.LR_Air-view a,.LR_Air-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.LR_Air-view .item{
+    background: #e4e4e4;
+    border: none;
+}
+
+.LR_Air-view .item .switch{
+    width: 200px;
+    height: 57px;
+    margin: 0 auto;
+    text-align: center;
+    border: 4px solid #eee;
+    border-radius: 37px;
+    background-image: -moz-linear-gradient( 90deg, rgb(186,190,194) 0%, rgb(255,255,255) 91%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(186,190,194) 0%, rgb(255,255,255) 91%);
+    background-image: -ms-linear-gradient( 90deg, rgb(186,190,194) 0%, rgb(255,255,255) 91%);
+
+}
+
+.LR_Air-view .item .switch button{
+    width: 45%;
+    height: 100%;
+    margin: 1px 0;
+    border: none;
+    background: transparent;
+    color: #9d9d9d;
+    font-size: 25px;
+
+}
+.LR_Air-view .item .switch button .icon{
+    font-size: 36px;
+
+}
+.LR_Air-view .item .switch button .icon.ion-volume-medium{
+    float: left;
+    margin-left: 0.8em;
+}
+.LR_Air-view .item .switch button .icon.ion-plus-round,
+.LR_Air-view .item .switch button .icon.ion-minus-round{
+    float: left;
+    font-size: 20px;
+    padding: 9px;
+    margin-left: 1.2em;
+}
+.LR_Air-view .item span{
+    font-size: 30px;
+}
+.LR_Air-view .row .col{
+    text-align: center;
+}
+.LR_Air-view .row .col button{
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.LR_Air-view .row .col img{
+    height: 72px;
+}
+.LR_Air-view .row{
+    padding: 0;
+    margin: 0;
+}
+/*客厅--DVD*/
+/*LR_DVD.html*/
+.LR_DVD-view div,.LR_DVD-view span,.LR_DVD-view p,.LR_DVD-view a,.LR_DVD-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.LR_DVD-view .switch button img{
+    height: 40px;
+}
+
+/*客厅--净水器*/
+/*LR_Water.html*/
+
+.LR_Water-view div,.LR_Water-view span,.LR_Water-view p,.LR_Water-view a,.LR_Water-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.LR_Water-view .row .col-40 button{
+    background: transparent;
+    border: 2px solid #eee;
+    width: 80%;
+    height: 42px;
+    line-height: 26px;
+    border-radius: 18px;
+    background-image: -moz-linear-gradient( 90deg, rgb(186,190,194) 0%, rgb(255,255,255) 91%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(186,190,194) 0%, rgb(255,255,255) 91%);
+    background-image: -ms-linear-gradient( 90deg, rgb(186,190,194) 0%, rgb(255,255,255) 91%);
+}
+.LR_Water-view .row .col-40 button img{
+    height: 25px;
+    float: left;
+}
+.LR_Water-view .item{
+    background: #e4e4e4;
+    border-color: #999;
+    padding: 5px;
+}
+
+.LR_Water-view .item .row .col>p{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.LR_Water-view .item .row .col .waterstate{
+    color: #00a0e9;
+    font-size: 25px;
+}
+
+.LR_Water-view .item .row .col .water{
+    margin: 0 12px;
+    color: #00a0e9;
+    display: inline-block;
+    height: 30px;
+
+}
+
+.LR_Water-view .item .row .col .water em{
+    font-size: 25px;
+    margin: 0 2px;
+}
+
+.LR_Water-view .item .row.wt .col span img{
+    height: 45px;
+}
+.LR_Water-view .item .row.wt .col{
+    padding: 3px;
+    text-align: right;
+}
+.LR_Water-view .item .row.wt .col span{
+    display: inline-block;
+}
+.LR_Water-view .item .row.wt .col span p{
+    text-align: center;
+}
+.LR_Water-view .round p{
+    padding: 0 5px;
+    font-size: 16px;
+}
+.LR_Water-view .round .row .col{
+    text-align: center;
+}
+
+.LR_Water-view .round .row .col p{
+    margin: 0;
+}
+.LR_Water-view .round .row .col .icon{
+    font-size: 64px;
+}
+
+.LR_Water-view .row+.row {
+    padding: 0;
+}
+
+/*监控*/
+/*Monitor.html*/
+.Monitor-view div,.Monitor-view span,.Monitor-view p,.Monitor-view a,.Monitor-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.Monitor-view .Monitor_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+.Monitor-view .row .col{
+    text-align: center;
+}
+.Monitor-view .row .col.col-25 img{
+    height: 60px;
+}
+.Monitor-view .row+.row{
+    padding: 0;
+}
+.Monitor-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.Monitor-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+/*传感器*/
+/*Sensor.html*/
+.Sensor-view div,.Sensor-view span,.Sensor-view p,.Sensor-view a,.Sensor-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.Sensor-view .Sensor_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+.Sensor-view .row .col{
+    text-align: center;
+}
+.Sensor-view .row .col.col-25 img{
+    height: 60px;
+}
+.Sensor-view .row+.row{
+    padding: 0;
+}
+.Sensor-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+
+.Sensor-view .row .col.cs{
+    text-align: left;
+    line-height: 60px;
+    padding-left: 20px;
+}
+.Sensor-view .row .col.cs i{
+    font-size: 18px;
+}
+.Sensor-view .row .col.cs span{
+    padding: 5px 30px;
+    color: #fff;
+    background: #00a0e9;
+    margin: 0 7px;
+    font-size: 17px;
+}
+.Sensor-view .row .col.ds{
+    text-align: left;
+    line-height: 60px;
+    padding-left: 20px;
+
+}
+.Sensor-view .row .col.ds span{
+    font-size: 20px;
+}
+
+.Sensor-view .row .col.ds .icon{
+    font-size: 22px;
+    color: #00a0e9;
+    padding: 0 5px;
+}
+
+/*安防*/
+/*Security.html*/
+.Security-view div,.Security-view span,.Security-view p,.Security-view a,.Security-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.Security-view .Security_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+
+.Security-view .row .col{
+    text-align: center;
+}
+.Security-view .row .col.col-25 img{
+    height: 60px;
+}
+.Security-view .row .col button{
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 13px;
+    border-radius: 4px;
+}
+.Security-view .row+.row{
+    padding: 0;
+}
+.Security-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+
+/*音乐*/
+/*Music.html*/
+.Music-view div,.Music-view span,.Music-view p,.Music-view a,.Music-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.Music-view  .Music_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+
+.Music-view .row .col.col-25 img{
+    height: 60px;
+}
+.Music-view .row+.row{
+    padding: 0;
+}
+.Music-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.Music-view .row .col{
+    text-align: center;
+}
+
+.Music-view .row .col .ion-ios-arrow-forward{
+    padding: 0 7px;
+    color: #00a0e9;
+    font-size: 23px;
+}
+
+/*阳台--音乐*/
+/*Balcony_Music.html*/
+.Balcony_Music-view div,.Balcony_Music-view span,.Balcony_Music-view p,.Balcony_Music-view a,.Balcony_Music-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+/*其他*/
+/*Other.html*/
+.Other-view div,.Other-view span,.Other-view p,.Other-view a,.Other-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.Other-view .Other_name{
+    background: #d2d2d2;
+    padding: 5px 10px;
+    height: 28px;
+    color: #00a0e9;
+    font-size: 17px;
+}
+.Other-view .row .col{
+    text-align: center;
+}
+.Other-view .row .col.col-25 img{
+    height: 60px;
+}
+.Other-view .row .col button{
+    margin: 0 2px;
+    background: #00a0e9;
+    color: #fff;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.Other-view .row+.row{
+    padding: 0;
+}
+.Other-view .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+/*设置*/
+/*Setting.html*/
+.Setting-view div,.Setting-view span,.Setting-view p,.Setting-view a,.Setting-view button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+
+.Setting-view .item.item-toggle{
+    height: 54px;
+}
+.popup-container.SettingPopup .popup{
+    border-radius: 6px;
+    background: #fff;
+}
+.popup-container.SettingPopup .popup .popup-head{
+    border-bottom: 2px solid #11c1f3;
+}
+.popup-container.SettingPopup .popup .popup-title{
+    text-align: left;
+    font-size: 22px;
+    color: #11c1f3;
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+
+}
+.popup-container.SettingPopup .popup .popup-body{
+    padding: 15px;
+}
+.popup-container.SettingPopup .popup .popup-body span{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+
+}
+.popup-container.SettingPopup .popup .popup-buttons{
+    border-top: 1px solid #ccc;
+    padding: 5px;
+    min-height: 50px;
+}
+.popup-container.SettingPopup .popup .popup-buttons button{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    outline:none;
+}
+.popup-container.SettingPopup .popup .popup-buttons button:hover{
+    border: none;
+}
+.popup-container.SettingPopup .popup .popup-buttons .button:last-child{
+    border-left: 1px solid #ccc;
+}
+.popup-container.SettingPopup .popup .popup-buttons .button.button-positive{
+    background: transparent;
+    color: #000;
+    outline:none;
+
+}
+.popup-container.SettingPopup .popup .popup-buttons .button.button-positive:focus{
+    outline:none;
+    border: none;
+
+}
+.popup-container.SettingPopup .popup .popup-buttons .button.button-default{
+    background: transparent;
+    color: #000;
+    outline:none;
+
+}
+    /*主机参数*/
+/*Host.html*/
+.Host-view .list .item.item-input.item-stacked-label{
+    padding: 0;
+    margin: 10px;
+    border: none;
+}
+
+.Host-view .list .item.item-input.item-stacked-label input{
+    border: 1px solid #eee;
+    height: 48px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.Host-view .btnbar{
+    text-align: center;
+    margin: 15px auto;
+}
+.Host-view .btnbar button{
+    border-radius: 10px;
+    background: #00a0e9;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/*服务器地址*/
+/*ServiceAddress.html*/
+.ServiceAddress-view .list{
+    margin-top: 30px;
+}
+
+/*关于我们*/
+/*AboutUs.html*/
+.AboutUs-View .item{
+    background: #e4e4e4;
+    text-align: center;
+    height: 180px;
+}
+.AboutUs-View .item .LOGO{
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    color: #fff;
+    background: #00a0e9;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+}
+.AboutUs-View .item p{
+    font-size: 16px;
+}
+
+/*推送设置*/
+/*Push.html*/
+.Push-view .item{
+    background: #e4e4e4;
+    border: none;
+}
+.Push-view .item p{
+    text-align: right;
+}
+
+.Push-view .item p .ion-ios-email-outline{
+    font-size: 70px;
+    color: #ccc;
+}

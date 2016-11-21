@@ -1,0 +1,45 @@
+<ion-view class="MR_Curtain-view" style="background: #e4e4e4;">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a href="javascript:history.back()" class="button button-clear icon ion-ios-arrow-back"style="margin-left: 10px;color: #00a0e9;"></a>
+        <div class="h1 title">办公区--单向内置电机</div>
+    </div>
+    <ion-content class="has-header">
+        <div class="center">
+            <ion-item>
+                <span>{{cur.value}}%</span>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <div class="col" style="text-align: right;">
+                        <button>
+                            <i class="icon ion-arrow-right-b"></i>
+                            <i class="icon ion-pause"></i>
+                            <i class="icon ion-arrow-left-b"></i>
+                        </button>
+                        <p style="margin-left: 13px;">close</p>
+                    </div>
+                    <div class="col">
+                        <button>
+                            <i class="icon ion-pause"></i>
+                        </button>
+                        <p>stop</p>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <button>
+                            <i class="icon ion-arrow-left-b"></i>
+                            <i class="icon ion-pause"></i>
+                            <i class="icon ion-arrow-right-b"></i>
+                        </button>
+                        <p style="margin-right: 13px;">open</p>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <ion-item>
+            <div class="item range range-calm">
+                <input ng-change="cur.valChanged(cur.value)" type="range" name="volume" min="0" max="100" ng-model="cur.value">
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

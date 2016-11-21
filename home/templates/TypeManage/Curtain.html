@@ -1,0 +1,99 @@
+<ion-view class="Curtain-view">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a href="javascript:history.back(0)" class="button button-clear icon ion-ios-arrow-back"style="margin-left: 10px;color: #00a0e9;"></a>
+        <div class="h1 title">窗帘</div>
+    </div>
+    <ion-content class="has-header">
+        <p class="Curtain_name">双向内置窗帘</p>
+        <div class="row" ui-sref="MR_Curtain">
+            <div class="col col-25">
+                <img src="img/Curtain-01.jpg">
+            </div>
+            <div class="col col-33">
+                <p>主卧</p>
+                <p>打开窗帘</p>
+            </div>
+            <div class="col col-20">
+                <span>{{MR_cur_value}}%</span>
+            </div>
+            <div class="col" style="text-align: right;line-height: 60px;">
+                <i class="icon ion-ios-arrow-forward"></i>
+            </div>
+        </div>
+        <div class="row" ui-sref="CR_Curtain">
+            <div class="col col-25">
+                <img src="img/Curtain-02.jpg">
+            </div>
+            <div class="col col-33">
+                <p>洗衣间</p>
+                <p>窗帘</p>
+            </div>
+            <div class="col col-20">
+                <span>{{Laundry_cur_value}}%</span>
+            </div>
+            <div class="col" style="text-align: right;line-height: 60px;">
+                <i class="icon ion-ios-arrow-forward"></i>
+            </div>
+        </div>
+        <p class="Curtain_name">双向外置窗帘</p>
+        <div class="row" >
+            <div class="col col-25">
+                <img src="img/Curtain-03.jpg">
+            </div>
+            <div class="col col-33">
+                <p>客厅</p>
+                <p>双向外置电机</p>
+            </div>
+            <div class="col" style="text-align: right;line-height: 55px;">
+                <button class="button-clear">关闭</button>
+                <button class="button-clear">停止</button>
+                <button class="button-clear">打开</button>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col col-25">
+                <img src="img/Curtain-03.jpg">
+            </div>
+            <div class="col col-33">
+                <p>健身房</p>
+                <p>双向外置电机</p>
+            </div>
+            <div class="col" style="text-align: right;line-height: 55px;">
+                <button class="button-clear">关闭</button>
+                <button class="button-clear">停止</button>
+                <button class="button-clear">打开</button>
+            </div>
+        </div>
+        <p class="Curtain_name">单向内置窗帘</p>
+        <div class="row" ui-sref="WR_Curtain">
+            <div class="col col-25">
+                <img src="img/Curtain-03.jpg">
+            </div>
+            <div class="col col-33">
+                <p>办公区</p>
+                <p>单向内置电机</p>
+            </div>
+            <div class="col col-20">
+                <span>{{WR_cur_value}}%</span>
+            </div>
+            <div class="col" style="text-align: right;line-height: 60px;">
+                <i class="icon ion-ios-arrow-forward"></i>
+            </div>
+        </div>
+        <div class="row" ui-sref="DR_Curtain">
+            <div class="col col-25">
+                <img src="img/Curtain-03.jpg">
+            </div>
+            <div class="col col-33">
+                <p>餐厅</p>
+                <p>单向内置电机</p>
+            </div>
+            <div class="col col-20">
+                <span>{{DR_cur_value}}%</span>
+            </div>
+            <div class="col" style="text-align: right;line-height: 60px;">
+                <i class="icon ion-ios-arrow-forward"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

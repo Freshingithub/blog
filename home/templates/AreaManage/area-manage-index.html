@@ -1,0 +1,107 @@
+<div class="bar bar-header stable-bg">
+	<a href="#" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<h1 class="title text-center">区域</h1>
+</div>
+<ion-content class="has-header">
+	<ion-list>
+		<ion-item ng-click="index.tap1()" class="row scene-m-item-p area-m-index-h">
+			<i ng-class="index.f1"></i>
+			一楼
+			<span class="area-m-index-num">5</span>
+		</ion-item>
+		<ion-list ng-show="index.flag1">
+			<div ng-repeat="firstFloor in firstFloors" ui-sref="{{firstFloor.link}}" class="item row scene-m-item-p">
+				<div class="col-25">
+					<i class="scene-m-bg {{firstFloor.bg}}"></i>
+				</div>
+				<div class="col-25 text-center">
+					<button class="button button-clear button-dark">{{firstFloor.room}}</button>
+				</div>
+				<div class="col-25">
+				</div>
+				<div class="col-25">
+					<i class="area-m-index-num button button-clear button-calm ion-chevron-right area-m-fzr"></i>
+				</div>
+			</div>
+		</ion-list>
+		<ion-item ng-click="index.tap2()" class="row scene-m-item-p area-m-index-h">
+			<i ng-class="index.f2"></i>
+			二楼
+			<span class="area-m-index-num">2</span>
+		</ion-item>
+		<ion-list ng-show="index.flag2">
+			<div ui-sref="areabedroom" class="item row scene-m-item-p">
+				<div class="col-25">
+					<i class="area-m-bg"></i>
+				</div>
+				<div class="col-25 text-center">
+					<button class="button button-clear button-dark">主卧</button>
+				</div>
+				<div class="col-25">
+				</div>
+				<div class="col-25">
+					<i class="area-m-index-num button button-clear button-calm ion-chevron-right area-m-fzr"></i>
+				</div>
+			</div>
+			<div ui-sref="areawashingroom" class="item row scene-m-item-p">
+				<div class="col-25">
+					<i class="area-m-bg area-m-wash"></i>
+				</div>
+				<div class="col-25 text-center">
+					<button class="button button-clear button-dark">洗手间</button>
+				</div>
+				<div class="col-25">
+				</div>
+				<div class="col-25">
+					<i class="area-m-index-num button button-clear button-calm ion-chevron-right area-m-fzr"></i>
+				</div>
+			</div>
+		</ion-list>
+		<ion-item ng-click="index.tap3()" class="row scene-m-item-p area-m-index-h">
+			<i ng-class="index.f3"></i>
+			三楼
+			<span class="area-m-index-num">2</span>
+		</ion-item>
+		<ion-list ng-show="index.flag3">
+			<div ui-sref="areastudy" class="item row scene-m-item-p">
+				<div class="col-25">
+					<i class="area-m-bg area-m-study"></i>
+				</div>
+				<div class="col-25 text-center">
+					<button class="button button-clear button-dark">书房</button>
+				</div>
+				<div class="col-25">
+				</div>
+				<div class="col-25">
+					<i class="area-m-index-num button button-clear button-calm ion-chevron-right area-m-fzr"></i>
+				</div>
+			</div>
+			<div ui-sref="areaoffice" class="item row scene-m-item-p">
+				<div class="col-25">
+					<i class="area-m-bg area-m-work"></i>
+				</div>
+				<div class="col-25 text-center">
+					<button class="button button-clear button-dark">办公区</button>
+				</div>
+				<div class="col-25">
+				</div>
+				<div class="col-25">
+					<i class="area-m-index-num button button-clear button-calm ion-chevron-right area-m-fzr"></i>
+				</div>
+			</div>
+		</ion-list>
+		<div ui-sref="arealaundry" class="item row scene-m-item-p">
+			<div class="col-25">
+				<i class="area-m-bg area-m-washing"></i>
+			</div>
+			<div class="col-25 text-center">
+				<button class="button button-clear button-dark">洗衣间</button>
+			</div>
+			<div class="col-25">
+			</div>
+			<div class="col-25">
+				<i class="area-m-index-num button button-clear button-calm ion-chevron-right area-m-fzr"></i>
+			</div>
+		</div>
+	</ion-list>
+</ion-content>

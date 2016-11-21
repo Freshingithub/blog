@@ -1,0 +1,44 @@
+<ion-view class="Home-view">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <div class="h1 title" style="font-size: 25px;">Smart Home</div>
+        <a href="#/Setting" class="button button-clear icon ion-android-apps"style="margin-left: 10px;color: #000;"></a>
+    </div>
+    <ion-content class="has-header">
+        <ion-slide-box does-continue="true" auto-play="true" show-pager="true">
+            <ion-slide>
+                <img src="img/banner.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img src="img/banner.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img src="img/banner.jpg">
+            </ion-slide>
+        </ion-slide-box>
+        <ul class="left">
+            <li ui-sref="areaindex">
+                <img src="img/d_manage.jpg">
+            </li>
+            <li ui-sref="taskmanage">
+                <img src="img/task_manage.jpg">
+            </li>
+            <li ui-sref="scenemanage">
+                <img src="img/s_manage.jpg">
+            </li>
+        </ul>
+        <ul class="right">
+            <li ui-sref="TypeManage">
+                <img src="img/t_manage.jpg">
+            </li>
+            <li>
+                <img src="img/a_community.jpg">
+            </li>
+            <li ui-sref="SecurityManage">
+                <img src="img/a_system.jpg">
+            </li>
+            <li ui-sref="BuildingManage">
+                <img src="img/b_talk.jpg">
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

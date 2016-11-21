@@ -1,0 +1,263 @@
+/*pag scene_m style*/
+.scene-m-item-p p { line-height: 25px; }
+.row+.row {
+	margin-top: 0; 
+    padding: 10px 0;
+}
+.scene-m-bg {
+    display: block;
+    background-size: 50px;
+    background-image: url(../img/scene_m_sp.png);
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+} 
+.scene-m-cafe { background-position: 0 0; }
+.scene-m-eat { background-position: 0 -69px; }
+.scene-m-study { background-position: 0 -137px; }
+.scene-m-run { background-position: 0 -205px; }
+.scene-m-meeting { background-position: 0 -274px; }
+.scene-m-item-p { padding: 10px 0; }
+.scene-m-button {
+    font-size: 0.8em;
+    margin: 0;
+    height: 32px;
+    min-height: 0;
+    line-height: 30px;
+    top: 9px;
+}
+.scene-m-toggle {
+    left: 15%;
+    margin: 3px 0 0;
+}
+
+/*pag task_m style*/
+.task-m-getup { background-position: 0 -342px; }
+.task-m-sleep { background-position: 0 -562px; }
+.task-m-qy { background-position: 0 -488px; }
+.task-m-home { background-position: 0 -416px; }
+
+/*pag area_m_index style*/
+.area-m-index-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 150%;
+    margin-left: 10px;
+}
+.area-m-index-h { line-height: 30px; }
+.area-m-index-num {
+	position: absolute;
+    right: 10%;
+}
+.area-m-bg {
+	display: block;
+    background-size: 50px;
+    background-image: url(../img/area_m_index_sp.png);
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.area-m-wash { background-position: 0 -60px; }
+.area-m-washing { background-position: 0 -118px; }
+.area-m-study { background-position: 0 -174px; }
+.area-m-work { background-position: 0 -232px; }
+.area-m-fzr { right: 4%; }
+
+/*pag area_m_livingroom style*/
+.area-m-livingroom-bg {
+    background: url(../img/area_m_banner.jpg) no-repeat;
+    background-size: 100%;
+    max-width: 425px;
+    min-width: 425px;
+    height: 86px;
+}
+.area-m-livingroom-title {
+    background-color: #ececec;
+    padding: 4px 0 4px 16px;
+    color: #00a0e9;
+    font-size: 120%;
+}
+.area-m-livingroom-bgi {
+    display: block;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.area-m-livingroom-bgia { background-image: url(../img/light-01.jpg); }
+.area-m-livingroom-bgib { background-image: url(../img/light-02.jpg); }
+.area-m-livingroom-bgic { background-image: url(../img/light-03.jpg); }
+.area-m-livingroom-bgid { background-image: url(../img/light-05.jpg); }
+.area-m-livingroom-bgie { background-image: url(../img/light-06.jpg); }
+.area-m-livingroom-bgif { background-image: url(../img/light-07.jpg); }
+.area-m-livingroom-bgig { background-image: url(../img/light-08.jpg); }
+
+/*pag area_m_diningroom style*/
+.area-m-dining-button {
+    margin: 0 4px;
+    height: 30px;
+    padding: 0 10px;
+    width: 80px;
+    border-radius: 4px;
+    line-height: 30px;
+    z-index: 100;
+    min-height: 0px;
+    position: relative;
+    top: 28px;
+    left: 33%;
+}
+.area-m-diningroom-percent {
+    font-size: 120%;
+    color: #11c1f3;
+    line-height: 40px;
+}
+.area-m-diningroom-color {
+    background-color: #434343;
+    width: 6em;
+    height: 2em;
+    margin: 0 auto;
+    margin-top: 0.4em;
+}
+.area-m-diningroom-bgi {
+    display: block;
+    background-size: 50px;
+    background-image: url(../img/area_m_dining_sp.jpg);
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.area-m-diningroom-bgib { background-position: 0 -71px; }
+.area-m-diningroom-bgic { background-position: 0 -142px; }
+.area-m-diningroom-bgid { background-position: 0 -236px; }
+.area-m-diningroom-bgie { background-position: 0 -332px; }
+
+/*pag area_m_balcony style*/
+.area-m-balcony-bgi {
+    display: block;
+    background-size: 50px;
+    background-image: url(../img/area_m_balcony_sp.jpg);
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.area-m-balcony-bgib { background-position: 0 -53px; }  
+.area-m-balcony-bgic { background-position: 0 -108px; }
+.area-m-balcony-bgid { background-position: 0 -166px; }
+
+/*pag area_m_bedsit style*/
+.area-m-bedsit-bgi { background-image: url(../img/Type-01.jpg); }
+
+/*sidemenu style*/
+.sidemenu-span {
+    color: #fff;
+    font-size: 1em;
+    line-height: 35px;
+    margin: 15px 0;
+}
+
+/*pag area_m_balconymusic style*/
+.area-m-balconymusic-top {
+    width: 100%;
+    height: 60%;
+}
+.area-m-balconymusic-bottom {
+    width: 100%;
+    height: 40%;
+    background-color: #d8d8d8;
+}
+.area-m-balconymusic-bottom-playing {
+    color: #a2a2a9;
+    line-height: 60px;
+    text-indent: 55px;
+}
+.area-m-balconymusic-bottom-voicectr-v {
+    font-size: 2em;
+    color: #a2a2a9;
+}
+.area-m-balconymusic-bottom-voicectr-p {
+    font-size: 1em;
+    color: #a2a2a9;
+    padding: 4px; 
+}
+.area-m-balconymusic-bottom-ctr-bgi { background-image: url(../img/area_m_balconymusic_sp.png); }
+.area-m-balconymusic-bottom-ctr-r {
+    width: 36px;
+    height: 36px;
+    background-position: 0 -10px;
+    background-size: 300px;
+    margin-left: 5%;
+    margin-top: 25px;
+}
+.area-m-balconymusic-bottom-ctr-p {
+    width: 55px;
+    height: 55px;
+    background-position: -69px -12px;
+    background-size: 400px;
+    margin-left: 3%;
+    margin-top: 15px;
+}
+.area-m-balconymusic-bottom-ctr-s {
+    width: 88px;
+    height: 84px;
+    background-position: -157px 0px;
+    background-size: 420px;
+    margin-left: 3%;
+}    
+.area-m-balconymusic-bottom-ctr-n {
+    width: 55px;
+    height: 55px;
+    background-position: -267px -12px;
+    background-size: 400px;
+    margin-left: 3%;
+    margin-top: 15px;
+}
+.area-m-balconymusic-bottom-ctr-rf {
+    width: 36px;
+    height: 36px;
+    background-position: -264px -10px;
+    background-size: 300px;
+    margin-left: 3%;
+    margin-top: 25px;
+}
+
+/*page LRoom_color style*/
+.lroom-color-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #00a0e9;
+}
+#lroom-color-input {
+    width: 200px;
+    height: 203px;
+    background-color: #00a0e9;
+}
+.lroom-color-displaycolor {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.lroom-color-colorpic {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.lroom-color-range-value { margin-top: 50px; }
+.lroom-color-select-yellow { background-color: yellow; }
+.lroom-color-select-lightblue { background-color: lightblue; }
+.lroom-color-select-pink { background-color: pink; }
+.lroom-color-select-s {
+    margin-top: 50px;
+    height: 50px;
+    width: 90%;
+}
+::-webkit-color-swatch-wrapper { background-image: url(../img/lroom_color_colorpic.png);}
+::-webkit-color-swatch { 
+    position: absolute;
+    left: -4000px;
+}
+.buttons-right {
+    position: absolute;
+    right: 4%;
+}
