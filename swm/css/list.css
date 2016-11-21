@@ -1,0 +1,51 @@
+/* 成功案例开始 */
+.case_info{ width: 100%; height: auto; padding: 2% 0 0 2%;}
+.case_info .case_info_center{width: 100%;}
+.case_info li{ width: 48%; height: auto; margin-right: 2%; margin-bottom: 2%; float: left;}
+.case_info li h3{ font-size: 1.3rem; padding: 1% 0; color: #242424;}
+.case_info li p{ font-size: 1.1rem; margin: 0; color: #8e8e8e;}
+/* 成功案例结束 */
+
+
+/* 招聘信息开始 */
+.recruit_center,.recruit_tab,.recruit_contact{ width: 100%; margin: 0 auto;}
+.recruit_row{ text-align: center;}
+.recruit_center .col-xs-3{ width: 25%; font-size: 1.6rem;}
+.recruit_tab{ margin-top: 2.2rem;}
+.recruit_tab th,.recruit_tab td{ font-size: 1.4rem;color: #242424; padding: .8rem .6rem; text-align: center; border: 1px solid #bbbbbb;}
+.recruit_tab th{ font-weight: normal;  background: #f0f0f0;}
+.recruit_info{ width: 100%; height: auto; margin: 1rem auto; font-size: 1.5rem; color: #242424; line-height: 1.8rem;}
+.recruit_contact{ margin: 2rem 0;}
+.recruit_contact tr{ width:100%; height: 2rem; }
+.recruit_contact td{font-size: 1.4rem; color: #242424;  line-height: 1.6rem;}
+/* 招聘信息结束 */
+
+
+
+
+/* 联系我们开始 */
+.maoming .contact_titles,.guangzhou .contact_titles{ padding: 2rem 0 1.6rem 0; color: #8e8e8e; font-size: 1.6rem;}
+.maoming .maoming_map,.guangzhou .maoming_map{ width: 100%; height: auto; margin: 0 auto; padding-bottom: 1.6rem;}
+.maoming .company_maoming,.guangzhou .company_maoming{ font-size: 2rem; color: #2dafe7;}
+.maoming .maoming_map_info,.guangzhou .maoming_map_info{ width: 100%; height: auto;}
+.maoming .maoming_map_info li,.guangzhou .maoming_map_info li{ font-size: 1.4rem; color: #8e8e8e; line-height: 2rem; word-spacing: .1rem; }
+.maoming .maoming_map_info li .glyphicon,.guangzhou .maoming_map_info li .glyphicon{ padding: .5rem;}
+/* 联系我们结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

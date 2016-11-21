@@ -1,0 +1,570 @@
+/*@author by nzf
+ *2016/4/18
+ */
+
+ .swcontainer {
+ 	width: 100%;
+ 	height: auto;
+ 	padding: 0;
+ 	margin: 0;
+ }
+
+ .nswkj {
+ 	font-size: 16px;
+ 	line-height: 55px;
+ }
+
+ .nabout {
+ 	font-size: 12px;
+ 	vertical-align: text-top;
+ }
+
+ .ntel {
+ 	display: inline-block;
+ 	font-size: 12px;
+ 	line-height: 55px;
+ 	text-align: left;
+ 	white-space: normal;
+ 	word-break: break-all;
+ 	overflow: hidden;
+ }
+
+ .nheader {
+ 	width: 100%;
+ 	height: 55px;
+ 	background: #2dafe7;
+ 	color: #fff;
+ 	margin: 0px;
+ }
+
+ .nheader div {
+ 	padding: 0;
+ 	height: 55px;
+ 	line-height: 55px;
+ }
+
+ .nheader div img {
+	width: 24px;
+	height: 24px;
+	float: left;
+	position: relative;
+	top: 25%;
+ }
+
+ .nheader div span {
+ 	height: 55px;
+ 	float: left;
+ }
+
+
+/*nav样式开始*/
+.nnav {
+	height: 36px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 36px;
+	border-bottom-style: inset;
+}
+
+.nnav div{
+	text-align: center;
+}
+
+.nnav div a {
+	color: #8e8e8e;	
+}
+
+.nactived {
+	color: #2dafe7!important;
+}
+
+
+/*contentpic样式开始*/
+
+div.container>img {
+	padding: 10px 0;
+}
+
+/*contenttitle样式开始*/
+
+.ncontenttitle {
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.nno1 {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	background: #2dafe7;
+}
+
+.ncontentgsjj {
+	background: #f0f0f0;
+	color: #2dafe7;
+	line-height: 30px;
+	font-size: 14px
+}
+
+.ncontentgsjj:after {
+	position: absolute;
+	top: 30px;
+	left: 26px;
+	content: "";
+	width: 0;
+	height: 0;
+	border-color: #f0f0f0 transparent transparent;
+	border-width: 16px 10px 0 10px;
+	border-style: solid;
+}   	/*css实现气泡框三角形*/
+
+
+/*ncontent样式开始*/
+.nfirstpara, .nsecondpara {
+	font-size: 14px;
+	margin: 20px 0;
+	text-indent: 16px;
+	text-align: justify;
+	white-space: normal;
+	word-break: break-all;
+	overflow: hidden;
+	letter-spacing: 1px;
+	line-height: initial;
+}
+
+.ngshj, .ntdjj {
+	color: #cccccc;
+	padding: 0 30px;
+}
+
+/*nfooter样式开始*/
+
+.nfooter {
+	margin-top: 30px;
+	margin-bottom: 64px;
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #cccccc;
+}
+
+.nfootertop {
+	height: 60px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.nfootertop ul {
+	display: table;
+	margin: 0 auto;
+	height: 15px;
+	padding: 0;
+	text-align: center;
+}
+
+.nfootertop ul li {
+	font-size: 14px;
+	float: left;
+	list-style-type: none;
+	padding: 5px 3px;	
+}
+
+.nfootertop ul li a {
+	color: #2dafe7;
+}
+
+.nfooterbottom {
+	font-size: 12px;
+	text-align: center;
+	height: 40px;
+	line-height: 30px;
+	color: #cccccc;
+	width: 100%;
+	white-space: normal;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+
+/*新闻中心页面样式开始
+ * 新闻中心首页
+ */
+ 
+ /*nnewsnav样式开始*/
+
+ .nnewsnav {
+ 	width: 100%;
+ 	height: 40px;
+ 	background: #edecec;
+ 	color: #c1c1c1;
+ }
+
+ .nnewsnav ul {
+ 	padding-left: 0px;
+ }
+
+ .nnewsnavcol {
+ 	list-style-type: none;
+ 	float: left;
+ 	line-height: 40px;
+ 	width: 20%;
+ 	text-align: center;
+ }
+
+ /*内容样式开始*/
+ .nmargpad0 {
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+
+ .nnewsitem {
+ 	height: 48px;
+ 	line-height: 48px;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+ 	white-space: nowrap;
+ 	color: #555;
+ 	font-size: 14px;
+ }
+
+ .nnewsitemdate {
+ 	padding-left: 0px;
+ 	text-align: right;
+ }
+
+ .nnewsitemcontent {
+ 	padding-right: 0px;
+ }
+
+ .nnewsitem a {
+ 	color: #555;
+ }
+
+ .ndivider {
+ 	position: relative;
+ 	top: 48px;
+ 	width: 100%;
+ 	height: 1px;
+ 	background: #bbbbbb;
+ }
+
+ /*nav样式开始*/
+
+ .nnewscenternav {
+ 	font-size: 12px;
+ 	padding: 20px 15px 0px;
+ 	margin-top: 30px;
+ 	height: 65px;
+ 	color: #8e8e8e;
+ }
+
+ .nnewscenternav ul {
+ 	padding: 0;
+ 	float: left;
+ }
+
+ .nnewscenternav div {
+ 	height: auto;
+ 	float: left;
+ 	margin: 0 0 0 15px;
+ }
+
+ .nnewscenternav div a {
+ 	color: #8e8e8e;
+ 	border: 1px solid #cccccc;
+ 	padding: 2px 0;
+ }
+
+ .nnewscenternav ul li {
+ 	list-style-type: none;
+ 	float: left;
+ 	border: 1px solid #cccccc;
+ 	padding: 2px 5px;
+ 	margin: 0 1px;
+ }
+
+ .nnewscenternav input {
+ 	width: 32px;
+ }
+
+ .nnewscenternav ul li a {
+ 	color: #8e8e8e;
+ }
+
+
+/*成功案例页面样式开始
+ *成功案例
+ */
+
+/*新闻中心展示页面样式开始*/
+
+/*xwzxzstitle样式开始*/
+
+ .nxwzxzsnumber {
+ 	font-size: 12px;
+ 	margin-top: 10px;
+ 	color: #bbbbbb;
+ }
+
+ .nxwzxzstile {
+    text-align: center;
+    color: #2dafe7;
+ }
+
+ .nxwzxzstile>h5 {
+ 	font-size: 16px;
+ }
+
+ /*xwzxzscontent样式开始*/
+
+ .nxwzxzscontent {
+ 	background: #f0f0f0;
+ 	font-size: 14px;
+ 	letter-spacing: 1px;
+ 	line-height: initial;
+ 	text-indent: 28px;
+ }
+
+ .nxwzxzsppadding {
+ 	padding-top: 15px;
+ }
+
+ .nxwzxzsreturn {
+ 	text-align: right;
+ 	padding-bottom: 15px;
+ }
+
+ .nxwzxzsreturn a {
+ 	color: #2dafe7;
+ }
+
+
+/*关于胜网服务优势页面样式开始
+ *aboutswfwys页面样式开始
+ */
+
+.naboutswfwys6item h5 {
+	text-align: center;
+	color: #2dafe7;
+}
+
+.naboutswfwys6item p {
+	font-size: 14px;
+	text-indent: 16px;
+	text-align: justify;
+	line-height: initial;
+}
+
+.nswfwystoppicl, .nbotpicl {
+	padding: 0 0 0 15px;
+}
+
+.ntoppicc, .nbotpicc {
+	padding: 0 7.5px 0;
+}
+
+.nswfwystoppicr, .nbotpicr {
+	padding: 0 15px 0 0;
+}
+
+/*关于胜网人才招聘页面样式开始
+ *aboutswrczp页面样式开始
+ */
+
+/*aboutswrczp table样式开始*/
+ .nzptable {
+ 	font-size: 12px;
+	margin-top: 25px;
+ 	text-align: center;
+ }
+
+ .nthaligncenter {
+ 	text-align: center;
+ }
+
+ 
+
+/*aboutswrczp content样式开始*/
+.naboutswrczpzplxxx {
+	font-size: 12px;
+	margin-top: 15px;
+	text-align: justify;
+}
+
+.naboutswrczpzplxxx p, .naboutswrczpl p, .naboutswrczpr p {
+	letter-spacing: 1px;
+	text-align: left;
+	line-height: initial;
+}
+
+.naboutswrczpl, .naboutswrczpr {
+	font-size: 12px;
+}
+
+
+/*微信代运营页面样式开始
+ *swwxdyy样式开始
+ */
+
+.nswwxdyypic2 h5 {
+	font-weight: bold;
+}
+
+.nswwxdyypic2 p {
+	font-size: 12px;
+	text-align: justify;
+	line-height: initial;
+}
+
+.nswwxdyypic2 {
+	background: url(../images/swwxdyypic1.png) no-repeat center center;
+	background-size: 33%;
+	height: 200px;
+}
+
+.nswwxdyypic2ltop, .nswwxdyypic2rtop, .nswwxdyypic2lbot, .nswwxdyypic2rbot {
+	position: absolute;
+}
+
+.nswwxdyypic2ltop {
+	left: 0;
+	top: 0;
+}
+
+.nswwxdyypic2rtop {
+	right: 0;
+	top: 0;
+}
+
+.nswwxdyypic2lbot {
+	left: 0;
+	bottom: -200px;
+}
+
+.nswwxdyypic2rbot {
+	right: 0;
+	bottom: -200px;
+}
+
+.nswwxdyypic3, .nswwxdyypic4, .swwxdyy4th, .nswwxdyypic2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.nswwxdyypic3>div:first-child {
+	display: flex;
+}
+
+.nswwxdyypic3>div:first-child>img {
+	margin: auto;
+}
+
+.nswwxdyypic3r {
+	font-size: 12px;
+	padding-left: 0;
+}
+
+.nswwxdyypic2 h5, .nswwxdyypic3r h5 {
+	margin: 5px 0;
+	font-size: 12px;
+	color: #2dafe7;
+}
+
+.nswwxdyypic3r p {
+	margin-bottom: 0;
+	line-height: initial;
+}
+
+.nswwxdyypink {
+	background: #f87676;
+}
+
+.nswwxdyygreen, .swwxdyy4thgreen {
+	background: #85c243;
+}
+
+.nswwxdyyroyal, .swwxdyy4throyal {
+	background: #beaedd;
+}
+
+.nswwxdyyorange, .swwxdyy4thorange {
+	background: #f2a54b;
+}
+
+.nswwxdyyblue, .swwxdyy4thblue {
+	background: #2dafe7;
+}
+
+.nswwxdyydarkgreen {
+	background: #5bbcc5;
+}
+
+.nswwxdyypic4 div div {
+	height: 215px;
+	margin: 2px 0;
+	padding: 0 4px;
+	border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.nswwxdyypic4 div div h5 {
+	height: 13px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.swwxdyy4th div div p, .nswwxdyypic4 div div p {
+	color: #fff;
+	font-size: 12px;
+	line-height: initial;
+	text-align: justify;
+}
+
+.nswwxdyypic4 div div img {
+	width: 16px;
+    height: 14px;
+	margin-top: 10px;
+}
+
+.swwxdyy4th div div{
+	height: 115px;
+	padding: 4px 4px 0;    
+	border-right: 2px solid #fff;
+    border-left: 2px solid #fff
+}
+
+
+/*胜网成功案例-项目简介页面样式开始
+ *swcgalxq页面样式开始
+ */
+
+.swcgalxqxmjj {
+ 	width: 100%;
+ 	height: 30px;
+ 	margin: 0 15px 15px 0;
+ }
+
+.swcgalxqxmjj h5 {
+ 	height: 30px;
+ 	color: #2dafe7;
+ 	display: inline-block;
+ 	padding-right: 10px;
+ }
+
+ .swcgalxqxmjj h5:before {
+ 	content: '';
+ 	border-left: 3px solid #2dafe7;
+ 	margin: 0 10px;
+ }
+
+.swcgalxqxmjj a {
+ 	color: #bbbbbb;
+ }
