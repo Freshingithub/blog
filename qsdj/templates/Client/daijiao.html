@@ -1,0 +1,48 @@
+<ion-view view-title="代叫" >
+    <div class="bar bar-header header-h">
+        <a class="button  icon ion-ios-arrow-left button-clear" ui-sref="OneKeyOder" style="margin: 0 0 0 10px;"></a>
+        <h1 class="h1 title">代叫</h1>
+    </div>
+    <ion-content  class="has-header">
+
+        <ion-list ng-model="items">
+            <ion-item  class="item-icon-right" ng-click="show()">
+                <span ng-bind="items.firstname"></span>
+                <span style=" position: absolute;right: 50px;line-height: 23px;" ng-bind="nb"></span>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item  class="item-icon-right" ng-click="openTelModal()">
+                    <span ng-bind="items.secondname"></span>
+                    <span style=" position: absolute;right: 40px;" ng-bind="telphone"></span>
+                    <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item  class="item-icon-right"  ng-click="chufadi()">
+                <span ng-bind="items.thirdname"></span>
+                <input type="text" placeholder="请选择您的出发地"  ng-model="myform.djfrom" style="text-align: right; position: absolute; right: 40px; bottom: 10px;background-color: #fff;width: 68%;" ng-disabled="true">
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item  class="item-icon-right" ng-click="account()" ><!-- ng-click="account()"-->
+                <span ng-bind="items.fourthname"></span>
+                <input type="text" placeholder="请选择您的目的地" ng-model="myform.djdestination" style="text-align: right; position: absolute; right: 40px; bottom: 10px;background-color: #fff;width: 68%;" ng-disabled="true">
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item  class="item-icon-right">
+                <span ng-bind="items.fifthname"></span>
+                <span style="color:red;text-align:right;position:absolute;right:40px;bottom:10px;line-height: 30px;">{{preestimateprice}}元</span>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+        <ul class="list DaiJiaoList">
+            <li class="item item-checkbox DaiLi">
+                <span>使用我的账号结算</span>
+                <label class="checkbox daiCheckbox">
+                    <input type="checkbox" checked>
+                </label>
+            </li>
+        </ul>
+    </ion-content>
+    <div id="daijiaomap" style="display:none"></div>
+    <ion-footer-bar class="DaiJiaoFoot foot-f">
+        <a class="button" ng-click="order(myform)">立即下单</a>
+    </ion-footer-bar>
+</ion-view>

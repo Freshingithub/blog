@@ -1,0 +1,60 @@
+<ion-header-bar class="bar bar-header nheaderbarborderbottom">
+	<a href="#/vipm" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<h1 class="title ntextac">服务商管理</h1>
+</ion-header-bar>
+<ion-tabs class="has-header tabs-top tabs-striped tabs-color-active-calm">
+	<ion-tab title="服务商审核" on-select="get('list')">
+		<ion-view>
+			<ion-content>
+				<ion-list>
+
+					<ion-item class="nborderbf5" ng-repeat="item in items">
+						<img class="nfloatl nfwsshimg" ng-src="http://218.15.27.250:10080/houduan/Public/paperImage/{{item.paper_img}}" alt="">
+						<div class="nfloatl nfwsshdiv"><h2>{{item.driver_name}}</h2><p>手机:<em>{{item.driver_phone}}</em></p><p>地区:<em>{{item.work_address}}</em> 驾龄:<em>{{item.driving_age}}</em>年</p><p>驾照档案编号:<em>{{item.file_number}}</em></p></div>
+						<a class="nfwsszarrow button button-calm nmargintop" ng-if="item.status==1" ng-click="status(item.id,item.login_id)">审核</a>
+						<a class="nfwsszarrow button button-balanced nmargintop" ng-if="item.status==2">已通过</a>
+					</ion-item>
+					
+				</ion-list>
+				<ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore('list')" distance="5%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-view>
+	</ion-tab>
+	<ion-tab title="服务商设置" on-select="get('set')">
+		<ion-view>
+			<ion-content>
+				<ion-list>
+					<ion-item ui-sref="fwsszxq({id:item.id})" class="nborderbf5" ng-repeat="item in itemssz">
+						<img class="nfloatl nfwsszimg" ng-src="http://218.15.27.250:10080/houduan/Public/paperImage/{{item.paper_img}}" alt="">
+						<div class="nfwsszdiv">
+							<h2>{{item.driver_name}}
+								<em ng-if="item.work_status==1">服务中</em>
+								<em ng-if="item.work_status==2">空闲</em>
+							</h2>
+							<p>手机:
+								<em>{{item.driver_phone}}</em>
+								</p>
+							<p>代驾:
+								<em>{{item.driver_serve_num}}</em>
+								次  驾龄:<em>{{item.driving_age}}</em>
+								年  籍贯:<em>{{item.native_place}}</em>
+							</p>
+							<p ng-if="item.customer_level==1"><i class=" ion-android-star assertive"></i>
+							</p>
+							<p ng-if="item.customer_level==2"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+							</p>
+							<p ng-if="item.customer_level==3"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+							</p>
+							<p ng-if="item.customer_level==4"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+							</p>
+							<p ng-if="item.customer_level==5"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+							</p>
+						</div>
+						<a class="icon h2 ion-ios-arrow-forward nfwsszarrow"></a>
+					</ion-item>
+				</ion-list>
+				<ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore('set')" distance="5%"></ion-infinite-scroll>				
+			</ion-content>
+		</ion-view>
+	</ion-tab>
+</ion-tabs>

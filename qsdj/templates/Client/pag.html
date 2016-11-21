@@ -1,0 +1,90 @@
+<ion-view  class="Myaccount-view" view-title="支付">
+    <div class="bar bar-header header-h">
+    <a class="button  icon ion-ios-arrow-left button-clear"  ng-click="$ionicGoBack()" style="margin: 0 0 0 10px;"></a>
+    <h1 class="h1 title">支付</h1>
+    </div>
+    <ion-content  class="has-header">
+           <ion-list>
+               <ion-item ng-repeat="item in items" class="pag-item">
+                   <span class="p-span">{{item.firtname}}</span>
+                   <span class="pag-span">{{item.secondname}}</span>
+               </ion-item>
+           </ion-list>
+           <b class="pag-b">选择支付方式</b>
+           <!--<ion-list >-->
+               <!--<ion-item class="pag">-->
+                   <!--<img src="img/yuer.png" alt="">-->
+                   <!--<span class="pag-span1">余额支付</span>-->
+                   <!--<span class="pag-span2">可用余额35元</span>-->
+               <!--</ion-item>-->
+           <!--</ion-list>-->
+        <form name="pageForm" ng-model="pageForm" id="pageForm" novalidate>
+        <ion-list>
+            <!--<p style="padding: 7px;margin: 0;background: #dfdfdf;">选择支付方式</p>-->
+                <!--<ion-item ng-repeat="pag in pags" class="pagItem">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col col-80">-->
+                            <!--<img ng-src="{{pag.PagSrc}}">-->
+                            <!--<span class="pag-span1">{{pag.firtname}}</span>-->
+                            <!--<span class="pag-span2">{{pag.secondname}}</span>-->
+                        <!--</div>-->
+                        <!--<div class="col col-20">-->
+                            <!--<input type="radio" name="pay" ng-model="pageFro" checked/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</ion-item>-->
+
+            <ion-item class="pagItem">
+                <div class="row">
+                    <div class="col col-80">
+                        <img src="img/yuer.png" >
+                        <span class="pag-span1">余额支付</span>
+                        <span class="pag-span2">可用余额{{account_yue}}元</span>
+                    </div>
+                    <div class="col col-20">
+                        <input type="radio" ng-model="pageForm.pay" name="pay" value="余额支付"/>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="pagItem">
+                <div class="row">
+                    <div class="col col-80">
+                        <img src="img/weixin.jpg" >
+                        <span class="pag-span1">微信支付</span>
+                    </div>
+                    <div class="col col-20">
+                        <input type="radio" ng-model="pageForm.pay" name="pay" value="微信支付"/>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="pagItem">
+                <div class="row">
+                    <div class="col col-80">
+
+                        <img src="img/aplay.jpg" >
+                        <span class="pag-span1">支付宝支付</span>
+                    </div>
+                    <div class="col col-20">
+                        <input type="radio" ng-model="pageForm.pay" name="pay" value="支付宝支付"/>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="pagItem">
+                <div class="row">
+                    <div class="col col-80">
+                        <img src="img/unionPay.jpg" >
+                        <span class="pag-span1">网银支付</span>
+                    </div>
+
+                    <div class="col col-20">
+                        <input type="radio" ng-model="pageForm.pay" name="pay" value="网银支付"/>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="btnbar" style="margin: 20px 10px;">
+            <button type="submit" class="button button-block button-calm" ng-click=" immediatePay(pageForm)">立即支付</button>
+        </div>
+        </form>
+    </ion-content>
+</ion-view>

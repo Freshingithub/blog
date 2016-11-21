@@ -1,0 +1,69 @@
+<div class="bar bar-header" ng-controller="vipCtrl">
+	<a href="#/vipm" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<div class="h1 title vip_titles">会员管理</div>
+	<a href="#/VipManagement_add" class="button button-clear button-calm icon ion-ios-plus-outline right"></a>
+</div>
+	<!-- 标题结束 -->
+
+<!-- <ion-tabs class="has-header tabs-top tabs-striped tabs-color-active-calm vip_tabs_underline" ng-controller="vipCtrl">
+	<ion-tab title="会员信息"> -->
+		<ion-view>
+			<ion-content class="has-header" ng-controller="vipCtrl">
+				<div style="position: absolute;top: 20%;left: 42%	;text-align: center;" ng-show="flag">
+					<ion-spinner icon="android"></ion-spinner>
+					<p>数据加载中...</p>
+				</div>
+				<ion-list>
+					<ion-item class="nborderbf5">
+						<div class="ndjkhddwrap item-input">
+							<i></i>
+							<input type="search" placeholder="按姓名电话号码搜索" ng-model="cont" name="cont">
+							<span>|</span><button class="button-clear" ng-click="search(cont)">确定</button>
+						</div>
+					</ion-item>
+
+					<ion-item class="vip_info_items" ng-repeat="vip in vips">
+
+						<a href="#/vipEdit" class="edits" ng-click="dianji(vip.id)">
+							<img ng-src="http://218.15.27.250:10080/houduan/Public/headImage/{{vip.head_img}}" alt="">
+					<ul class=" vip_info_details">
+						<li class="vip_name">{{vip.customer_realname}}</li>
+						<li>电话：{{vip.customer_phone}}</li>
+						<li>金额：{{vip.account_yue}}元</li>
+						<li class="vip_info_stars" ng-if="vip.customer_level==0">等级：0
+							
+						</li>
+						<li class="vip_info_stars" ng-if="vip.customer_level==1">等级：
+							<i class=" ion-android-star assertive"></i>
+						</li>
+						<li class="vip_info_stars" ng-if="vip.customer_level==2">等级：
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+						</li>
+						<li class="vip_info_stars" ng-if="vip.customer_level==3">等级：
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+						</li>
+						<li class="vip_info_stars" ng-if="vip.customer_level==4">等级：
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+						</li>
+						<li class="vip_info_stars" ng-if="vip.customer_level==5">等级：
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+							<i class=" ion-android-star assertive"></i>
+						</li>
+					</ul>
+						</a>
+
+					</ion-item>
+
+				</ion-list>
+				<ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-view>

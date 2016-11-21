@@ -1,0 +1,16 @@
+<ion-view>
+	<div class="bar bar-header header-h">
+        <a class="button  icon ion-ios-arrow-left button-clear" style="margin: 0 0 0 10px;" ui-sref="orderTabs.receiveOrder.inform"></a>
+        <div class="h1 title">地图定位</div>
+    </div>
+    
+    <ion-content class="has-header" style="height: 100%;">
+		<div style="position: absolute;top: 50px;left: 35%;text-align: center;height: 100%;" ng-show="flag">
+			<ion-spinner icon="android"></ion-spinner>
+			<p>正在获取您的位置</p>
+		</div>
+		<button ng-show="!flag" class="button button-block" style="z-index: 0;position: absolute;" ng-click="spinner()">点击这里刷新地图</button>
+		<div style="height:520px" id="l-map"></div>
+	</ion-content>
+    
+</ion-view>

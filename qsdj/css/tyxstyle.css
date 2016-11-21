@@ -1,0 +1,534 @@
+
+/* Empty. Add your own CSS if you like */
+@font-face { font-family: 'iconfont'; src: url("font/iconfont.eot?20150908");
+    /* IE9*/
+    src: url("font/iconfont.eot?#iefix") format("embedded-opentype"), url("font/iconfont.woff?20150908") format("woff"), url("font/iconfont.ttf?20150908") format("truetype"), url("font/iconfont.svg#uxiconfont?20150908") format("svg");
+    /* iOS 4.1- */ }
+.iconfont { font-family: "iconfont" !important; font-size: 22px; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; }
+
+@font-face { font-family: 'usericons'; src: url("font/usericons.eot?uvjlf8"); src: url("font/usericons.eot?#iefixuvjlf8") format("embedded-opentype"), url("font/usericons.woff?uvjlf8") format("woff"), url("font/usericons.ttf?uvjlf8") format("truetype"), url("font/usericons.svg?uvjlf8#usericons") format("svg"); font-weight: normal; font-style: normal;}
+h1,h2,h3,h4,h5,h6,a,title,p,span,em,b,input{
+    font-family: Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial;
+}
+.pane,.view {
+    background-color: #f7f7f7!important;
+}
+.Route img{width: 100%}
+.header-h>a{
+    color: #09a6ed !important;
+}
+.foot-f >a{
+background-color: #09a6ed !important;
+    color: #fff;
+}
+.header-h>h1{
+    font-size: 25px !important;
+    text-align: center !important;
+}
+/*一键下单页开始*/
+.oder-foot{padding: 0}
+.oder-foot-first{
+    border-right: 1px solid #fff !important;
+    width: 20%;
+}
+.oder-foot>.col-55{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 55%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 55%;
+    -ms-flex: 0 0 55%;
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+.oder-foot i{
+    float: left;
+    margin-top: -2px;
+
+}
+.oder-foot-btn{
+    border-radius:0;
+}
+.oder-foot .daijiaobtn{
+    margin-left: 10px;
+    width: 20%;
+    background-color: #56c076!important
+}
+/*一键下单页结束*/
+/*正在拍单页开*/
+.frame-inset{
+     width: 100%;
+    margin: 0;
+ }
+.frame-inset input{
+    display: -webkit-inline-box;
+}
+.frame-inset-i span{
+    padding-right: 20px;
+}
+.frame-inset-right{
+    right: 0;
+    position: absolute;
+    padding-right: 10px;
+}
+.foot-frame-inset{
+    width: 100%;
+    margin: 0 auto;
+    height: 160px;
+    background-position: bottom;
+}
+.OneKeyOderLater>.popup{
+    border-radius: 5px;
+    width: 300px;
+}
+.OneKeyOderLater>.popup>.popup-head{
+    border-bottom:0;
+
+}
+.OneKeyOderLater>.popup>.popup-buttons>button{
+    border-radius: 5px;
+}
+.OneKeyOderLater>.popup>.popup-buttons>button:first-child{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+}
+.OneKeyOderLater>.popup>.popup-buttons>button:last-child{
+   background-color: #09a6ed;
+}
+.pd-span1{
+    text-align: center;
+    color: #5d5d5d
+}
+.pd-P{
+    text-align: center;
+    color: #5d5d5d
+}
+.pd-H2{
+    margin:0;
+    line-height: 14px;
+    padding-top: 10px;
+    color: #5d5d5d
+}
+/*正在拍单页结束*/
+/*代叫开始*/
+.DaiJiaoList{
+    margin-top: 10px
+}
+.DaiJiaoFoot a{
+    width: 100%;
+}
+.daijiaoAc button{
+    text-align: center!important;
+}
+.slide-in-right {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.slide-in-right.ng-enter, .slide-in-right > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+.slide-in-right.ng-enter-active, .slide-in-right > .ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-in-right.ng-leave, .slide-in-right > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+.slide-in-left {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(100%);
+}
+.slide-in-left.ng-enter, .slide-in-left > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+.slide-in-left.ng-enter-active, .slide-in-left > .ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-in-left.ng-leave, .slide-in-left > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+.daiCheckbox{
+    height: 100%;
+}
+.daiCheckbox>input{
+    position: absolute!important;
+    right: 8px;
+}
+.DaiJiaoList>.DaiLi>span{
+    margin-left: -50px;
+}
+    /*代叫结束*/
+    /*代叫联系电话开始*/
+.telClass>.popup{
+    border-radius: 5px;
+}
+.telClass>.popup>.popup-head{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+   .telClass>.popup>.popup-body{
+       text-align: center;
+   }
+.telClass>.popup>.popup-buttons>button:first-child{
+    background-color:#09a6ed;
+    color: #fff;
+    border-radius: 5px;
+}
+   /*代叫联系电话结束*/
+/*代叫-出发地-搜索弹出层开始*/
+.header-label{
+    width: 77%;
+    height: 90%;
+    background-color: #f8f8f8;
+    padding-left: 5px;
+    margin-top: 2px;
+}
+.header-label>i{
+    font-size: 20px;
+   color: #ddd;
+
+}
+.header-label input{
+    width: 100%;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    height: 100%;
+}
+.myPopup>.popup{
+    width: 100%;
+    height: 100%;
+    /*margin-left: -10px;*/
+    position: absolute;
+    left: 0;
+    max-height: 100%;
+}
+/*.header-label input :before{*/
+    /*font-family: iconfont;*/
+    /*content: "\f002";*/
+    /*font-size: 16px;*/
+
+/*}*/
+/*.search-label:before{*/
+    /*font-family: iconfont;*/
+    /*content: "\f002";*/
+    /*font-size: 16px;*/
+    /*margin-right: 4px;*/
+/*}*/
+.ChuInput{text-align: left}
+/*代叫-出发地-搜索弹出层结束*/
+
+
+
+/*订单管理开始*/
+/*.Managemnt{*/
+    /*width: 100%;*/
+    /*height: 150px;*/
+    /*background-color: #fff;*/
+    /*padding-top: 15px;*/
+    /*padding-left: 15px;*/
+/*}*/
+/*.Managemnt-group{*/
+    /*width: 100%;*/
+/*}*/
+.ndjkhdddiv .mati-85 {
+    width: 85%;
+}
+.ndjkhdddiv .mati-85 p{
+    white-space: normal;
+}
+.ndjkhdddiv .mati-15 {
+    width: 15%;
+}
+.qBtn{
+    position: absolute;
+    top: -7px;
+    color:#09A6ED!important;
+    right: 0;
+    font-size: 13px;
+}
+.mati-15>.ndjkhfwz>.qBtn{
+    margin-top: 5px;
+}
+.Mg-Btn{
+    text-align: center;
+    background: #09a6ed;
+    margin-top: -20px;
+    height: 60px;
+    max-width: 75px;
+    min-width: 55px;
+    padding: 0 4px;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+}
+.Mg-Btn p{
+    color: #fff;
+   /* padding-top: 15px;
+    position: relative;*/
+}
+.Managemnt-list{
+    padding-left: 10px;
+    line-height: 30px;
+    height: 50px;
+}
+.sp-group{
+    padding-left: 8px;
+}
+/*.Managemnt-list i{*/
+    /*font-size: 18px;*/
+/*}*/
+/*.Managemnt-list span{*/
+    /*font-size: 18px;*/
+/*}*/
+.Managemnt-list b{
+    position: absolute;
+    right: 10px;
+    color: #c40203;
+}
+.consult-tab>.tabs {
+    top: 48px;
+}
+.consult-tab>.tabs>.tab-item {
+    max-width: 400px;
+}
+/*订单管理结束*/
+/*价格表开始*/
+.PriceRow{
+padding: 0;
+}
+.PriceRow span{
+    color: #b2b2b2;
+    line-height: 50px;
+}
+.PriceItem{
+    padding: 0;
+    text-align: center;
+}
+.lastLi{
+    border-left: 1px solid #dddddd;
+}
+.lastLi p{
+    color: #b2b2b2;
+}
+.price b,.price h2{
+    display: inline;
+    color: #0a9dc7;
+}
+.price h2{
+    font-size: 25px;
+}
+
+/*价格表结束*/
+/*代办业务开始*/
+.AsImg img{
+    width: 100%;
+    height: auto;
+}
+.list-Group{
+    height: 90px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin: 20px 10px;
+    display:-webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.list-H{
+   width: 100%;
+    text-align: center;
+}
+.list-H h3{
+    padding-top: 32px;
+}
+.list-span{
+   width: 100%;
+    padding-top: 23px;
+}
+.list-img{
+width: 100%;
+    height: 100%;
+}
+.list-img img{
+    width: 100%;
+    height: 100%;
+}
+.listHOne{color: #6b46e5}
+.listHTwo{color: #fe3a6a}
+.listHThree{color: #63d60e }
+.listHFour{color:#ff7800 }
+.listHFive{color: #39c2fb; position: absolute;left: 20px;}
+.AgentClass>.popup{
+    border-radius: 5px;
+}
+.AgentClass>.popup>.popup-head{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.AgentClass>.popup>.popup-head>.popup-title h3{
+    color: #504F4F;
+}
+.AgentClass>.popup>.popup-body{
+    text-align: center;
+}
+.AgentClass>.popup>.popup-body span{
+    font-size: 16px;
+    color: #504F4F;
+}
+.AgentClass>.popup>.popup-buttons{
+    padding: 30px 50px 20px 50px;
+}
+.AgentClass>.popup>.popup-buttons>button:first-child{
+    /*background-color:#09a6ed;*/
+    color: #504F4F;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+}
+/*代办业务结束*/
+/*支付开始*/
+.pag-item{
+    padding: 16px !important;
+}
+.p-span{
+    font-weight: bold;
+}
+.pag-span{
+    float: right;
+    right: 0;
+    color: #b2b2b2;
+}
+.pag-b{
+    padding-left: 15px;
+}
+.pag img{
+    widt: 40px;
+}
+.pag-span1{
+    display: inline-block;
+    position: absolute;
+    top: 26px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+.pag-span2{
+    color: #b2b2b2 ;
+    position: absolute!important;
+    padding-left: 80px!important;
+    padding-top: 11px!important;
+}
+.pagItem{
+    padding: 5px;
+}
+.pagItem>.row>.col-80>img{
+    height: 40px;
+}
+
+.pagItem>.row>.col-20{
+    line-height: 36px;
+    text-align: center;
+}
+.pagItem>.row>.col-20>input{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    outline: none;
+    background: none;
+    border: 0;
+}
+.pagItem>.row>.col-20>input[type=radio]:before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #999;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pagItem>.row>.col-20>input[type=radio]:checked:after{
+    display: block;
+}
+.pagItem>.row>.col-20>input[type=radio]:after{
+    display: none;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 8px;
+    top: 6px;
+    left: 6px;
+    border: solid #09a6ed;
+    border-width: 0 0 2px 2px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/*支付结束*/
+/*地图样式开始*/
+#Pmap label{
+    border:0 !important;
+    border-radius:50px;
+    height: 76px;
+    width: 190px;
+}
+.MapItem{
+    border-radius:50px;
+    height: 76px;
+    width: 190px;
+    border: 0;
+}
+.MapItem h2{
+    margin-top: -5px;
+}
+.MapItem i{
+    color: #ae3940;
+    line-height: 37px;
+    font-size: 23px;
+}
+.MapI{
+    color: #fff;
+    font-size: 50px;
+    left: 80px;
+    position: absolute;
+    margin-top: -16px;
+}
+.MapI2{
+    color: #09a6ed;
+    font-size: 30px;
+    left: 58px;
+    position: absolute;
+    margin-top: -9px;
+}
+#allmap label{
+    border: 0 !important;
+    background-color: #09a6ed !important;
+    border-radius: 5px;
+}
+#Pmap>.BMap_noprint,#Pmap>.anchorBR{
+   top: 10px!important;
+}
+#allmap>.BMap_noprint,#allmap>.anchorBR{
+    top: 10px!important;
+}
+/*地图样式结束*/

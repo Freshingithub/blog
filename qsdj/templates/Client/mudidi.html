@@ -1,0 +1,14 @@
+<ion-view>
+    <ion-header-bar class="header-h">
+        <a class="button  icon ion-ios-arrow-left button-clear" ng-click="pSelect()" style="margin: 0 0 0 10px;"></a> <!--ng-click="pSelect()"-->
+        <label class="header-label item-input">
+            <i class="icon ion-ios-search search-label"></i>
+            <input type="search" id="suggestId" placeholder="搜索全顺目的地的位置" ng-model="value" class="search-label" map-suggestion autofocus />
+        </label>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="y in mapitems" ng-click="MSelect(y.city+y.district+y.business)">{{y.city+y.district+y.business}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

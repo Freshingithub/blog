@@ -1,0 +1,16 @@
+<ion-view class="State">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a href="#/set-state" class="button button-clear button-calm icon ion-ios-arrow-left" style="margin-left: 10px;"></a>
+        <div class="h1 title">设置状态</div>
+    </div>
+    <ion-content class=" has-header ">
+
+        <p class="notes gary">请设置您的状态，以便系统为您接单</p>
+
+        <div class="btnbar">
+            <button type="submit" class="button btn button-positive" style="width: 45%;margin-right: 8%;" ng-click="work()" ng-class="{'ash':!flag}">上线接单</button>
+            <button type="submit" class="button btn button-positive" style="width: 45%;" ng-class="{'ash':flag}" ng-click="rest()">下线休息</button>
+        </div>
+
+    </ion-content>
+</ion-view>

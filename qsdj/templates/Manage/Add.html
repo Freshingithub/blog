@@ -1,0 +1,32 @@
+<ion-view class="Add-view" view-title="增加">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a  href="#/system" class="button button-clear icon ion-ios-arrow-left"style="margin-left: 10px;color: #14aaee;"></a>
+        <div class="h1 title">增加</div>
+    </div>
+    <form name="addForm">
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item>
+                <span>用户名</span>
+                <input placeholder="请输入用户名" ng-model="username" name="username">
+            </ion-item>
+            <ion-item>
+                <span>姓名</span>
+                <input placeholder="请输入姓名" ng-model="name" name="name">
+            </ion-item>
+            <ion-item>
+                <span>手机号码</span>
+                <input placeholder="请输入手机号码" ng-model="phone" name="phone">
+            </ion-item>
+        </ion-list>
+
+
+    </ion-content>
+    <ion-footer-bar>
+        <div class="btnbar">
+            <button class="button button-block button-calm" ng-click="add(addForm.name,addForm.username,addForm.phone)">保存</button>
+
+        </div>
+    </ion-footer-bar>
+</form>
+</ion-view>

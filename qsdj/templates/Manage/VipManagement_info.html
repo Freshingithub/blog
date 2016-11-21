@@ -1,0 +1,33 @@
+<ion-view class="stable-bg">
+<div class="bar bar-header">
+	<a ng-click="$ionicGoBack()" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<div class="h1 title vip_titles">会员修改</div>
+</div>
+	<!-- 标题结束 -->
+<form name="editForm" ng-model="editForm" ng-submit="submitForm(editForm)"> 
+	<ion-content class="has-header">
+		<ul class="list">
+			<li class="item">
+				<label for="vip_name">
+					会员编号：{{items.customer_name}}
+				</label>
+			</li>
+			<li class="item">
+				<label for="vip_names">
+					姓名：<input type="text" id="vip_names" placeholder="请输入姓名" name="realname" ng-model="items.customer_realname">
+				</label>
+			</li>
+			<li class="item">
+				<label for="vip_tel">
+					手机号码：<input type="text" id="vip_tel" placeholder="请输入手机号码" name="phone" ng-model="items.customer_phone">
+				</label>
+			</li>
+		</ul>
+	</ion-content>
+
+	<!-- 页脚开始 -->
+	<ion-footer-bar class="bar bar-footer">
+		<button class="button btn_footer calm-bg light">确认修改</button>
+	</ion-footer-bar>
+</form>
+</ion-view>

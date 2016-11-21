@@ -1,0 +1,60 @@
+<ion-view class="setState">
+    <div class="bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <span class="head">
+            <input type="file" ng-show="flag" file-model="myFile" name="myFile" />
+            <img src="{{paperImg}}" ng-show="flag"/>
+        </span>
+        <div style="display: inline-block;height: 100%;">
+            <span ng-show="flag">
+                <p style="margin-top: 20px;" ng-bind="user.name"></p>
+                <p ng-bind="user.tel"></p>
+            </span>
+            <a class="icon" ui-sref="orderTabs.receiveOrder.inform" ng-show="flag">返回</a>
+             <span style="line-height: 96px;font-size: 16px;" ng-show="!flag">
+                未登录
+            </span>
+        </div>
+    </div>
+	<ion-content class="has-header" style="top: 100px;">
+        <ion-item ng-show="flag">
+            <div class="row" >
+                <a href="#/State" class="itemlink">
+                    <i class="icon ion-ios-gear-outline"></i>
+                    <span style="padding: 5px;">设置状态</span>
+                </a>
+            </div>
+        </ion-item>
+        <ion-item ng-show="flag">
+            <div class="row" >
+                <a href="#/Notice" class="itemlink">
+                    <img src="img/notice.jpg">
+                    <span style="padding: 5px;position: absolute">公告信息</span>
+                </a>
+            </div>
+        </ion-item>
+        <ion-item ng-show="!flag">
+            <div class="row" >
+                <a class="itemlink" ng-click="loginTip()">
+                    <i class="icon ion-ios-gear-outline"></i>
+                    <span style="padding: 5px;">设置状态</span>
+                </a>
+            </div>
+        </ion-item>
+       <ion-item ng-show="!flag">
+           <div class="row" >
+               <a class="itemlink" ng-click="loginTip()">
+                   <img src="img/notice.jpg">
+                   <span style="padding: 5px;position: absolute;">公告信息</span>
+               </a>
+        </div>
+       </ion-item>
+    </ion-content>
+    <ion-footer-bar style="height: 55px;border: none">
+        <div class="btnbar" ng-show="flag">
+            <button class="button button-block button-calm" style="margin: 0;height: 100%;font-size: 17px;"ng-click="exit()">退出</button>
+        </div>
+        <div class="btnbar" ng-show="!flag">
+            <button class="button button-block button-calm" style="margin: 0;height: 100%;font-size: 17px;"ui-sref="Login">登录</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

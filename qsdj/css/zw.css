@@ -1,0 +1,790 @@
+#dropOuts{
+	font-weight: 500;
+    font-size: 16px;
+    line-height: 34px;
+    position: absolute;
+    right: 16px;
+    color: #09a6ed;
+}
+/* Vip管理开始 */
+
+.pushRights{
+	float: right;
+	padding-left: 4px;
+}
+
+.vipEditPic{
+	width: 80px;
+	display: block;
+	padding: 10px 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bar .vip_titles{ 
+	font-weight: bolder;
+}
+
+.vip_tabs_underline .tab-item{ 
+	max-width: 100%;
+}
+
+.vip_info_items{ 
+	margin-bottom: 5%;
+}
+
+.vip_info_items img{ 
+	width: 70px; 
+	float: left;
+}
+
+.vip_info_details{
+	margin-bottom: 0; 
+	margin-left:85px;
+}
+
+.vip_name{
+	color: #09a6ed; 
+	font-weight: bold;
+}
+
+.vip_info_stars{ 
+	padding: 0;
+}
+
+.vip_info_stars>i{
+	font-size: 120%;
+}
+
+#M_info_m{
+	width: 16px;
+	height: 16px;
+	margin-top: 3px;
+	position: relative;
+	-webkit-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    outline: none;
+    background: none;
+    border: 0; 
+    top: -2px;
+    left: -2px;
+}
+
+#M_info_m:before{
+	width: 16px;
+	height: 16px;
+	content: "";
+    position: absolute;
+    background: #fff;
+    border: 1px solid #999;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#M_info_m:after{
+	width: 10px; 
+	height: 6px; 
+	content: "";
+	position: absolute; 
+	top: 4px; 
+	left: 3px; 
+	display: none;
+	border: solid #09a6ed;
+    border-width: 0 0 2px 2px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#M_info_m:checked:after{
+	display: block;
+}
+
+.vipPages{
+	background: #fff;
+}
+
+/* Vip管理结束 */
+
+
+/* 修改会员信息开始 */
+
+.bar .vip_titles .vip_info_back{ 
+	float: left;
+	padding: 0 10px; 
+	color: #09a6ed; 
+	font-size: 130%; 
+	font-weight: 600;
+}
+
+.row_titles{ 
+	width: 100%; 
+	height: auto; 
+	border-bottom: 1px solid #dcdcdc; 
+	padding: 0 5px; 
+	padding-bottom: 1px; 
+	font-weight: bold;
+	margin-bottom:6px;
+}
+
+.has-header .row_titles li{ 
+	width: 100%; 
+	height: auto; 
+	border: none; 
+	text-align: center; 
+	padding: 5% 3px;
+}
+
+.vip_moneys{ 
+	color:#09a6ed; 
+}
+
+.row_information{ 
+	margin-top: 0; 
+	font-weight: normal;
+}
+
+.vip_radios{ 
+	float: left; 
+	margin-left: 5px; 
+}
+
+.vip_radios .vip_radios input{ 
+	position: relative; 
+	top: 10%; 
+	left: 6px; 
+	width: 25px; 
+	height: 22px; 
+}
+
+.vip_radios input[type=checkbox]:before{
+	content:"";
+	width: 18px; 
+	height: 18px;
+	position: absolute;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid #393939; 
+	left: 8px; top: 1px; 
+	background: #fff;
+}
+
+.vip_radios input[type=checkbox]:after{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 7px;
+	top: 5px;
+	left: 12px;
+	border: solid #09a6ed;
+	border-width: 0 0 3px 3px; 
+	transform: rotate(-45deg);
+	display: none;
+}
+
+.bar .btn_footer{ 
+	width: 100%; 
+	height: 100%; 
+	font-size: 130%; 
+	text-align: center; 
+	display: block; 
+	background: #09a6ed;
+	color: #fff;
+}
+
+#vip_name,#vip_names,#vip_tel,#vip_levels,#vip_moneys{ 
+	display: inline-block; 
+	padding: 0; 
+	height: auto; 
+	line-height: auto; 
+	font-size: 112%;
+}
+
+#vip_add:before{ 
+	font-weight: 700; 
+	font-size: 150%;
+}
+
+/* 修改会员信息结束 */
+
+
+/* 代办理业务价格设置开始 */
+
+.bar .title .setting_back{ 
+	color: #09a6ed;
+}
+
+.setting_on{ 
+	width: 96%; 
+	height: auto; 
+	text-align: center; 
+	margin: 0 auto; 
+	display: block; 
+	font-size: 150%; 
+	margin-bottom: 5%;
+}
+
+.has-header .settingPrices>li{ 
+	font-family: "Microsoft YaHei";
+}
+
+.setting_right{ 
+	float: right; 
+	font-size: 110%; 
+}
+
+.moneys{
+	text-align: right; 
+	padding-right: 5%;
+}
+
+/* 代办理业务价格设置结束 */
+
+
+/* 价格设置开始 */
+
+.settingPricesOn{ 
+	width: 96%;
+	margin: 0 auto; 
+	height: auto; 
+	margin-bottom: 5%;
+}
+
+.setting_prices{ 
+	overflow: hidden;
+}
+
+.setting_prices>div{ 
+	text-align: center; 
+	font-family: "Microsoft YaHei"; 
+	padding: 0;
+}
+
+.setting_prices label,.setting_times .row{ 
+	padding: 0;
+}
+
+.setting_times .row .col{ 
+	text-align: center;
+	padding: 0;
+	color: #a7a7a7;
+}
+
+.setting_times .row .col input{ 
+	padding: 0; 
+	color: #a7a7a7; 
+	font-size: 120%;
+}
+
+.setting_onprices{ 
+	color: #09a6ed; 
+	padding: 0;
+}
+
+.setting_onprices .row,.setting_onprices .row .col{ 
+	padding: 0;
+}
+
+.setting_onprices .row .col{ 
+	line-height: 30px;
+}
+
+.setting_onprices input{ 
+	text-align: right; 
+	width: 100%; 
+	font-size: 120%; 
+	padding: 0;
+	color: #09a6ed;
+}
+
+.danwei{ 
+	text-align: left;
+}
+
+.price_detail{ 
+	width: 96%; 
+	height: auto; 
+	margin: 0 auto;
+}
+
+.price_detail dt{
+	color: #a7a7a7;
+}
+
+.price_detail>*{ 
+	padding: 2% 0; 
+	font-size: 90%; 
+	font-family: "Microsoft YaHei" ;
+}
+
+.price_detail dd img{ 
+	width: 8%; 
+	padding: 0 2%;
+}
+
+#timeDuan1,#timeDuan2,#sMoney{ 
+	display: inline-block; 
+	text-align: right; 
+	width: 30%; 
+	font-size: 16px; 
+	padding: 0; 
+	height: auto;
+}
+
+#timeDuan1{ 
+	margin-left: 20%;
+}
+
+.jian{ 
+	font-size: 20px; 
+	width: 5%; 
+	height: auto; 
+	display: inline-block; 
+	text-align: center;
+}
+
+#sMoney{ 
+	margin-left: 56%;
+}
+
+
+/* 支付管理开始 */
+
+.downloads{ 
+	position: absolute;
+	top: 5px; 
+	right: 8px;
+}
+
+.downloads:before{ 
+	font-weight: 700;
+}
+
+.payment_info{ 
+	padding: 0;
+}
+
+.payment_rows{ 
+	padding: 5px;
+}
+
+.payment_cols{ 
+	text-align: center; 
+	padding: 2px; 
+	margin: 0; 
+	margin-top: auto; 
+	margin-bottom: auto;
+}
+
+.payment_cols p{ 
+	font-size: 90%;
+}
+
+.payment_speed{ 
+	margin-left: 12%;
+}
+
+.payment_speed p{ 
+	color: #09a6ed;
+}
+
+.pay_icons{ 
+	width: 50px; 
+	height:50px;
+}
+
+.pay_times{ 
+	width: 20%;
+}
+
+/* 支付管理结束 */
+
+
+/* 系统管理开始 */
+
+.system_titles{ 
+	font-weight: 700; 
+	font-size: 100%;
+}
+
+.operators{ 
+	padding: 5px 10px;
+}
+
+.operators_titles{ 
+	font-weight: bold;
+}
+
+.operators_titles div{ 
+	text-align: center; 
+	font-size: 90%;
+}
+
+.operators_titles div i:before{ 
+	font-weight: bolder; 
+	font-size: 150%;
+}
+
+.operators_info{ 
+	margin-left: -5px;
+}
+
+.show_hide{ 
+	float: right;
+}
+
+.show_hide:before{ 
+	margin-left: 10px;
+}
+
+.operators_info div{ 
+	font-weight: normal; 
+	font-family: "Microsoft YaHei"; 
+	font-size: 85%; 
+	text-align: center; 
+	white-space: nowrap;
+}
+
+.operators_info div .edits{ 
+	color:#09a6ed; 
+	text-decoration: underline; 
+}
+
+.operators_info div .username,.operators_info div .name{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	text-align: center;
+}
+
+.operators_info div .usernames{
+
+	/* border: 1px solid #ccc;
+	background: #f8f8f8;*/
+	border-radius: 4px; 
+	box-shadow: 0 0 5px #ddd inset;
+}
+
+.vipBg{ 
+	background: #fff;
+}
+
+.vipMs p{ 
+	background:#f7f7f7;
+	margin-top: 16px;
+	-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, .3);
+	-moz-box-shadow:0 1px 1px rgba(0, 0, 0, .3);
+	padding: 6px 10px;
+	font-size: 120%;
+}
+
+ .vipMs_row{ 
+ 	padding: 0 5px;
+ }
+
+#vipAdd1,#vipAdd2,#vipAdd3,#vipAdd4,#vipAdd5,#vipAdd6,#vipAdd7,#vipAdd8,#vipAdd9,#vipAdd10,#vipAdd1:before,#vipAdd2:before,#vipAdd3:before,#vipAdd4:before,#vipAdd5:before,#vipAdd6:before,#vipAdd7:before,#vipAdd8:before,#vipAdd9:before,#vipAdd10:before{
+ 										width: 18px; 
+ 										height: 18px;
+ 										border-radius: 50%;
+ 									}
+
+#vipAdd1,#vipAdd2,#vipAdd3,#vipAdd4,#vipAdd5,#vipAdd6,#vipAdd7,#vipAdd8,#vipAdd9,#vipAdd10{ 
+						margin-right: 5px;
+						position: relative;
+    					-webkit-appearance: none;
+    					appearance: none;
+    					vertical-align: middle;
+    					outline: none;
+    					background: none;
+    					border: 0; 
+    					margin-top: -3px;
+					}
+
+#vipAdd1:before,#vipAdd2:before,#vipAdd3:before,#vipAdd4:before,#vipAdd5:before,#vipAdd6:before,#vipAdd7:before,#vipAdd8:before,#vipAdd9:before,#vipAdd10:before{
+					content: "";
+    				position: absolute;
+    				background: #fff;
+    				border: 1px solid #999;
+    				-webkit-border-radius: 50%;
+    				-moz-border-radius: 50%;
+    				border-radius: 50%;
+    				-webkit-background-clip: padding-box;
+    				-moz-background-clip: padding-box;
+    				background-clip: padding-box;
+    				-webkit-box-sizing: border-box;
+    				-moz-box-sizing: border-box;
+    				box-sizing: border-box;
+				}
+
+#vipAdd1:after,#vipAdd2:after,#vipAdd3:after,#vipAdd4:after,#vipAdd5:after,#vipAdd6:after,#vipAdd7:after,#vipAdd8:after,#vipAdd9:after,#vipAdd10:after{
+			width: 10px; 
+			height: 6px; 
+			content: "";
+			position: absolute; 
+			top: 5px; 
+			left: 4px; 
+			display: none;
+			border: solid #09a6ed;
+    		border-width: 0 0 2px 2px;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+#vipAdd1:checked:after,#vipAdd2:checked:after,#vipAdd3:checked:after,#vipAdd4:checked:after,#vipAdd5:checked:after,#vipAdd6:checked:after,#vipAdd7:checked:after,#vipAdd8:checked:after,#vipAdd9:checked:after,#vipAdd10:checked:after{
+
+						display: block;
+}
+
+.system_configuration{
+	text-align: right;
+	font-size: 70%;
+}
+
+.payment_info .system_config{ 
+	padding: 5% 0; 
+	background: #f4f4f4; 
+	padding-left: 10px; 
+}
+
+.repaire_info{ 
+	border: none; 
+	font-size: 130%; 
+	text-align: center;  
+	font-family:"Microsoft YaHei";
+}
+
+.repaire_info i{
+	display: inline-block;
+	width: 31px; 
+	height: 27px; 
+	background-size: 50%; 
+	background-position: center;
+	vertical-align: middle;
+	margin-right: 10px;
+	background: url(../img/system_notice.png) no-repeat;
+}
+
+.repaire_details{ 
+	border: none; 
+	white-space: normal;
+	font-family:"Microsoft YaHei"; 
+	font-size: 110%;
+}
+
+.repaire_details .repaire_details_col{ 
+	text-align: right;
+}
+
+.repaire_details .repaire_details_right{ 
+	font-size: 200%; 
+	color: #a7a7a7;
+}
+
+.photosFiles{ 
+	width: 100%; 
+	height: auto; 
+	border: none; 
+	margin-top: 1px;
+}
+
+.pic_files{ 
+	opacity: 0; 
+	position: absolute; 
+	top: 16px; 
+	width: 140px; 
+	height: 140px;
+}
+
+.add_pic{ 
+	font-size: 200%; 
+	text-align: center; 
+	display: block; 
+	line-height: 140px; 
+	color: #bebebe; 
+	width: 140px; 
+	height: 140px; 
+	border: 1px solid #a7a7a7; 
+	font-weight: bold; 
+}
+
+.photosFiles #mypic{
+    max-width: 150px;
+    max-height: 140px;
+    display: block;
+    margin-top: -140px;
+    float: right;
+    margin-right: 20px;
+
+}
+.sub_Title{
+	margin-top: 2px;
+	width: 100%;
+	height: 50px;
+	padding: 0!important;
+	background-color: #fff;
+}
+.sub_Title li{
+	text-align: center;
+	font-size: 18px;
+	color: #7C7C7C;
+	margin-top: 10px;
+	font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.flag2_list{
+	border-top: 1px solid #ddd ;
+}
+.flag2_li{
+	margin-bottom: 15px;
+	white-space: normal;
+	border: 0;
+}
+.sub_Title>.toSelect{
+	border-bottom: 2px solid #11C1F3;
+	color:#11C1F3 ;
+}
+/* 系统管理结束 */
+
+
+
+
+/* 余额提现管理开始 */
+
+.ti_cashPages{
+	margin-bottom: 10px;
+	border: none;
+	padding: 6px;
+}
+
+.ti_cashPages .ti_cashNum{
+	background-image: url(../img/orderm01.png);
+	background-repeat: no-repeat;
+	background-size: 8%;
+	background-position: left center ;
+	line-height: 3rem;
+	color: #333;
+	padding-left: 11%; 
+}
+
+.ti_cashPages .ti_cash i{
+	color: red;
+}
+
+.ti_cashPages .ti_cashTime{
+	line-height: 3rem;
+	color: #999;
+	text-align: right;
+}
+
+.colRight{ 
+	overflow: hidden;
+}
+
+.ti_cashPages .ti_cashDetails,.ti_cashPages .ti_cashOk{
+	width: 66px;
+	height: 30px;
+	display: block;
+	text-align: center;
+	line-height: 30px;
+	background: #09a6ed;
+	color: #fff;
+	font-size: 100%;
+	margin-top: 5px;
+	margin-left: 40%;
+	float: right;
+}
+
+.ti_cashPages .ti_cashOk{
+	margin-top: 6px;
+}
+
+.ti_cashPages .ti_cashNum img{
+	width: 6%;
+	margin-right: 6px;
+}
+
+.ti_cashPages .ti_cashOk1{
+	background: #cacaca;
+}
+
+/*操作员管理编辑*/
+/*Edit.html*/
+
+.Edit-view div,a,button,span,p{
+	font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+	text-decoration: none;
+	font-size: 14px;
+}
+.Edit-view .item input{
+	float: right;
+	text-align: right;
+	border: none;
+}
+.Edit-view .bar.bar-footer{
+	height: 120px;
+}
+.Edit-view .bar.bar-footer .btnbar{
+	width: 100%;
+}
+.Edit-view .bar.bar-footer .btnbar button{
+	height: 44px;
+	font-size: 17px;
+
+}
+
+/*操作员管理增加*/
+/*Add.html*/
+
+.Add-view div,a,button,span,p{
+	font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+	text-decoration: none;
+	font-size: 14px;
+}
+.Add-view .item input{
+	float: right;
+	text-align: right;
+	border: none;
+}
+.Add-view .bar.bar-footer{
+	height: 55px;
+}
+.Add-view .bar.bar-footer .btnbar{
+	width: 100%;
+}
+.Add-view .bar.bar-footer .btnbar button{
+	height: 100%;
+	font-size: 17px;
+	margin: 0;
+}
+
+
+
+/*权限管理编辑*/
+/*Permission.html*/
+
+.Permission-view div,a,button,span,p{
+	font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+	text-decoration: none;
+	font-size: 14px;
+}
+.Permission-view .bar.bar-footer{
+	height: 55px;
+}
+.Permission-view .bar.bar-footer .btnbar{
+	width: 100%;
+}
+.Permission-view .bar.bar-footer .btnbar button{
+	height: 100%;
+	font-size: 17px;
+	margin: 0;
+}

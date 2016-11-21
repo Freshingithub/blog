@@ -1,0 +1,348 @@
+/*设置状态*/
+/*set-state.html*/
+.setState{
+    background: #f7f7f7;
+}
+.setState div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+.setState .bar-header{
+    height: 100px;
+    background: #09a6ed;
+    position: relative;
+}
+.setState .bar-header span{
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    width: 108px;
+    position: relative;
+
+}
+.setState .bar-header span input{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.setState .bar-header span img {
+    width: 88%;
+    height: 100%;
+    border-radius:50% ;
+    color: #fff;
+}
+.setState .bar-header span.head{
+    float: left;
+    height: 100px;
+    padding: 10px;
+}
+
+.setState .bar-header .icon{
+    position: absolute;
+    right: 18px;
+    top: 37%;
+    font-size: 16px;
+    color: #fff;
+}
+
+.setState .icon.ion-ios-gear-outline{
+    padding: 0 5px;
+    font-size: 25px;
+    color: #ed0e33;
+}
+
+.setState .icon.ion-ios-gear-outline:before{
+    font-weight: bold;
+}
+.setState .item{
+    background: #f7f7f7;
+    padding: 10px;
+}
+.setState .itemlink img{
+    height: 35px;
+}
+.setState .itemlink{
+    position: relative;
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 30px !important;
+    width: 100%;
+}
+.setState .itemlink:before{
+    font-family: "iconfont";
+    position: absolute;
+    content: "\f054";
+    width: 13px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    right: 6px;
+    top: 50%;
+    margin-top: -8px;
+    color: #09a6ed;
+    font-size: 20px;
+}
+
+.setState .btnbar{
+    height: 100%;
+    width: 100%;
+}
+.State div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+.State .btnbar{
+    margin: auto 10px;
+
+}
+.State .notes{
+	padding-bottom: 35px;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+.gary{
+	 color: #a7a7a7;
+}
+/*当前订单*/
+.TaskNotice div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+.TaskNotice .col-75 p{
+    white-space: normal;
+}
+.TaskNotice .nd{
+    line-height: normal;
+    text-align: center;
+    background: #09a6ed;
+    margin-top: 60px;
+}
+.TaskNotice .nd p{
+    color: white;
+    padding: 3px;
+    cursor: pointer;
+}
+.TaskNotice .gary{
+    font-size: 14px;
+    color: #a7a7a7;
+}
+.TaskNotice .red{
+    font-size: 14px;
+    color: #e74040;
+}
+.TaskNotice .ndj{
+    line-height: normal;
+    text-align: center;
+    background: #09a6ed;
+    margin-top: 7px;
+}
+.TaskNotice .ndj .pad{
+    padding: 2px 0;
+    color: #ffffff;
+}
+.TaskNotice .cen{
+       border: 1px solid #4dbef2;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+    top: 100px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #09a6ed; 
+}
+.TaskNotice .cen .cenn{
+    padding-top: 26%;
+     color: #ffffff !important;
+}
+
+.TaskNotice .btnbar{
+    margin:auto 10px;
+    margin-top: 70px;
+}
+.TaskNotice .cem{
+    position: relative;
+    top: 50px;
+    
+}
+.TaskNotice .tex{
+    width: 100%;
+    background: #ebebeb;
+    -webkit-box-shadow:0px 4px 2px 0px #b0b0b0; 
+    -moz-box-shadow:0px 4px 2px 0px #b0b0b0;
+    box-shadow:0px 4px 2px 0px #b0b0b0;
+    margin-bottom: 3px;
+}
+.TaskNotice .te{
+    margin: auto 15px;
+}
+.myorder .nborderbf5:last-child {
+    margin-bottom: 80px;
+} 
+.TaskNotice .lang:last-child{
+    margin-bottom: 40px;
+}
+.TaskNotice .lang .operators_info .col-50{
+    color: #999;
+}
+.TaskNotice .edits.red {
+    color:#09a6ed!important;
+    text-decoration: none !important;
+}
+.edits.noline {
+    text-decoration: none !important; 
+}
+
+/*余额提现*/
+/*TakeCash.html*/
+.TakeCash-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+
+.TakeCash-view .item{
+    padding: 7px;
+    border: 1px solid #eee;
+}
+.TakeCash-view .item.item-input{
+    border: none;
+}
+.TakeCash-view .item.item-input .input-label{
+    color: #000;
+    font-size: 13px;
+}
+.TakeCash-view .GetCash-time{
+    width: 70%;
+    text-align: right;
+    padding: 7px;
+    color: #9f9f9f;
+}
+.TakeCash-view .CanTake{
+    background: #ebebeb;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    border-bottom: 2px solid #bdbdbd;
+    color: #979797;
+    margin-bottom: 1px;
+}
+.TakeCash-view .CanTake span{
+    color: #ff0000;
+    padding: 0 5px;
+}
+.TakeCash-view .money{
+    padding: 10px;
+    color: #000;
+}
+.TakeCash-view .money span{
+    margin: 0 7px;
+}
+.TakeCash-view .bar.bar-footer{
+    height: 52px;
+    border: none;
+}
+.TakeCash-view .btnbar{
+    width: 100%;
+
+}
+.TakeCash-view .btnbar button{
+    margin: 0;
+    height: 100%;
+    font-size: 16px;
+}
+/*余额提现管理详情*/
+/*TakeCashManage.html*/
+.TakeCashManage-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+
+.TakeCashManage-view .item{
+    padding: 7px;
+    border: 1px solid #eee;
+}
+.TakeCashManage-view .item.item-input{
+    border: none;
+}
+.TakeCashManage-view .item.item-input .input-label{
+    color: #000;
+    font-size: 15px;
+}
+
+.TakeCashManage-view .item.item-input span:last-child{
+    width: 70%;
+    text-align: right;
+    padding: 7px;
+    color: #9f9f9f;
+}
+.TakeCashManage-view .item p{
+    padding: 8px;
+}
+.TakeCashManage-view .item p span:last-child{
+    width: 78%;
+    display: inline-block;
+    text-align: right;
+}
+
+.TakeCashManage-view input[type=radio]{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    outline: none;
+    background: none;
+    border: 0;
+}
+
+
+.TakeCashManage-view input[type=radio]:before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 1px solid #999;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.TakeCashManage-view input[type=radio]:after{
+    display: none;
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #09a6ed;
+    border-radius: 50%;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.TakeCashManage-view input[type=radio]:checked:after{
+    display: block;
+}
+
+.TakeCashManage-view input[type=radio]:checked:before{
+    border: 1px solid #999;
+    background: #fff;
+}
+

@@ -1,0 +1,112 @@
+<ion-view class="ion-views" view-title="订单管理">
+    <div class="bar bar-header header-h">
+        <a class="button  icon ion-ios-arrow-left button-clear"  ng-click="$ionicGoBack()" style="margin: 0 0 0 10px;"></a>
+        <h1 class="h1 title">订单管理</h1>
+    </div>
+
+    <ion-tabs class="tabs-striped tabs-top consult-tab has-header">
+        <ion-tab title="已完成订单" on-select="on_select('suc')">
+            <ion-view>
+                <ion-content>
+                    <div ng-show="displaystatus" class="assumenoorder">
+                      <i class="ion ion-android-alert noordericon"></i>
+                      <p>当前没有订单</p>
+                    </div>
+                    <ion-list>
+                        <ion-item class="nborderbf5 nnopadding" ng-repeat="item in items" >
+                            <div class="row ndjkhdddiv">
+                                <div class="col-85">
+                                    <p>
+                                        <i class="ndjkhdd01"></i>
+                                        订单号:<span ng-bind="item.orderform"></span>
+                                    </p>
+                                    <p>
+                                        <i class="ndjkhdd02"></i>
+                                        出发地<span class="sp-group" ng-bind="item.setout"></span>
+                                    </p>
+                                    <p>
+                                        <i class="ndjkhdd04"></i>
+                                        目的地<span class="sp-group" ng-bind="item.destination"></span></p>
+                                    <p>下单时间:{{item.ordertime}}</p>
+                                </div>
+                                <div class="col-15">
+                                    <p class="ndjkhfwz Managemnt-list">
+                                        <b ng-bind="item.status"></b>
+                                    </p>
+                                    <div class=" Mg-Btn">
+                                        <div ng-if="item.order_type==1">
+                                            <p>预约</p>
+                                            <p><span ng-bind="item.estimate_money"></span>元</p>
+                                        </div>
+                                        <div ng-if="item.order_type==2">
+                                            <p>一键下单</p>
+                                            <p><span ng-bind="item.estimate_money"></span>元</p>
+                                        </div>
+                                        <div ng-if="item.order_type==3">
+                                            <p>代叫</p>
+                                            <p><span ng-bind="item.estimate_money"></span>元</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                    <ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore('suc')" distance="5%"></ion-infinite-scroll>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="未完成订单" on-select="on_select('not')">
+            <ion-view>
+                <ion-content>
+                    <div ng-show="displaystatus" class="assumenoorder">
+                      <i class="ion ion-android-alert noordericon"></i>
+                      <p>当前没有订单</p>
+                    </div>
+                    <ion-list>
+                        <ion-item class="nborderbf5 nnopadding" ng-repeat="item in items" >
+                            <div class="row ndjkhdddiv">
+                                <div class="mati-85">
+                                    <p style="position: relative">
+                                        <i class="ndjkhdd01"></i>
+                                        订单号:<span ng-bind="item.orderform"></span>
+                                        <a class="button button-clear qBtn" ng-click="cancelOrder(item.orderform)" ng-if="item.order_status==3">取消订单</a>
+                                    </p>
+                                    <p>
+                                        <i class="ndjkhdd02"></i>
+                                        出发地<span class="sp-group" ng-bind="item.setout"></span>
+                                    </p>
+                                    <p>
+                                        <i class="ndjkhdd04"></i>
+                                        目的地<span class="sp-group" ng-bind="item.destination"></span></p>
+                                    <p>下单时间:{{item.ordertime}}</p>
+                                </div>
+                                <div class="mati-15">
+                                    <p class="ndjkhfwz Managemnt-list">
+                                        <b ng-bind="item.status" ng-if="item.status=='已取消'"></b>
+                                        <a class="button button-clear qBtn" ng-click="payfor(item.orderform)" ng-if="item.pay_status==0&&item.status!='已取消'">待支付</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class=" Mg-Btn">
+                                <div ng-if="item.order_type==1">
+                                    <p>预约</p>
+                                    <p><span ng-bind="item.estimate_money"></span>元</p>
+                                </div>
+                                <div ng-if="item.order_type==2">
+                                    <p>一键下单</p>
+                                    <p><span ng-bind="item.estimate_money"></span>元</p>
+                                </div>
+                                <div ng-if="item.order_type==3">
+                                    <p>代叫</p>
+                                    <p><span ng-bind="item.estimate_money"></span>元</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                    <ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore('not')" distance="5%"></ion-infinite-scroll>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>
+

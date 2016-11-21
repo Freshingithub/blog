@@ -1,0 +1,107 @@
+<ion-view class="Myaccount-view" view-title="我的账户">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a ng-click="$ionicGoBack()" class="button button-clear icon ion-ios-arrow-left" style="margin-left: 10px;color: #14aaee;"></a>
+        <div class="h1 title">我的账户</div>
+    </div>
+    <div class="scroll-content has-header">
+        <ion-tabs class="tabs-striped tabs-top tabs-color-active-calm" ng-model="account">
+            <ion-tab title="<span class='tab-title'>余额充值</span>" >
+                <ion-view>
+                    <ion-content class="Myaccount-content">
+                        <form id="Myaccount_form" name="Myaccount_form" ng-model="Myaccount_form" novalidate>
+                        <div class="center">
+                            <div class="cirle">
+                                <p>当前余额</p>
+                                <em >{{account.current}}</em>元
+                            </div>
+                        </div>
+                        <ion-item style="padding: 5px;">
+                            <div class="row">
+                                <div class="col col-60" style="line-height: 34px;">
+                                    <span>充值金额</span>
+                                </div>
+                                <div class="col col-33">
+                                    <input type="number" placeholder="输入金额" ng-model="money" name="money" ng-pattern="/^[1-9]\d*$/" required/>
+                                </div>
+                                <div class="col "style="line-height: 30px;">
+                                    <span>元</span>
+                                </div>
+                            </div>
+                        </ion-item>
+                        <ion-list>
+                            <p style="padding: 7px;margin: 0;background: #dfdfdf;">选择支付方式</p>
+                            <ion-item>
+                                <div class="row">
+                                    <div class="col col-80">
+                                        <img src="img/weixin.jpg" >
+                                        <span>微信支付</span>
+                                    </div>
+                                    <div class="col col-20">
+                                    
+                                        <input type="radio" name="pay" ng-model="Myaccount_form.pay" value="微信支付"  />
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item>
+                                <div class="row">
+                                    <div class="col col-80">
+                                        <img src="img/aplay.jpg" >
+                                        <span>支付宝支付</span>
+                                    </div>
+                                    <div class="col col-20">
+                                        <input type="radio" name="pay" ng-model="Myaccount_form.pay" value="支付宝支付" />
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item>
+                                <div class="row">
+                                    <div class="col col-80">
+                                        <img src="img/unionPay.jpg" >
+                                        <span>网银支付</span>
+                                    </div>
+                                    <div class="col col-20">
+                                        <input type="radio" name="pay" ng-model="Myaccount_form.pay" value="网银支付" />
+                                    </div>
+                                </div>
+                            </ion-item>
+                        </ion-list>
+                        <div class="btnbar">
+                            <button type="submit" class="button button-block button-calm" ng-click="takeRecharge(Myaccount_form)">立即充值</button>
+                        </div>
+                        <p style="text-align: center;">充值金额用于抵扣代驾费，不支持退款</p>
+                        </form>
+                    </ion-content>
+                </ion-view>
+
+            </ion-tab>
+            <ion-tab title="<span class='tab-title'>账单明细</span>" on-select="get_billsList()">
+                <ion-view>
+                <ion-content class=" Myaccount-detail " >
+                    <ion-list>
+                        <ion-item>
+                            <p style="padding: 7px;">当前余额</p>
+                            <p>￥{{account.current}}</p>
+                        </ion-item>
+                        
+                        <ion-item ng-repeat="item in items">
+                            <span style="float:left;">
+                                <p>{{item.bills_type}}</p>
+                                <ul>
+                                    <li>
+                                        <span>{{item.bills_time}}</span>
+                                    </li>
+                                    <li>
+                                        <span>订单号：<em>{{item.bills_order}}</em></span>
+                                    </li>
+                                </ul>
+                            </span>
+                            <span style="float: right;line-height: 43px;font-size: 20px;color: #27934f;" ng-if="item.sign=='+'">{{item.sign}}<em>￥{{item.recharge_amount}}</em></span>
+                            <span style="float: right;line-height: 43px;font-size: 20px;color: #df7105;" ng-if="item.sign=='-'">{{item.sign}}<em>￥{{item.spending_amount}}</em></span>
+                        </ion-item>
+                    </ion-list>
+                </ion-view>
+                </ion-content>
+            </ion-tab>
+        </ion-tabs>
+    </div>
+</ion-view>

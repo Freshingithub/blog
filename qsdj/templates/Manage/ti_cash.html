@@ -1,0 +1,29 @@
+<ion-header-bar class="bar bar-header nheaderbarborderbottom">
+	<a href="#/vipm" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<h1 class="title ntextac">余额提现管理</h1>
+</ion-header-bar>
+		<ion-view>
+			<ion-content>
+				<ion-list>
+					 <ion-item class="ti_cashPages" ng-repeat="item in items">
+						<div class="row ti_cashPages">
+							<div class="col col-67">
+								<p class="ti_cashNum">提现单号：{{item.withdraw_number}}</p>
+								<p>会员名：{{item.driver_name}}</p>
+								<p>提现前预存款：{{item.account}}</p>
+								<p>提现后预存款：{{item.account_yue}}</p>
+								<p class="ti_cash">提现金额：<i>{{item.withdraw_money}}</i></p>
+							</div>
+							<div class="col col-33 colRight">
+								<p class="ti_cashTime">{{item.withdraw_datetime}}</p>
+								<a href="#/TakeCashManage" class="ti_cashDetails" ng-click="go(item.withdraw_id)">详情</a>
+								<p class="ti_cashOk" ng-if="item.withdraw_status=='00'">已确认</p>
+								<p class="ti_cashOk" ng-if="item.withdraw_status=='01'" ng-click="check(item.withdraw_id)">待确认</p>
+							</div>
+						</div>
+					</ion-item> 
+				</ion-list>
+				<ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-view>
+	

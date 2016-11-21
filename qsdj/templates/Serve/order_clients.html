@@ -1,0 +1,34 @@
+<ion-view>
+	<ion-content>
+		<div class="item" ng-if="telphone==null||address==null" >
+			当前还没有接到单，快去抢单...
+		</div>
+		<div class="list clearmargin" ng-if="telphone!=null||address!=null" >
+
+			<div class="item" >
+				<div class="row">
+					<div class="col col-25">电话：</div>
+					<div class="col col-33">{{telphone}}</div>
+					<div class="col"><a href="tel:{{telphone}}" class="button button-calm dial-btn">一键拨号</a></div>
+				</div>
+				<div class="row">
+					<div class="col col-25">地址：</div>
+					<div class="col col-75" style="white-space: normal">{{address}}</div>
+				</div>
+				<div class="row">
+					<div class="col col-33" style="line-height: 48px">位置地图：</div>
+					<div class="col col-67"><i class="iconstart"></i></div>
+
+				</div>
+				<div class="row">
+					<div class="col col-33"></div>
+					<div class="col col-67">
+						<a ui-sref="schoolAddressMap({address:address,destination:destination,location_point:location_point,start_lon:start_lon,start_lat:start_lat})">点击查看客户位置</a>
+
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- <app-map style="height:400px;" address="{{address}}"> </app-map> -->
+	</ion-content>
+</ion-view>

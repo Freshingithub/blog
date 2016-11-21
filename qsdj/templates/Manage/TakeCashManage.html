@@ -1,0 +1,62 @@
+<ion-view class="TakeCashManage-view">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a href="#/ti_cash" class="button button-clear icon ion-ios-arrow-left"style="margin-left: 10px;color: #14aaee;"></a>
+        <div class="h1 title">余额提现管理详情</div>
+    </div>
+    <ion-content class="has-header">
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">会员名</span>
+                <span >{{item.driver_name}}</span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">当前预存款</span>
+                <span>{{item.account_yue}}</span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">操作时间</span>
+                <span>{{item.date}}<i style="padding-left: 10px;">{{item.time}}</i></span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">提现金额</span>
+                <span >{{item.withdraw_money}}</span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">提现方式</span>
+                <span >支付宝</span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">支付宝帐号</span>
+                <span >{{item.zhifubao_num}}</span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <label class="item item-input">
+                <span class="input-label">支付宝真实姓名</span>
+                <span >{{item.real_name}}</span>
+            </label>
+        </ion-item>
+        <ion-item>
+            <p>
+                <span style="color: #000;display: inline-block;width: 22%;font-size: 15px;text-align: left;">到款状态</span>
+                <span ng-if="item.withdraw_status=='00'">
+                    <input type="radio" name="money" checked /><i style="padding: 5px;color: #000;">已确认</i>
+                </span>
+                <span  ng-if="item.withdraw_status=='01'">
+                    <input type="radio" name="money" checked /><i style="padding: 5px;color: #000;">待确认</i>
+                </span>
+            </p>
+
+        </ion-item>
+    </ion-content>
+</ion-view>

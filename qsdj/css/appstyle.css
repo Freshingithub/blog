@@ -1,0 +1,130 @@
+
+.btn.ash{  
+    background: #a7a7a7;
+}
+/*接单--任务通知*/
+.button.button-fixed{
+	min-height: initial;
+	padding: 6px 25px;
+	line-height: initial;
+	color:#fff;
+}
+.btn-calmm {
+	background-color: #09A6ED;
+}
+.btn-dom {
+	background-color: #a7a7a7;
+}
+.clearmargin {
+	margin-bottom: 0;
+}
+.templateList .item{
+	background: #09A6ED;
+	color:#fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.icolapa:after {
+	content: '';
+	display: inline-block;
+	height:33px;
+	width:34px;
+	margin-right:8px;
+	background: url('../img/2016-05-09_141011.png') no-repeat;
+	vertical-align: middle;
+}
+.teveList ion-item{
+	margin-bottom: 12px;
+}
+.teveList ion-item:last-child {
+	margin-bottom: 62px;
+}
+/*.border-tabs>.tabs {
+	border-top:1px solid #ddd !important;
+}*/
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+    border-width:0;
+}
+.center	{
+	text-align: center;
+}
+.popupicon {
+	text-align: center;
+	font-size: 82px;
+	color:#09A6ED;
+}
+/*接单--联系客户*/
+.iconstart:after {
+	content: '';
+	display: inline-block;
+	height:43px;
+	width:48px;
+	margin-right:8px;
+	background: url('../img/2016-05-09_170211.png') no-repeat;
+	vertical-align: middle;
+}
+.button.dial-btn {
+	min-height: initial;
+	line-height: normal;
+	background: #1C8BC0;
+	color:#fff;
+	padding:3px 12px;
+	border-radius: 8px;
+	box-shadow: 0px 1px 1px 1px #000;
+	margin-top: -7px;
+	margin-left: 20px;
+}
+/*实时计时器*/
+.timerpopup {
+	top: 25%;
+	height: 50%;
+}
+.timerpopup .popup {
+	width:300px;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 1);
+}
+.timerpopup .popup-head {
+    border-bottom: 0;  
+}
+.timerList li{
+	display: table-cell;
+	min-width:92px;
+	height:47px;
+	border-bottom:1px solid #969696;
+	border-right:1px solid #969696;
+	text-align: center;
+	line-height: 47px;
+	font-size:18px;
+	font-weight: bold;
+}
+.timerList li:last-child {
+	border-right:0;
+}
+.timerList li.item-h:before {
+    background: url(../img/2016-05-10_092650.png);
+}
+.timerList li.item-kilo:before {
+    background: url(../img/2016-05-10_100657.png);
+}
+.timerList li.item-cash:before {
+    background: url(../img/2016-05-10_100720.png);
+}
+.timerList li.item-i:before{
+	content: '';
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left:5px;
+}
+
+.timerList2 {
+	margin-bottom:20px;
+}
+.timerList2 li {
+	border-bottom: 0;
+	color:#21AFF0;
+}

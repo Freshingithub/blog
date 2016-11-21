@@ -1,0 +1,61 @@
+<ion-view class="Person-view" view-title="个人中心">
+    <div class="bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <span style="float: left">
+            <input type="file" file-model="myFile" name="myFile" ng-if="flag"><img ng-src="{{headImg}}" ng-if="flag"/>
+        </span>
+        <div style="display: inline-block;height: 100%;">
+            <span ng-if="flag">
+                <p style="margin-top: 20px;" ng-bind="user.name"></p>
+                <p ng-bind="user.tel"></p>
+            </span>
+            <a class="icon" ui-sref="OneKeyOder" ng-if="flag">返回</a>
+             <span style="line-height: 96px;font-size: 16px;" ng-if="!flag">
+                未登录
+            </span>
+        </div>
+    </div>
+    <ion-content class="has-header" style="top: 100px;">
+        <ion-list>
+            <ion-item>
+                <a class="itemlink" href="#/OrderManagement" ng-if="flag">
+                   <img src="img/order.jpg"><span>订单管理</span>
+                </a>
+                <a class="block" href="" ng-if="!flag" ng-click="logintip()">
+                    <img src="img/order.jpg"><span>订单管理</span>
+                </a>
+            </ion-item>
+            <ion-item>
+                <a class="itemlink" href="#/Myaccount" ng-if="flag">
+                   <img src="img/myaccount.jpg"><span>我的账户</span>
+                </a>
+                <a class="block" href="" ng-if="!flag" ng-click="logintip()">
+                    <img src="img/myaccount.jpg"><span>我的账户</span>
+                </a>
+            </ion-item>
+            <ion-item>
+                <a class="itemlink" href="#/Help" ng-if="flag">
+                    <img src="img/help.jpg"><span>帮助中心</span>
+                </a>
+                <a class="block" href="" ng-if="!flag" ng-click="logintip()">
+                    <img src="img/help.jpg"><span>帮助中心</span>
+                </a>
+            </ion-item>
+            <ion-item ng-if="flag">
+                <a class="itemlink" href="#/Register">
+                    <img src="img/apply.jpg"><span>申请代驾服务商</span>
+                </a>
+            </ion-item>
+            <ion-item ng-if="flag">
+                <a class="itemlink" href="#/Notice">
+                    <img src="img/notice.jpg" style="height: 35px;"><span>公告信息</span>
+                </a>
+            </ion-item>
+        </ion-list>
+        <div class="btnbar" ng-if="flag">
+            <a class="button button-block button-positive" ng-click="exit()">退出</a>
+        </div>
+        <div class="btnbar" ng-if="!flag">
+            <a class="button button-block button-positive" href="#/Login">登录</a>
+        </div>
+    </ion-content>
+</ion-view>

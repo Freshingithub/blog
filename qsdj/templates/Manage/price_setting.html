@@ -1,0 +1,82 @@
+<ion-header-bar class="bar bar-header">
+	<a href="#/vipm" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<div class="h1 title vip_titles">价格设置</div>
+</ion-header-bar>
+	<!-- 标题结束 -->
+
+<!-- <ion-tabs class="has-header tabs-top tabs-striped tabs-color-active-calm vip_tabs_underline" >
+	<ion-tab title="价格设置"> -->
+		<ion-view>
+			<ion-content>
+		<form name="priceForm" ng-model="priceForm" ng-submit="submitForm(priceForm)">
+		<ul class="list vip_list settingPrices">
+			<li class="item">时间段
+				<input type="time" value="08:00:00" id="timeDuan1" ng-model="start_time" name="start_time">
+				<span class="jian">-</span>
+				<input type="time" value="20:00:00" id="timeDuan2" ng-model="end_time" name="end_time">
+			</li>
+			<li class="item">价格
+				<input type="number" placeholder="10" id="sMoney" ng-model="number" name="number">
+			</li>
+		</ul>
+		<button  class="button button-calm setting_on">确定</button>
+		</form>	
+		<ul class="list settingPricesOn" >
+			<li class="item">
+				<div class="row setting_prices">
+					<div class="col col-50">时间段</div>
+					<div class="col col-50">起步价</div>
+				</div>
+			</li>
+			<li class="item" ng-repeat="prices in price">
+				<div class="row setting_prices">
+					<div class="col col-50 setting_times">
+						<div class="row">
+							<div class="col col-40">
+								{{prices.start_time}}
+							</div>
+							<div class="col col-20">-</div>
+							<div class="col col-40">
+								{{prices.end_time}}
+							</div>
+						</div>
+					</div>
+					<div class="col setting_onprices">
+						{{prices.initiate_rate}}元
+					</div>
+				</div>
+			</li>
+		</ul>
+		<dl class="price_detail">
+			<dt>价格说明：</dt>
+			<dd><img src="img/detail_icons.png" alt="">当前时段起步价为{{price[0].initiate_rate}}元，以开车起步时间为准。</dd>
+			<dd><img src="img/detail_icons.png" alt="">代驾里程超过10公里后，每5公里加收20元，不足5
+公里按5公里计算。</dd>
+			<dd><img src="img/detail_icons.png" alt="">30分钟免费等待，超出30分钟收费20元，不足30分
+钟按30分钟计算。</dd>	
+		</dl>
+			</ion-content>
+		</ion-view>
+	<!--</ion-tab>
+
+	<ion-tab title="代办理业务价格设置" ng-controller="backesCtrl">
+		 <ion-view>
+		<ion-content class="has-header">
+		<ul class="list vip_list settingPrices">
+			<li class="item">次数
+				<label>
+					<input type="number" class="setting_right moneys" value="0">
+				</label>
+			</li>
+			<li class="item">价格
+				<label>
+					<input type="number" class="setting_right moneys" value="0">
+				</label>
+			</li>
+		</ul>
+		<button class="button button-calm setting_on">确定</button>
+		
+			</ion-content>
+		</ion-view> 
+</ion-tab>-->
+<!-- </ion-tabs> -->

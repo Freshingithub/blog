@@ -1,0 +1,585 @@
+/*字体图标*/
+@font-face { font-family: 'iconfont'; src: url("font/iconfont.eot?20150908");
+    /* IE9*/
+    src: url("font/iconfont.eot?#iefix") format("embedded-opentype"), url("font/iconfont.woff?20150908") format("woff"), url("font/iconfont.ttf?20150908") format("truetype"), url("font/iconfont.svg#uxiconfont?20150908") format("svg");
+    /* iOS 4.1- */ }
+.iconfont { font-family: "iconfont" !important; font-size: 22px; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; }
+
+@font-face { font-family: 'usericons'; src: url("font/usericons.eot?uvjlf8"); src: url("font/usericons.eot?#iefixuvjlf8") format("embedded-opentype"), url("font/usericons.woff?uvjlf8") format("woff"), url("font/usericons.ttf?uvjlf8") format("truetype"), url("font/usericons.svg?uvjlf8#usericons") format("svg"); font-weight: normal; font-style: normal; }
+a, a:visited { color: #3c3c3c; -webkit-tap-highligh-color: transparent; }
+
+/*注册*/
+/*Register.html*/
+.Register-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+}
+.Register-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Register-view .item-stacked-label{
+    padding: 10px;
+    border: none;
+}
+
+.Register-view .item-stacked-label span{
+    padding: 5px;
+}
+
+.Register-view .item-stacked-label input{
+    padding: 5px;
+    border: 1px solid #0ba7ed;
+    height: 45px;
+}
+
+.Register-view  .camer{
+    border: 1px solid #0ba7ed;
+    font-size: 30px;
+    color: #0ba7ed;
+    position: relative;
+    width: 25%;
+}
+.Register-view  .camer img{
+    height: 100%;
+    width: 100%;
+}
+.Register-view  .camer .icon.ion-ios-camera{
+    position: absolute;
+    top:10px;
+    left: 39%;
+}
+.Register-view .list .row{
+    padding: 10px;
+}
+
+.Register-view .upload{
+    width: 100px;
+    height: 55px;
+    border: 1px solid #0ba7ed;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #0ba7ed;
+    position: relative;
+    overflow: hidden;
+    border:none;
+}
+.Register-view .upload img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #0ba7ed;
+}
+.Register-view  .upload input{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.Register-view .icon.ion-ios-plus-outline{
+    line-height: 50px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+/*登录*/
+/*Login.html*/
+.Login-view{
+    background: #f7f7f7;
+}
+.Login-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+.Login-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Login-view .list.list-inset{
+    margin: 20px auto;
+}
+
+.Login-view .list.list-inset label{
+    border-color: #eeeeee;
+}
+
+.Login-view  .btnbar{
+    margin: auto 10px;
+}
+
+/*规则协议*/
+/*Rule.html*/
+.Rule-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+.Rule-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Rule-view p{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/*预约代驾*/
+/*Booked.html*/
+.Booked-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+}
+.Booked-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Booked-view .center{
+    margin: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+.Booked-view .itemlink span{
+    color: #a7a7a7;
+}
+.Booked-view .itemlink{
+    position: relative;
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 30px !important;
+    width: 100%;
+}
+
+.Booked-view .itemlink:before{
+    font-family: "iconfont";
+    position: absolute;
+    content: "\f054";
+    width: 13px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    right: 6px;
+    top: 50%;
+    margin-top: -8px;
+    color: #ccc;
+    font-size: 20px;
+}
+.Booked-view .item .booked-time.row{
+    padding: 0;
+}
+.Booked-view .item .booked-time.row span{
+    font-size: 16px;
+}
+.Booked-view .item .booked-time.row .col-20{
+    line-height: 44px;
+}
+
+.Booked-view .item .booked-time input{
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    background: #fff;
+}
+.Booked-view .item .booked-time input[type=date]{
+    padding: 5px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.Booked-view .item .booked-time input[type=time]{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-size: 13px;
+}
+.Booked-view .list .item label{
+    padding: 0;
+    border: none;
+}
+
+.Booked-view .list .item label input::-ms-input-placeholder{
+    text-align: right;
+}
+.Booked-view .list .item label input::-webkit-input-placeholder{
+    text-align: right;
+}
+
+.Booked-view .btnbar{
+    margin: 120px 10px 0 10px;
+}
+/*个人中心*/
+/*Person.html*/
+.Person-view .bar-header{
+    height: 100px;
+    background: #09a6ed;
+    position: relative;
+}
+.Person-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Person-view .bar-header span{
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    width: 108px;
+    position: relative;
+}
+.Person-view .bar-header span input{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.Person-view .bar-header span img{
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    /*margin: 13px;*/
+    padding: 10px;
+    color: #fff;
+}
+.Person-view .bar-header .icon{
+    position: absolute;
+    right: 18px;
+    top: 37%;
+    font-size: 16px;
+    color: #fff;
+}
+.Person-view .list .item{
+    background: #f5f5f5;
+}
+.Person-view .block{
+    position: relative;
+}
+.Person-view .block span{
+    position: absolute;
+    top:12px;
+    padding: 0 5px;
+}
+.Person-view .itemlink{
+    position: relative;
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 30px !important;
+}
+.Person-view .itemlink:before{
+    font-family: "iconfont";
+    position: absolute;
+    content: "\f054";
+    width: 13px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    right: 6px;
+    top: 50%;
+    margin-top: -8px;
+    color: #0fa8ed;
+    font-size: 20px;
+}
+
+.Person-view .itemlink img{
+    height: 30px;
+}
+.Person-view .itemlink span{
+    position: absolute;
+    top: 3px;
+    padding: 0 10px;
+}
+.Person-view .btnbar{
+    margin: 40px 10px 0 10px;
+}
+
+/*我的账户*/
+/*Myaccount.html*/
+
+/*余额充值*/
+.Myaccount-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+    font-size: 14px;
+}
+.Myaccount-view{
+    background: #f7f7f7;
+}
+.Myaccount-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Myaccount-view .tabs-top > .tabs{
+    top: 0;
+}
+.Myaccount-view .scroll-content.has-header .tab-item{
+    max-width: 100%;
+}
+.Myaccount-view .Myaccount-content .center{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.Myaccount-view .Myaccount-content .center .cirle{
+    height: 140px;
+    width: 140px;
+    background: #09a6ed;
+    border-radius: 50%;
+    margin: 30px auto;
+    color: #fff;
+
+}
+.Myaccount-view .Myaccount-content .center .cirle p{
+    padding-top: 40px;
+    font-size: 17px;
+}
+.Myaccount-view .Myaccount-content .center .cirle em{
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+.Myaccount-view .Myaccount-content.has-tabs-top {
+    top: 49px;
+}
+
+.Myaccount-view .Myaccount-content .row .col.col-33 input{
+    width: 100%;
+    background: #dfdfdf;
+    padding: 5px;
+}
+
+
+.Myaccount-view .Myaccount-content .list .row input[type=radio] {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    outline: none;
+    background: none;
+    border: 0;
+}
+
+.Myaccount-view .Myaccount-content .list .row input[type=checkbox]{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    outline: none;
+    background: none;
+    border: 0;
+}
+
+.Myaccount-view .Myaccount-content .list .row input[type=radio]:before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #999;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.Myaccount-view .Myaccount-content .list .row input[type=checkbox]:before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid #999;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Myaccount-view .Myaccount-content .list .row input[type=radio]:checked:before{
+    border: 1px solid #999;
+    background: #fff;
+}
+
+.Myaccount-view .Myaccount-content .list .row input[type=checkbox]:checked:before {
+   border: 1px solid #999;
+    background: #fff;
+}
+.Myaccount-view .Myaccount-content .list .row input[type=radio]:after {
+    display: none;
+    content: "";
+    position: absolute;
+    width:14px;
+    height: 8px;
+    top: 6px;
+    left: 6px;
+    border: solid #09a6ed;
+    border-width: 0 0 2px 2px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.Myaccount-view .Myaccount-content .list .row input[type=checkbox]:after{
+    display: none;
+    content: "";
+    position: absolute;
+    width:14px;
+    height: 8px;
+    top: 6px;
+    left: 6px;
+    border: solid #09a6ed;
+    border-width: 0 0 2px 2px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.Myaccount-view .Myaccount-content .list .row input[type=radio]:checked:after{
+    display: block;
+}
+.Myaccount-view .Myaccount-content .list .row input[type=checkbox]:checked:after{
+    display: block;
+}
+.Myaccount-view .Myaccount-content .list .item{
+    padding: 5px;
+}
+.Myaccount-view .Myaccount-content .list .row{
+    position: relative;
+
+}
+.Myaccount-view .Myaccount-content .list .row .col.col-80 img{
+    height: 40px;
+}
+.Myaccount-view .Myaccount-content .list .row .col.col-80 span{
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    padding: 0 10px;
+
+}
+.Myaccount-view .Myaccount-content .list .row .col.col-20{
+    line-height: 36px;
+    text-align: center;
+}
+
+.Myaccount-view .Myaccount-content .btnbar{
+    margin: 20px 10px;
+    margin-bottom: 0;
+}
+/*账单明细*/
+
+/*tab距离顶部样式*/
+.Myaccount-view .Myaccount-detail.has-tabs-top {
+    top: 49px;
+}
+/*当前余额*/
+.Myaccount-view .Myaccount-detail .list .item:first-child{
+    background: #ececec;
+}
+.Myaccount-view .Myaccount-detail .list .item:first-child p:last-child{
+    font-size: 25px;
+    color: #04a4ec;
+    padding: 10px 0;
+}
+.Myaccount-view .Myaccount-detail .list .item{
+    padding: 10px;
+    border-color: #eee;
+}
+.Myaccount-view .Myaccount-detail .list .item p{
+    color: #363636;
+}
+.Myaccount-view .Myaccount-detail .list .item ul{
+    color: #a7a7a7;
+}
+.Myaccount-view .Myaccount-detail .list .item ul li{
+    float: left;
+}
+.Myaccount-view .Myaccount-detail .list .item ul li span{
+    font-size: 12px;
+    padding: 0 2px;
+}
+.Myaccount-view .itemlink{
+    position: relative;
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 30px !important;
+    width: 100%;
+}
+
+/*商务合作*/
+/*Cooperation.html*/
+
+.Cooperation-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+    font-size: 14px;
+}
+.Cooperation-view{
+    background: #f7f7f7;
+}
+
+.Cooperation-view .button.button-clear.icon.ion-ios-arrow-back:before{
+    line-height: 26px;
+}
+.Cooperation-view .center{
+    height: 200px;
+    text-align: center;
+}
+
+.Cooperation-view .center img{
+    height: 70%;
+    margin: 40px auto;
+}
+
+/*帮助中心*/
+/*Help.html*/
+.Help-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+    font-size: 14px;
+}
+.Help-view{
+    background: #f7f7f7;
+}
+.Help-view .button.button-clear.icon.ion-ios-arrow-back:before {
+    line-height: 26px;
+}
+.Help-view .itemlink{
+    position: relative;
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 30px !important;
+    width: 100%;
+}
+
+
+.Help-view .itemlink span{
+    position: absolute;
+    top:5px;
+    padding: 0 10px;
+}
+/*公告信息*/
+/*Notice.html*/
+.Notice-view div,a,button,span,p{
+    font-family: Helvetica, "STHeiti STXihei", "Microsoft YaHei", Tohoma, Arial;
+    text-decoration: none;
+    font-size: 14px;
+}
+.Notice-view .list .item{
+    margin-bottom: 10px;
+}
+.Notice-view .list .item p{
+    white-space: normal;
+    color: #000;
+}

@@ -1,0 +1,94 @@
+<ion-view view-title="接单">
+	<ion-content>
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<ion-list>
+			<ion-item ng-if="orderTab==null"  style="text-align: center;">
+				当前还没有接到单，快去抢单...
+			</ion-item>            
+            <ion-item class="nnopadding" ng-if="orderTab!=null" >
+                <div class="row">
+                    <div class="col col-23 col-offset-10">
+                        <div class="col-demo center">全程</div>
+                    </div>
+                    <div class="col col-67">
+                        <div class="col-demo"><em>{{orderTab.distance}}</em>公里</div>
+                    </div>
+                </div>
+                <p class="ndivider"></p>
+				<div class="row ndjkhdddiv">
+					<div class="col col-33">
+						<p><i class="ndjkhdd02"></i>出发地</p>
+					</div>
+					<div class="col col-67">
+						<p>{{orderTab.bespoke_address}}</p>
+					</div>
+				</div>
+				<div class="row ndjkhdddiv">
+					<div class="col col-33">
+						<p><i class="ndjkhdd04"></i>目的地</p>
+					</div>
+					<div class="col col-67">
+						<p>{{orderTab.destination}}</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-75 gary">
+						<div class="col-demo">{{orderTab.order_time}}</div>
+					</div>
+					<div class="col col-25">
+						<button class="button button-fixed btn-calmm" ui-sref="schoolAddressMap({address:orderTab.bespoke_address,destination:orderTab.destination,location_point:orderTab.location_point,start_lon:orderTab.start_lon,start_lat:orderTab.start_lat})">详情</button>
+					</div>
+				</div>
+   
+            </ion-item>   
+                
+        </ion-list>
+        <div class="list templateList clearmargin">
+			<div class="item">
+				<i class="icolapa"></i>新任务
+			</div>
+        </div>
+		
+		<ion-list class="teveList" >            
+            <ion-item class="nnopadding" ng-repeat="(x,order) in orders">
+                <div class="row">
+                    <div class="col col-23 col-offset-10">
+                        <div class="col-demo center">全程</div>
+                    </div>
+                    <div class="col col-67">
+                        <div class="col-demo"><em>{{order.distance}}</em>公里</div>
+                    </div>
+
+                </div>
+                <p class="ndivider"></p>
+				<div class="row ndjkhdddiv">
+					<div class="col col-33">
+						<p><i class="ndjkhdd02"></i>出发地</p>
+					</div>
+					<div class="col col-67">
+						<p>{{order.bespoke_address}}</p>
+					</div>
+				</div>
+				<div class="row ndjkhdddiv">
+					<div class="col col-33">
+						<p><i class="ndjkhdd04"></i>目的地</p>
+					</div>
+					<div class="col col-67">
+						<p>{{order.destination}}</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-75 gary">
+						<div class="col-demo" ng-show="order.order_type==1">{{order.bespoke_starttime}}</div>
+						<div class="col-demo" ng-show="order.order_type!=1">{{order.order_time}}</div>
+					</div>
+					<div class="col col-25">
+						<button ng-if="order.driver_id==0||order.driver_id==null" ng-click="gradOrder(order.order_id,x)" class="button button-fixed btn-calmm">抢单</button>
+						<button ng-if="order.driver_id!=0" class="button button-fixed btn-dom disabled">抢单</button>	
+					</div>
+				</div>
+   
+            </ion-item>         
+        </ion-list>
+	</ion-content>
+</ion-view>

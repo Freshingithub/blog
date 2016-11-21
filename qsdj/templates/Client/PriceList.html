@@ -1,0 +1,39 @@
+<ion-view view-title="价格表">
+    <div class="bar bar-header header-h">
+        <a class="button  icon ion-ios-arrow-left button-clear"  ng-click="$ionicGoBack()" style="margin: 0 0 0 10px;"></a>
+        <div class="h1 title">价格表</div>
+    </div>
+    <ion-content class="has-header">
+            <div class="list list-inset">
+                <div class="item PriceItem ">
+                    <ul class="row PriceRow">
+                        <li class="col col-75">开始时间</li>
+                        <li class="col col-25 lastLi">起步价</li>
+                    </ul>
+                </div>
+                <div class="item PriceItem" ng-repeat="prices in price">
+                    <ul class="row PriceRow" >
+                        <li class="col col-75">
+                            <span>{{prices.start_time}}-{{prices.end_time}}</span>
+                        </li>
+                        <li class="col col-25 lastLi">
+                            <div class="price">
+                                <b>￥</b>
+                                <h2>{{prices.initiate_rate}}</h2>
+                            </div>
+                            <p>含10公里</p>
+                        </li>
+                    </ul>
+                </div>
+              
+            </div>
+        <dl class="price_detail">
+            <dt></dt>
+            <dd><img src="img/detail_icons.png" alt=""><em>起步价：</em><b>费用以实际开车为准</b></dd>
+            <dd><img src="img/detail_icons.png" alt=""><em>里程费：</em><b>代驾里程超过10公里后，每5公里加收20元，不足5
+                公里按5公里计算。</b></dd>
+            <dd><img src="img/detail_icons.png" alt="">
+                <em>等候费：</em><b>等候不足15分钟不收费，每满15分钟收10元</b></dd>
+        </dl>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,99 @@
+<ion-view class="Permission-view">
+<form name="permissionsForm">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a  href="#/system" class="button button-clear icon ion-ios-arrow-left"style="margin-left: 10px;color: #14aaee;"></a>
+        <div class="h1 title">权限管理</div>
+    </div>
+    <ion-content class="has-header">
+        <ion-list>
+            <div class="vipMs">
+                <p>会员管理</p>
+                <div class="row vipMs_row">
+                    <div class="col col-33">
+                        <label for="vipAdd1">
+                            <input type="checkbox" id="vipAdd1"  ng-model="permissionsForm.canCtrl.adduser" ng-checked="checkCtrl.adduser" name="adduser" >会员添加
+                        </label>
+
+                    </div>
+                    <div class="col col-33">
+                        <label for="vipAdd2">
+                            <input type="checkbox" id="vipAdd2" ng-checked="checkCtrl.edituser" ng-model="permissionsForm.canCtrl.edituser" name="edituser">会员修改
+                        </label>
+
+                    </div>
+                    <div class="col col-33">
+                        <label for="vipAdd3">
+                            <input type="checkbox" id="vipAdd3" ng-checked="checkCtrl.deluser" ng-model="permissionsForm.canCtrl.deluser" name="deluser">会员删除
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="vipMs">
+                <p>服务商管理</p>
+                <div class="row vipMs_row">
+                    <div class="col col-33">
+                        <label for="vipAdd4">
+                            <input type="checkbox" id="vipAdd4" ng-checked="checkCtrl.serviceShenhe" ng-model="permissionsForm.canCtrl.serviceShenhe" name="serviceShenhe">服务商审核
+                        </label>
+                    </div>
+                    <div class="col col-33">
+                        <label for="vipAdd5">
+                            <input type="checkbox" id="vipAdd5" ng-checked="checkCtrl.serviceShezhi"  ng-model="permissionsForm.canCtrl.serviceShezhi" name="serviceShezhi">服务商设置
+                        </label>
+
+                    </div>
+                    <div class="col col-33">
+                        <label for="vipAdd6">
+                            <input type="checkbox" id="vipAdd6" ng-checked="checkCtrl.serviceChakan" ng-model="permissionsForm.canCtrl.serviceChakan" name="serviceChakan">查看服务商
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="vipMs">
+                <p>订单管理</p>
+                <div class="row vipMs_row">
+                    <div class="col col-33">
+                        <label for="vipAdd7">
+                            <input type="checkbox" id="vipAdd7" ng-checked="checkCtrl.orderChaxun" ng-model="permissionsForm.canCtrl.orderChaxun"  name="orderChaxun">订单查询
+                        </label>
+
+                    </div>
+                    <div class="col col-33">
+                        <label for="vipAdd8">
+                            <input type="checkbox" id="vipAdd8" ng-checked="checkCtrl.orderChuli" ng-model="permissionsForm.canCtrl.orderChuli" name="orderChuli">订单处理
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="vipMs">
+                <p>支付管理</p>
+                <div class="row vipMs_row">
+                    <div class="col col-33">
+                        <label for="vipAdd9">
+                            <input type="checkbox" id="vipAdd9" ng-checked="checkCtrl.infor" ng-model="permissionsForm.canCtrl.infor" name="infor">信息维护
+                        </label>
+
+                    </div>
+                    <div class="col col-33">
+                        <label for="vipAdd10">
+                            <input type="checkbox" id="vipAdd10" ng-checked="checkCtrl.download" ng-model="permissionsForm.canCtrl.download" name="download">数据下载
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar>
+        <div class="btnbar">
+            <button class="button button-block button-calm" ng-click="submitForm(permissionsForm,id)">保存</button>
+        </div>
+    </ion-footer-bar>
+</form>
+</ion-view>

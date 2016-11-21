@@ -1,0 +1,24 @@
+<ion-view view-title="正在拍单">
+    <div class="bar bar-header header-h">
+        <a class="button button-calm icon ion-ios-arrow-left button-clear"  ui-sref="OneKeyOder" style="margin: 0 0 0 10px;"></a>
+        <h1 class="h1 title">正在拍单</h1>
+        <a  class="button button-calm button-clear" ng-click="showConfirm()">取消订单</a>
+    </div>
+    <ion-content  class="has-header" style="height: 100%;">
+        <div id="allmap" style="height: 667px"></div>
+    </ion-content>
+    <ion-footer-bar class="foot-frame-inset" style="width: 90%;padding: 0;height: 122px;position: absolute;bottom: 10px" >
+    <div class="list list-inset  frame-inset">
+        <div class="item"  ng-click="account()">
+            <label for="目的地" class="icon ion-ios-location-outline"><span style="padding-left: 10px">目的地</span> </label>
+            <input type="text"  placeholder="点击选择目的地" ng-model="destinationmodel" style="vertical-align: initial;text-align: center;background-color: #fff;    width: 80%;" ng-disabled="true">
+        </div>
+        <div class="item frame-inset-i">
+            <i class="icon ion-social-yen"></i>
+            <span>预估价</span>
+            <span style="color: #e42112;font-weight: bold;margin-left: 100px;" ng-model="preestimateprice">{{preestimateprice}}元</span>
+            <button class="button-clear" ng-click="order()" style="position: absolute;right: 16px;font-size: 14px;color: #11c1f3;bottom: 8px;">确定</button>
+        </div>
+    </div>
+    </ion-footer-bar>
+</ion-view>

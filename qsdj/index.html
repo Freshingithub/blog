@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GtNsbGUnVhLterk9nG5GPLWRFVzvuDcv"></script> 
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+
+    <!--tyx-->
+    <link href="css/tyxstyle.css" rel="stylesheet">
+    <!--<script src="lib/Contact.js" ></script>-->
+    <!--<script src="lib/contacts.js" ></script>-->
+    <script src="lib/ionic/js/ionic.bundle.js" ></script>
+    
+    <link href="lib/ionic/css/icomoon.css" rel="stylesheet">
+    <script src="lib/ng-cordova.min.js" ></script>
+    <script src="cordova.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/tyxcontrollers.js"></script>
+    <script src="js/tyxroutes.js"></script>
+
+    <!--zw-->
+    <link href="css/zw.css" rel="stylesheet">
+    <script src="js/zw_controllers.js"></script>
+    <script src="js/zw_routes.js"></script>
+    <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+
+    <!--hjh-->
+    <link href="css/hjhstyle.css" rel="stylesheet">
+    <script src="js/hjhcontrollers.js"></script>
+    <script src="js/hjhroutes.js"></script>
+
+    <!--微信支付-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/pgwxpay.js"></script>
+
+
+    <!--zyz-->
+    <link href="css/zyzstyle.css" rel="stylesheet">
+    <script src="js/zyzcontrollers.js"></script>
+    <script src="js/zyzroutes.js"></script>
+    <!--ysj-->
+     <link href="css/appstyle.css" rel="stylesheet">
+    <script src="js/appcontrollers.js"></script>
+    <script src="js/appservices.js"></script>
+    
+     <!--nzf-->
+    <link href="css/nstyles.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/nrouters.js"></script>
+    <script type="text/javascript" src="js/ncontrollers.js"></script>
+    <!--推送-->
+    <script type="text/javascript">
+      var onDeviceReady = function () {
+        console.log("JPushPlugin:Device ready!");
+        initiateUI();
+      };
+
+      function getRegistrationID() {
+        window.plugins.jPushPlugin.getRegistrationID(onGetRegistradionID);
+      }
+
+      var onGetRegistradionID = function (data) {
+        try {
+
+          console.log("JPushPlugin:registrationID is " + data);
+
+          if (data.length == 0) {
+            var t1 = window.setTimeout(getRegistrationID, 1000);
+          }
+          $("#registrationid").html(data);
+        } catch (exception) {
+          console.log(exception);
+        }
+      };
+
+      var onTagsWithAlias = function (event) {
+        try {
+          console.log("onTagsWithAlias");
+          var result = "result code:" + event.resultCode + " ";
+          result += "tags:" + event.tags + " ";
+          result += "alias:" + event.alias + " ";
+          $("#tagAliasResult").html(result);
+        } catch (exception) {
+          console.log(exception)
+        }
+      };
+      //打开推送通知的操作，控制页面跳转方法
+      var onOpenNotification = function (event) {
+        try {
+          var alertContent;
+          var alertTitle;
+          //var href = window.location.href;
+          if (device.platform == "Android") {
+            alertContent = window.plugins.jPushPlugin.openNotification.alert;
+            alertTitle = window.plugins.jPushPlugin.openNotification.title;
+          } else {
+            alertContent = event.aps.alert;
+            alertTitle = "";
+          }
+          //alert("open Notificaiton:" + "title:" + alertTitle + "--content:" + alertContent);
+
+          var href = location.href;
+          var match = href.match(/#([\s\S]*)/);
+          match && (href = href.replace(match[1], ""));
+          //href = href.replace(/&&|&$/g, "");
+
+          href = href + "/inform" + "?title=" + alertTitle + "&alert=" + alertContent;
+          location.href = href;
+
+        } catch (exception) {
+          console.log("JPushPlugin:onOpenNotification" + exception);
+        }
+      };
+      var onReceiveNotification = function (event) {
+        try {
+          var alertContent;
+          if (device.platform == "Android") {
+            alertContent = window.plugins.jPushPlugin.receiveNotification.alert;
+          } else {
+            alertContent = event.aps.alert;
+          }
+          $("#notificationResult").html(alertContent);
+
+        } catch (exeption) {
+          console.log(exception)
+        }
+      };
+      var onReceiveMessage = function (event) {
+        try {
+
+          var message;
+          if (device.platform == "Android") {
+            message = window.plugins.jPushPlugin.receiveMessage.message;
+          } else {
+            message = event.content;
+          }
+          //var extras = window.plugins.jPushPlugin.extras
+          $("#messageResult").html(message);
+        } catch (exception) {
+          console.log("JPushPlugin:onReceiveMessage-->" + exception);
+        }
+      };
+
+      var initiateUI = function () {
+        try {
+          window.plugins.jPushPlugin.init();
+          getRegistrationID();
+
+          if (device.platform != "Android") {
+            window.plugins.jPushPlugin.setDebugModeFromIos();
+            window.plugins.jPushPlugin.setApplicationIconBadgeNumber(0);
+          } else {
+            window.plugins.jPushPlugin.setDebugMode(true);
+            window.plugins.jPushPlugin.setStatisticsOpen(true);
+          }
+        } catch (exception) {
+          console.log(exception);
+        }
+        $("#setTagWithAliasButton").click(function (ev) {
+//                 window.plugins.jPushPlugin.getApplicationIconBadgeNumber(function(data){
+//                     console.log(data);
+//                 });
+          try {
+            var tag1 = $("#tagText1").attr("value");
+            var tag2 = $("#tagText2").attr("value");
+            var tag3 = $("#tagText3").attr("value");
+            var alias = $("#aliasText").attr("value");
+            var dd = [];
+
+            if (tag1 == "" && tag2 == "" && tag3 == "") {
+            } else {
+              if (tag1 != "") {
+                dd.push(tag1);
+              }
+              if (tag2 != "") {
+                dd.push(tag2);
+              }
+              if (tag3 != "") {
+                dd.push(tag3);
+              }
+            }
+            window.plugins.jPushPlugin.setTagsWithAlias(dd, alias);
+
+          } catch (exception) {
+            console.log(exception);
+          }
+        })
+      };
+      document.addEventListener("jpush.setTagsWithAlias", onTagsWithAlias, false);
+      document.addEventListener("deviceready", onDeviceReady, false);
+      document.addEventListener("jpush.openNotification", onOpenNotification, false);
+      document.addEventListener("jpush.receiveNotification", onReceiveNotification, false);
+      document.addEventListener("jpush.receiveMessage", onReceiveMessage, false);
+      //jpush.receiveMessage
+    </script>
+  </head>
+  <body ng-app="24EApp" >
+  <!--<div ui-view="main"></div>-->
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <!--<ion-nav-bar>-->
+
+    <!--</ion-nav-bar>-->
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view>
+
+    </ion-nav-view>
+
+
+
+  </body>
+</html>

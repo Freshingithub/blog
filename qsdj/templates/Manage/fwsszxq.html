@@ -1,0 +1,27 @@
+<ion-header-bar class="bar bar-header nheaderbarborderbottom">
+	<a ng-click="$ionicGoBack()" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<h1 class="title ntextac">服务商设置</h1>
+</ion-header-bar>
+<ion-view>
+	<ion-content class="padding">
+		<img class="nfloatl nfwsszxqimg" ng-src="http://218.15.27.250:10080/houduan/Public/paperImage/{{itemssz.paper_img}}" alt="">
+		<div class="nfwsszxqdiv nfloatl">
+			<h4>{{itemssz.driver_name}}<em ng-if="itemssz.work_status==1">服务中</em><em ng-if="item.work_status==2">空闲</em></h4>
+			<p>手机:{{itemssz.driver_phone}}</p>
+			<p>地区:{{itemssz.work_address}}</p>
+			<p>代驾:{{itemssz.driver_serve_num}}次</p>
+			<p>驾龄:{{itemssz.driving_age}}年</p>
+			<p>驾照档案编号:{{itemssz.file_number}}</p>
+			<p ng-if="item.customer_level==1"><i class=" ion-android-star assertive"></i>
+			</p>
+			<p ng-if="item.customer_level==2"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+			</p>
+			<p ng-if="item.customer_level==3"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+			</p>
+			<p ng-if="item.customer_level==4"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+			</p>
+			<p ng-if="item.customer_level==5"><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i><i class=" ion-android-star assertive"></i>
+			</p>
+		</div>
+	</ion-content>
+</ion-view>

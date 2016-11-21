@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <form name="myForm">
+        <div class="bar bar-header header-h">
+            <a class="button  icon ion-ios-arrow-left button-clear"  ng-click="claseM()" style="margin: 0 0 0 10px;"></a>
+            <h1 class="h1 title">联系电话</h1>
+            <a  class="button button-clear" ng-click="closeTelModal(myForm)">保存</a>
+        </div>
+        <ion-content class="has-header padding">
+
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="tel" ng-pattern="/0?(13|14|15|18)[0-9]{9}/" placeholder="请输入手机号码" maxlength="11" minlength="11" ng-model="telphone" name="telphone" required>
+                </label>
+            </div>
+            <!--<a class="button button-block" style="background-color: #09a6ed !important;color: #fff" ng-click="findContactsBySearchTerm()">-->
+                <!--<span>从电话本导入</span>-->
+            <!--</a>-->
+        </ion-content>
+    </form>
+</ion-modal-view>

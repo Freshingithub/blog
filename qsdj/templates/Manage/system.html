@@ -1,0 +1,177 @@
+<ion-header-bar class="bar bar-header nheaderbarborderbottom">
+	<a href="#/vipm" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<h1 class="title ntextac">系统管理</h1>
+	
+</ion-header-bar>
+<ion-tabs class="has-header tabs-top tabs-striped tabs-color-active-calm">
+	<ion-tab title="操作员管理" class="system_titles">
+		<ion-view>
+			<ion-content>
+				<ion-list>
+					<ion-item class="operators">
+						<div class="row operators_titles">
+							<div class="col col-20">用户名</div>
+							<div class="col col-20">姓名</div>
+							<div class="col col-25">手机</div>
+							<div class="col">登录次数</div>
+							<div class="col col-10">
+								<i class="ion-ios-close-outline assertive"></i>
+							</div>
+						</div>
+					</ion-item>
+
+					<ion-item class="operators" ng-repeat="system in systems">
+						<div class="row operators_info">
+							<div class="col col-20 ">
+								<input type="text" class="username" value="{{system.username}}"  disabled />
+							</div>
+						
+							<div class="col col-20">
+								<input type="text" class="name" value="{{system.name}}" disabled />
+							</div>
+
+							<div class="col ">{{system.phone}}</div>
+							<div class="col">{{system.login_num}}</div>
+							<div class="col col-10">
+								<a href="#/Edit" class="edits" ng-click="edit(system.id)">编辑</a>
+							</div>
+						  
+						</div>
+					</ion-item>
+				</ion-list>
+				<div class="btnbar" style="margin: 30px 10px;">
+					<a class="button button-block button-positive" href="#/Add" ng-click="add()">增加</a>
+				</div>
+			</ion-content>
+		</ion-view>
+	</ion-tab>
+
+	<ion-tab title="权限管理" class="system_titles">
+		<ion-view>
+		
+			<ion-content class="vipBg">
+
+				<ion-list>
+					<ion-item class="operators">
+						<div class="row operators_titles">
+							<div class="col col-20">用户名</div>
+							<div class="col col-20">姓名</div>
+							<div class="col col-25">手机</div>
+							<div class="col">登录次数</div>
+							<div class="col col-10">
+								<i class="ion-ios-close-outline assertive"></i>
+							</div>
+						</div>
+					</ion-item>
+
+					<ion-item class="operators" ng-repeat="system in systems">
+						<form name="EditForm">
+							<div class="row operators_info">
+								<div class="col col-20 ">
+									<input type="text" class="username" value="{{system.username}}"  disabled />
+								</div>
+
+								<div class="col col-20">
+									<input type="text" class="name" value="{{system.name}}" disabled />
+								</div>
+
+								<div class="col ">{{system.phone}}</div>
+								<div class="col">{{system.login_num}}</div>
+								<div class="col col-10">
+									<a href="#/Permission" class="edits" style="text-decoration: none;" ng-click="revisions({{system.id}})">权限</a>
+								</div>
+							</div>
+						</form>
+					</ion-item>
+				</ion-list>
+			</ion-content>
+			
+		</ion-view>
+	</ion-tab>
+	<ion-tab title="系统配置" class="system_titles">
+		<ion-view>
+			<ion-content>
+				<ion-list>
+					<ion-item class="payment_info">
+						<div class="row rbac">
+							<div class="col">名称</div>
+							<div class="col rbac_notice system_configuration">e代驾4.4.2	
+							</div>
+						</div>
+					</ion-item>
+					<ion-item class="payment_info">
+						<div class="row rbac">
+							<div class="col">行业</div>
+							<div class="col rbac_notice system_configuration">网络科技
+							</div>
+						</div>
+					</ion-item>
+					<ion-item class="payment_info">
+						<div class="row rbac">
+							<div class="col">构架类型</div>
+							<div class="col rbac_notice system_configuration">B/S结构
+							</div>
+						</div>
+					</ion-item>
+					<ion-item class="payment_info">
+						<p class="system_config">B/S开发环境和技术</p>
+					</ion-item>
+
+					<ion-item class="payment_info">
+						<div class="row rbac">
+							<div class="col">采用技术</div>
+							<div class="col rbac_notice system_configuration">PHP+MySQL、angularjs、ionic
+							</div>
+						</div>
+					</ion-item>
+					<ion-item class="payment_info">
+						<div class="row rbac">
+							<div class="col">数据库技术</div>
+							<div class="col rbac_notice system_configuration">MySQL数据库
+							</div>
+						</div>
+					</ion-item>
+					<ion-item class="payment_info">
+						<div class="row rbac">
+							<div class="col">其它技术</div>
+							<div class="col rbac_notice system_configuration">Ajax 
+							</div>
+						</div>
+					</ion-item>
+							
+				</ion-list>
+			</ion-content>
+		</ion-view>
+	</ion-tab>
+	<ion-tab title="公告信息" class="system_titles">
+		<ion-view>
+		<form name="addForm" enctype="multipart/form-data">
+			<ion-content>
+				<ul class="row sub_Title">
+					<li class="col col-50" ng-click="sub_click1()" ng-class="{'toSelect':isSelect1}">新增公告</li>
+					<li class="col col-50" ng-click="sub_click2()" ng-class="{'toSelect':isSelect2}">历史公告</li>
+				</ul>
+				<ul class="list" ng-show="flag1" >
+					<li class="item ">描述</li>
+					<li class="item">
+						<textarea  id="textareas" cols="30" rows="10" placeholder="请输入你要填写的信息" name="cont" ng-model="cont"></textarea>
+					</li>
+					<li class="item photosFiles">
+						<i class=" icon ion-plus add_pic"></i>
+						<input type="file" class="pic_files" name="myFile" file-model="myFile">
+						<img ng-src="{{mypic}}" id="mypic">
+					</li>
+				</ul>
+
+				<ul class="list flag2_list" ng-show="flag2">
+                    <li class="item flag2_li"  ng-repeat="item in items">{{$index+1}}、{{item.notice}}</li>
+				</ul>
+
+			</ion-content>
+			<ion-footer-bar class="bar bar-footer" ng-show="flag1">
+				<button class="button btn_footer calm-bg light" ng-click="noticeForm(addForm.cont)">提交</button>
+			</ion-footer-bar>
+		</form>	
+		</ion-view>
+	</ion-tab>
+</ion-tabs>

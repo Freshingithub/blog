@@ -1,0 +1,65 @@
+
+<ion-header-bar class="bar bar-header nheaderbarborderbottom" ng-controller="paymentCtrl">
+	<a href="#/vipm" class="button button-clear button-calm icon ion-ios-arrow-left"></a>
+	<h1 class="title ntextac">支付管理</h1>
+	<form method="POST" action="http://218.15.27.250:10080/houduan/index.php/Manage/Pay/download?select=1" ng-if="select==1"><button type="button" class="button button-clear button-calm icon ion-ios-download-outline downloads" ng-click="downloads(1)" ></button></form>
+	<form method="POST" action="http://218.15.27.250:10080/houduan/index.php/Manage/Pay/download?select=2" ng-if="select==2"><button type="button" class="button button-clear button-calm icon ion-ios-download-outline downloads" ng-click="downloads(2)"></button></form>
+</ion-header-bar>
+<ion-tabs class="has-header tabs-top tabs-striped tabs-color-active-calm vip_tabs_underline">
+	<ion-tab title="支付流水日志" on-select="onselect(1)">
+		<ion-view>
+			<ion-content>
+				<ion-list ng-controller="paymentCtrl">
+					<ion-item class="payment_info" ng-repeat="payment in payments">
+						<div class="row payment_rows">
+							<div class="col payment_cols">
+								<p>今天</p>
+								<p>{{payment.time}}</p>
+							</div>
+							<div class="col payment_cols">
+								<img ng-src="img/payicon.png" alt=""class="pay_icons">
+							</div>
+							<div class="col payment_cols" ng-if="payment.bills_type=='recharge'">
+								<p>+{{payment.recharge_amount}}</p>
+								<p>充值账单号：{{payment.bills_order}}</p>
+							</div>
+							<div class="col payment_cols" ng-if="payment.bills_type=='spending'">
+								<p>-{{payment.real_price}}</p>
+								<p>路程：{{payment.distance}}公里</p>
+							</div>
+						</div>
+					</ion-item>
+				</ion-list>
+				<ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore(1)" distance="5%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-view>
+	</ion-tab>
+	<ion-tab title="月数据统计" on-select="onselect(2)">
+		<ion-view>
+			<ion-content>
+				<ion-list ng-controller="paymentCtrl" >
+					<ion-item class="payment_info" ng-repeat="paymonth in paymonths">
+						<div class="row payment_rows">
+								<div class="col payment_cols">
+								<p>{{paymonth.day}}</p>
+								<p>{{paymonth.time}}</p>
+							</div>
+							<div class="col payment_cols">
+								<img ng-src="img/payicon.png" alt=""class="pay_icons">
+							</div>
+							<div class="col payment_cols" ng-if="paymonth.bills_type=='recharge'">
+								<p>+{{paymonth.recharge_amount}}</p>
+								<p>充值账单号：{{paymonth.bills_order}}</p>
+							</div>
+							<div class="col payment_cols" ng-if="paymonth.bills_type=='spending'">
+								<p>-{{paymonth.real_price}}</p>
+								<p>路程：{{paymonth.distance}}公里</p>
+							</div>
+						</div>
+					</ion-item>
+				</ion-list>
+				<ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore(2)" distance="5%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-view>
+	</ion-tab>
+</ion-tabs>

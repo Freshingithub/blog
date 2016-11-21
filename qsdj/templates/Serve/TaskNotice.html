@@ -1,0 +1,162 @@
+<ion-view class="TaskNotice">
+	<div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a href="#" class="button button-clear button-calm " style="margin-left: 10px;"></a>
+        <div class="h1 title ">我的订单</div>
+    </div>
+   
+	<ion-tabs class="has-header tabs-top tabs-striped tabs-color-active-calm">
+    <ion-tab title="我的订单" >
+  
+            <ion-tabs  class="tabs-top tabs-striped" title="dds" style="top: 44px;">
+              <!--当前订单-->
+            <ion-tab title="当前订单" ng-controller="myorderCtrl" on-select="selecton()">
+                 <ion-view>
+                <ion-content>
+                    <div ng-show="displaystatus" class="assumenoorder">
+                      <i class="ion ion-android-alert noordericon"></i>
+                      <p>当前没有订单</p>
+                    </div>
+                   <ion-list class="myorder">
+                   <form name="takeOrder_form">
+                    <ion-item class="nborderbf5 nnopadding" ng-repeat="order in orders">
+                     <div class="row">
+                        <div class="col col-75 gary">
+                            <div class="col-demo">[{{order.order_type_show}}]{{order.order_time}}</div>
+                        </div>
+                        <div class="col col-25 red">
+                            <div class="col-demo">等待接单</div>
+                        </div>
+
+                     </div>
+                        <p class="ndivider"></p>
+
+                        <div class="row ndjkhdddiv">
+                            <div class="col-75">
+                                <p><i class="ndjkhdd02"></i>出发地:&nbsp;&nbsp;&nbsp;{{order.bespoke_address}}</p>
+                                <p><i class="ndjkhdd04"></i>目的地:&nbsp;&nbsp;&nbsp;{{order.destination}}</p>
+                                <p>{{order.estimate_price}}元({{order.distance}})公里</p>
+                            </div>
+                            <div class="col-25">
+                                <p class="ndjkhfwz"></p>
+                                  <p></p>
+                                    <p></p>
+                                <div class="nd" ng-click="goto(order.order_number)">
+                                   <p>去接单</p>
+                               
+                               </div>
+                                <!-- <div class="nd">
+
+                                </div>-->
+                                <!-- <div class="nd">
+                                </div> -->
+                                <!-- <input ng-model="order_id" style="display:none"> -->
+                                <!-- <div class="nd">
+                                    <p  ng-click="takeOrder(order.order_id)" ng-model="take" name="take">去接单</p>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </ion-item>
+                       </form>
+                </ion-list>
+                </ion-content>
+              </ion-view>
+            </ion-tab>
+            <!--当前订单-->
+            <!--历史订单-->
+            <ion-tab title="历史订单" ng-controller="mycurrentCtrl">
+              <ion-view>
+                <ion-content>
+                    <div ng-show="displaystatus" class="assumenoorder">
+                      <i class="ion ion-android-alert noordericon"></i>
+                      <p>当前没有订单</p>
+                    </div>
+                   <ion-list class="myorder">
+                    
+                       <ion-item class="nborderbf5 nnopadding" ng-repeat="current in currents">
+                        <p><span class="col-offset-10">{{current.order_time}}</span><span class="col-offset-25" style="color: #09a6ed;">{{current.pay_status_hans}}</span></p>
+                        <p class="ndivider"></p>
+                        <div class="row ndjkhdddiv">
+                            <div class="col-75">
+                                <p><i class="ndjkhdd02"></i>出发地:&nbsp;&nbsp;&nbsp;{{current.bespoke_address}}</p>
+                                <p><i class="ndjkhdd04"></i>目的地:&nbsp;&nbsp;&nbsp;{{current.destination}}</p>
+                            </div>
+                            <div class="col-25">
+                                <div class="ndj">
+                                    
+                                      <p class="pad">代驾消费</p>
+                                      <p class="pad">{{current.real_price}}元</p>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                        </ion-item>                    
+                    </ion-list>
+                    <ion-infinite-scroll ng-if="hasmore" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll> 
+                </ion-content>
+              </ion-view>
+            </ion-tab>
+            <!--历史订单-->
+        </ion-tabs>     
+    </ion-tab>
+    <!--帐号余额-->
+    <ion-tab title="帐号余额" ng-controller="mycashCtrl" on-select="onselect()">
+      <ion-view>
+        <ion-content style="background-color: #fff;">
+        <div class=" cen">
+          <div class="cenn">
+               <p >账户余额</p>
+               <p>{{account.account_yue}}元</p>
+          </div>
+        </div>
+           
+        </ion-content>
+      </ion-view>     
+    </ion-tab>
+    <!--帐号余额-->
+    <!--余额提现-->
+    <ion-tab title="余额提现" ng-controller="mycashCtrl" on-select="onselect()">
+        <ion-view >
+        <ion-content style="background-color: #fff;">
+        <div class=" cen" style="top:30px;">
+          <div class="cenn">
+               <p >账户余额</p>
+               <p>{{account.account_yue}}元</p>
+          </div>
+        </div>
+        <div class="col padding-left padding-right cem ">
+            <input type="number" class="col col-33 col-offset-33"  name="number" placeholder="输入提现金额" ng-model="number" style="background-color: #dcdcdc;text-align: center;">
+        </div>
+       <div class="btnbar">
+            <button type="button" class="button button-block button-positive" style="background-color: #09a6ed;" ng-click="setcash(number)">余额提现</button>
+           <!--<button type="button" class="button button-block button-positive" style="background-color: #09a6ed;" ui-sref="TakeCash">确定提现</button>-->
+       </div>
+            <div class="list">
+                    <div class="tex ">
+                        <div class="te ">历史记录</div>
+                    </div>
+                    <ion-item class="operators lang" ng-repeat="cash in cashs">
+                        <div class="row operators_info">
+                            <div class="col col-50">{{cash.withdraw_datetime}}</div>
+                            <div class="col col-33">提现金额</div>
+                            <!--<div class="col ">
+                                <a href="" class="edits">{{cash.withdraw_money}}</a>
+                            </div>-->
+                            <div class="col " style="text-align: right;">
+                                <a href="" class="edits red">{{cash.withdraw_money}}</a>
+                            </div>
+                           <!-- <div class="col 10" ng-if="cash.withdraw_status=='00'">
+                                <span class="edits noline">审核通过</span>
+                            </div>-->
+                        </div>
+                    </ion-item>
+                    
+            </div>
+        </ion-content>
+      </ion-view>
+    </ion-tab>
+    <!--余额提现-->
+</ion-tabs> 
+
+    
+</ion-view>

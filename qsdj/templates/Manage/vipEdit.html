@@ -1,0 +1,38 @@
+<ion-view class="Edit-view" view-title="编辑">
+    <div class="bar bar-header" style="box-shadow: 0 0 3px 1px #D9D9D9;">
+        <a  href="#/VipManagement" class="button button-clear icon ion-ios-arrow-left"style="margin-left: 10px;color: #14aaee;"></a>
+        <div class="h1 title">会员编辑</div>
+    </div>
+  <form name="editForm">
+    <ion-content class="has-header">
+        <ion-list>
+            
+            <!-- <ion-item> -->
+
+<!-- 
+                <img class="vipEditPic" src="img/vip_list01.png" /> -->
+            <!-- </ion-item> -->
+            <ion-item>
+                <span>会员编号</span>
+                <label style="float:right">{{items.customer_name}}</label>
+            </ion-item>
+            <ion-item>
+                <span>姓名</span>
+                <input ng-model="items.customer_realname" name="realname" placeholder="请输入姓名">
+            </ion-item>
+            <ion-item>
+                <span>手机号码</span>
+                <input ng-model="items.customer_phone" name="phone" placeholder="请输入手机号码">
+            </ion-item>
+           
+        </ion-list>
+
+    </ion-content>
+    <ion-footer-bar>
+        <div class="btnbar">
+            <button class="button button-block button-calm" ng-click="edit(editForm.realname,editForm.phone,items.id)">保存</button>
+            <button class="button button-block button-calm" ng-click="dele(items.id)">删除</button>
+        </div>
+    </ion-footer-bar>
+  </form>
+</ion-view>
