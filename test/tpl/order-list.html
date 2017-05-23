@@ -1,0 +1,186 @@
+<div class="order-list">
+	<div class="header">
+		<div class="search">
+			<div class="container">
+				<label class="search-area" for="txtsearch">
+					<input class="f-font14" ng-model="txtSearch" id="txtsearch" ng-keyup="myKeyup($event)" type="text" placeholder="请输入用户地址关键词">
+				</label>
+				<em ng-click="search()"></em>
+			</div>
+		</div>
+		<ul class="tab-title" ng-hide="orderStatus == 5 || orderStatus == 7">
+			<li ng-click="selectTab(1)">
+				<a ng-class="{'cur':orderStatus==1}" href="javascript:void(0)">待预约</a>
+			</li>
+			<li ng-click="selectTab(2)">
+				<a ng-class="{'cur':orderStatus==2}" href="javascript:void(0)">待服务</a>
+			</li>
+			<li ng-click="selectTab(4)">
+				<a ng-class="{'cur':orderStatus==4}" href="javascript:void(0)">待结算</a>
+			</li>
+		</ul>
+	</div>
+	<div ng-hide="!datalist.length" class="container">
+		<div
+		infinite-scroll='loadMore()'
+	    infinite-scroll-disabled='busy'
+	    infinite-scroll-parent="true"
+	    infinite-scroll-immediate-check="false"
+	    infinite-scroll-distance='0' style="{{ptNum}}">
+			<div class="items" ng-repeat="items in datalist" ui-sref="app.order-details({orderId : items.order_id})">
+				<div class="main">
+					<div class="title">
+						<h4>{{items.products[0].servicebrand_desc}}{{items.products[0].stantard_desc}}{{items.products[0].product_cate_name}}</h4>
+						<div class="button" style="flex-shrink: 0;">
+							<span ng-show="items.order_type == 1" class="show-tag tag-color-1">维修</span>
+							<span ng-show="items.order_type == 2" class="show-tag tag-color-2">安装</span>
+							<span ng-show="items.order_type == 4" class="show-tag tag-color-3">送修</span>
+							<span ng-show="items.in_or_out == 2" class="show-tag tag-color-4">保外</span>
+							<span ng-show="items.in_or_out == 1" class="show-tag tag-color-5">保内</span>
+							<span ng-show="items.products.length > 1" class="show-tag tag-color-6">多产品</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="text">
+							<p>
+								<span>{{items.full_name}}</span>
+								<span>{{items.tell}}</span>
+							</p>
+							<p>
+								{{areaDesc(items.area_desc)}}{{items.address}}
+							</p>
+						</div>
+						<div class="map" ui-sref="app.order-list.map({lat:items.lat,lng:items.lng,content:items.address})" ng-click="$event.stopPropagation();">
+							<span>地图</span>
+						</div>
+					</div>
+				</div>
+				<div class="foot">
+					<p ng-show="orderStatus == 7">
+						请按照约定时间上门服务
+					</p>
+					<p ng-hide="orderStatus == 7">{{returnExtendType(items.order_extend_type,items.order_extend_desc)}}</p>
+					<div class="button">
+						<label ng-show="(orderStatus == 2 || orderStatus == 3) && items.had_acce_order == 2" class="show-return" ui-sref="app.order-trace({type:2,orderId:items.order_id})" ng-click="$event.stopPropagation();">
+							<span class="small-button-2">配件进度</span>
+							<em ng-show="items.had_return_acce == 2"></em>
+						</label>
+						<label ng-show="items.servicetype == 110 && orderStatus == 1" class="show-return" ui-sref="app.check-order-express({'expressId': items.order_id})" ng-click="$event.stopPropagation();">
+							<span class="small-button-2">查看物流</span>
+							<!-- <em ng-show="items.had_return_acce == 2"></em> -->
+						</label>
+						<label ng-show="orderStatus == 4 || orderStatus == 5" class="show-return" ng-click="$event.stopPropagation();" ui-sref="app.details-of-charges({orderId:items.order_id})">
+							<span class="small-button-2">费用明细</span>
+						</label>
+						<label ng-show="orderStatus == 1" class="show-return" ng-click="uploadClick(items.order_id);$event.stopPropagation();">
+							<span class="small-button">上传预约</span>
+						</label>
+						<label ng-show="orderStatus == 2" class="show-return" ng-click="uploadReport(items.products,items.order_id);$event.stopPropagation();">
+							<span class="small-button">上传报告</span>
+						</label>
+						<label ng-show="orderStatus == 7" class="show-return">
+							<span class="small-button">查看详情</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="items">
+				<div class="main">
+					<div class="title">
+						<h4>乐视液晶电视80寸</h4>
+						<div class="button">
+							<span class="show-tag tag-color-1">维修</span>
+							<span class="show-tag tag-color-5">保内</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="text">
+							<p>
+								<span>赵小娜</span>
+								<span>13335523187</span>
+							</p>
+							<p>
+								海珠区龙头街四海为家路616号B栋502
+							</p>
+						</div>
+						<div class="map">
+							<span>地图</span>
+						</div>
+					</div>
+				</div>
+				<div class="foot">
+					<p>距上门还有01小时05分钟</p>
+					<div class="button">
+						<label class="show-return">
+							<span class="small-button-2">配件进度</span>
+						</label>
+						<label class="show-return">
+							<span class="small-button">上传预约</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="items">
+				<div class="main">
+					<div class="title">
+						<h4>乐视液晶电视80寸</h4>
+						<div class="button">
+							<span class="show-tag tag-color-1">维修</span>
+							<span class="show-tag tag-color-5">保内</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="text">
+							<p>
+								<span>预约上门时间</span>
+								<span>12月20日</span>
+								<span>17:20</span>
+							</p>
+							<p>
+								<span>赵小娜</span>
+								<span>13335523187</span>
+							</p>
+							<p>
+								海珠区龙头街四海为家路616号B栋502
+							</p>
+						</div>
+						<div class="map">
+							<span>地图</span>
+						</div>
+					</div>
+				</div>
+				<div class="foot">
+					<p>距上门还有01小时05分钟</p>
+					<div class="button">
+						<label class="show-return">
+							<span class="small-button-2">配件进度</span>
+							<em></em>
+						</label>
+						<label class="show-return">
+							<span class="small-button">上传预约</span>
+						</label>
+					</div>
+				</div>
+			</div> -->
+			<!-- <div ng-show='reddit.busy'>Loading...</div> -->
+			<div ng-show='busy'>Loading...</div>
+		</div>
+	</div>
+	<div ng-show="defaultList" class="view-null save-info-success">
+		<div class="content">
+			<div class="tips">
+				<img src="img/default_list.png">
+				<p>您暂时没有该状态工单</p>
+			</div>
+		</div>
+	</div>
+	<div ng-show="defaultSearchList" class="view-null save-info-success">
+		<div class="content">
+			<div class="tips">
+				<img src="img/default_search.png">
+				<p>搜索不到与该地址有关的工单</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="below-view" ui-view ng-show="showView"></div>

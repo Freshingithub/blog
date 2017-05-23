@@ -1,0 +1,93 @@
+<div class="teal-record" style="height:100%;overflow:scroll;">
+    <ul class="teal-record-nav border-bottom">
+        <li ng-class="{'hover':orderStatus == 0}"  ng-click="selectTab(0)">
+            <a href="javascript:void(0)">
+                全部
+            </a>
+        </li>
+        <li ng-class="{'hover':orderStatus == 1}" ng-click="selectTab(1)">
+            <a href="javascript:void(0)">
+                收入
+            </a>
+        </li>
+        <li ng-class="{'hover':orderStatus == 2}" ng-click="selectTab(2)">
+            <a href="javascript:void(0)">
+                提现
+            </a>
+        </li>
+        <li ng-class="{'hover':orderStatus == 3}" ng-click="selectTab(3)">
+            <a href="javascript:void(0)">
+                其他
+            </a>
+        </li>
+    </ul>
+    <ul class="teal-record-list"
+        infinite-scroll='loadMore()'
+        infinite-scroll-disabled='busy'
+        infinite-scroll-parent="true"
+        infinite-scroll-immediate-check="false"
+        infinite-scroll-distance='0'
+        style="padding-bottom:60px;" ng-show="datalist">
+        <li ng-repeat="items in datalist" class="border-bottom">
+            <!--判断是否有跳转资金调整详情-->
+            <div class="list-top">
+                <div class="else-show" ui-sref="app.money-change-details({orderId : items.id})" ng-show="items.type == 3"></div>
+                <div class="else-show" ui-sref="app.order-details({orderId : items.id})" ng-show="items.type == 1"></div>
+                <div>
+                    <h4>
+                        {{items.title}}
+                        <span ng-show="items.type == 1 && type_other_1[items.other]" ng-class="typeOneCoolr[items.other]">
+                            {{type_other_1[items.other]}}
+                        </span>
+                    </h4>
+                    <span>
+                        {{items.add_time * 1000 | date:'MM' }}月{{items.add_time * 1000 | date:'dd' }}日&nbsp;{{items.add_time * 1000 | date:'HH:mm' }}&nbsp;&nbsp;
+                        <span ng-show="items.type == 1">
+                            {{items.remarks}}
+                        </span>
+                        <span ng-show="items.type == 2">
+                            {{type_other_2[items.other]}}
+                        </span>
+                        <span ng-show="items.type == 3">
+                            {{items.remarks}}
+                        </span>
+                    </span>
+                </div>
+                <div class="padding-2" ng-class="items.money < 0 ? 'num-block' : 'num-blue'">
+                    {{items.money < 0 ? '' : '+'}}{{items.money}}
+                    <span ng-hide="items.type == 2"></span>
+                </div>
+            </div>
+            <div class="error-return" ng-if="items.type == 2 && items.other == 2">
+                <span class="fir">
+                    {{items.remarks ? items.remarks : ''}} 退款已返回余额
+                </span>
+                <span class="last">
+                    {{mathFloor(items.money)}}
+                </span>
+            </div>
+        </li>
+    </ul>
+    <div class="teal-record-bottom border-top" ng-show="datalist">
+        <p ng-show="orderStatus == 0">
+            账户余额: ¥{{data.counts}}
+        </p>
+        <p ng-show="orderStatus == 1">
+            工单累计收入: ¥{{data.counts}}
+        </p>
+        <p ng-show="orderStatus == 2">
+            累计提现: ¥{{data.counts}}
+        </p>
+        <p ng-show="orderStatus == 3">
+            累计调整: ¥{{data.counts}}
+        </p>
+    </div>
+    <div class="data-no" ng-show="!datalist">
+        <div>
+            <img src="./img/default_emptyicon.png">
+            <h4>
+                暂无交易记录
+            </h4>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="wallet-balance">
+    <div ui-sref="app.teal-record">
+        <p>钱包余额
+            <span>
+                (元)
+            </span>
+        </p>
+        <p>
+            {{money}}
+        </p>
+    </div>
+    <ul>
+        <li>
+            <p>
+                累计收入
+                <span>
+                    &nbsp;(元)
+                </span>
+            </p>
+            <p>
+                {{incomed}}
+            </p>
+        </li>
+        <li>
+            <p>
+                提现中
+                <span>
+                    &nbsp;(元)
+                </span>
+            </p>
+            <p>
+                {{extracting}}
+            </p>
+        </li>
+        <li ng-click="goOrderListFour();">
+            <p>
+                待结算
+                <span>
+                    &nbsp;(单)
+                </span>
+            </p>
+            <p>
+                {{order_num}}
+            </p>
+        </li>
+    </ul>
+    <button ng-click="goApplyCrash();">
+     <!-- ui-sref="app.verify-password({type: 5})" -->
+        申请提现
+    </button>
+</div>

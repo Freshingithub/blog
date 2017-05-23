@@ -1,0 +1,64 @@
+<div class="order-trace">
+	<ul class="tab-title">
+		<li>
+			<a href="javascript:void(0)" ng-click="selectTab(1)" ng-class="{'cur': type == 1}">工单</a>
+		</li>
+		<li>
+			<a href="javascript:void(0)" ng-click="selectTab(2)" ng-class="{'cur': type == 2}">配件单</a>
+		</li>
+		<li>
+			<a href="javascript:void(0)" ng-click="selectTab(3)" ng-class="{'cur': type == 3}">费用单</a>
+		</li>
+	</ul>
+	<div class="container">
+		<div class="order-status" ng-if="type == 1">
+			<ul>
+				<li ng-repeat="items in formData.data_list">
+					<p class="icon"><span>{{operationData[items.ope_role][items.ope_type]}}</span><span>{{items.add_time * 1000 | date:'yyyy-MM-dd HH:mm'}}</span></p>
+					<p class="b-border">{{items.operation}}</p>
+				</li>
+			</ul>
+		</div>
+		<div class="parts-apply-for" ng-if="type == 2">
+			<ul>
+				<li ng-repeat="items in formData.data_list" ui-sref="app.part-details({partId:items.id})">
+					<div>
+						<p>配件：{{items.acce_name}}</p>
+						<span>{{statusList[items.acce_status]}}</span>
+					</div>
+					<em></em>
+				</li>
+			</ul>
+			<div ng-show="defaultList" class="view-null save-info-success" style="height:450px;">
+				<div class="content">
+					<div class="tips">
+						<img src="img/default_armature.png">
+						<p>该工单暂无配件单</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="parts-apply-for" ng-if="type == 3">
+			<ul>
+				<li ng-repeat="items in formData.data_list" ui-sref="app.deal-flow-status({costsId:items.id})">
+					<div>
+						<p>{{costTypeList[items.cost_type]}}</p>
+						<span>{{costStatusList[items.cost_status]}}</span>
+					</div>
+					<div class="money">
+						<p>￥{{items.money}}</p>
+						<em></em>
+					</div>
+				</li>
+			</ul>
+			<div ng-show="defaultList" class="view-null save-info-success" style="height:450px;">
+				<div class="content">
+					<div class="tips">
+						<img src="img/default_list.png">
+						<p>该工单暂无费用单</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

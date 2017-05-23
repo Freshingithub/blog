@@ -1,0 +1,41 @@
+<div class="user-main">
+	<div class="user-info border-bottom">
+		<div class="user-info-inside">
+			<img ng-src="{{worker.thumb ? worker.thumb : 'img/big_addphoto.png'}}">
+			<h4>
+				{{worker.nickname}}
+				<span ng-if="worker.is_complete_info == 1"></span>
+			</h4>
+		</div>
+		<div class="dianzan-wrap border-top border-bottom">
+			<span class="fir">{{satisfy.satisfy}}</span>
+			<span class="sec">{{satisfy.unsatisfy}}</span>
+		</div>
+	</div>
+	<div class="info-list">
+		<ul>
+			<li ui-sref="app.my-info" class="border-bottom">
+				<span class="my-info"></span>
+				<h4>我的信息</h4>
+				<em></em>
+			</li>
+			<li ui-sref="app.worker-address" class="border-bottom">
+				<span class="recipients-info"></span>
+				<h4>收件人信息</h4>
+				<em></em>
+			</li>
+			<!-- <li ng-click="getCardDetails();"> -->
+			<li ui-sref="app.my-card" class="border-bottom">
+				<span class="thi-info"></span>
+				<h4>我的银行卡</h4>
+				<em></em>
+			</li>
+			<!-- <li ui-sref="app.change-password"> -->
+			<li ng-click="updatePassword();" class="border-bottom">
+				<span class="fou-info"></span>
+				<h4>修改提现密码</h4>
+				<em></em>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,127 @@
+<style type="text/css">
+    select {
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+    }
+</style>
+<div class="{{card_info.had_card ? 'my-card-details' : 'card-details'}}" ng-hide="is_verify">
+<!-- <div ng-class="card_info.had_card ? 'my-card-details' : 'card-details'" ng-hide="is_verify"> -->
+    <p ng-show="!card_info.had_card">
+        提现的金额将会汇款到以下的银行卡中, 请认真填写银行卡信息。
+    </p>
+    <ul>
+        <li class="border-bottom border-top">
+			<span class="title">
+				姓名
+			</span>
+            <input type="text" ng-model="card_info.nickname" ng-disabled='true' placeholder="输入开户人姓名" ng-show="!card_info.had_card">
+            <span ng-show="card_info.had_card">
+                {{card_info.nickname}}
+            </span>
+        </li>
+        <li class="border-bottom">
+			<span class="title">
+				开户银行
+			</span>
+            <select ng-model="bank_id" ng-options="bank.bank_id as bank.bank_name for bank in banks" style="width: 100%;" ng-disabled="card_info.had_card" ng-change="bankChange();" ng-show="!card_info.had_card">
+                <option value="" style="color: #a5a8a8">请选择开户银行</option>
+            </select>
+            <span ng-show="card_info.had_card">
+                {{bank_id}}
+            </span>
+            <em></em>
+        </li>
+        <li ng-show="is_other_bank" class="border-bottom">
+            <span class="title">
+                银行名称
+            </span>
+            <input type="text" placeholder="请填写银行名称" ng-model="other_bank_name" ng-show="!card_info.had_card">
+            <span ng-show="card_info.had_card">
+                {{other_bank_name}}
+            </span>
+        </li>
+        <li ng-click="selectBankCity();" class="border-bottom">
+			<span class="title">
+				开户城市
+			</span>
+            <input type="text" placeholder="请选择开户城市" disabled ng-model="showAddress.area_ids_desc" ng-show="!card_info.had_card">
+            <span ng-show="card_info.had_card">
+                {{showAddress.area_ids_desc}}
+            </span>
+            <em></em>
+        </li>
+        <li class="border-bottom border-top">
+			<span class="title">
+				银行卡号
+			</span>
+            <input type="tel" placeholder="请填写卡号" ng-model="card_number" ng-disabled="card_info.had_card" ng-change="account()" ng-show="!card_info.had_card">
+            <span ng-show="card_info.had_card">
+                {{card_number}}
+            </span>
+        </li>
+    </ul>
+    <div ng-if="!card_info.had_card" class="button">
+        <input class="small-button" type="button" value="确认添加" ng-click="isVerify();">
+    </div>
+    <button ng-if="card_info.had_card" ng-click="deleteCard();" class="border-top border-bottom">解除绑定该银行卡</button>
+    <p ng-show="!card_info.had_card">
+        <span>
+            *
+        </span>
+        开户人姓名必须为技工真实姓名,开户行,卡号确无误,否则无法体现;
+    </p>
+    <p ng-show="!card_info.had_card">
+        <span>
+            *
+        </span>
+        银行卡仅支持储蓄卡,请勿添加信用卡。
+    </p>
+</div>
+
+<div class="card-verify" ng-show="is_verify">
+    <p>
+        请校验您所添加的银行卡信息
+    </p>
+    <ul>
+        <li class="border-bottom border-top">
+            <span class="title">
+                姓名
+            </span>
+            <input type="text" ng-model="card_info.nickname" ng-disabled='true' placeholder="输入开户人姓名" style="color: #303232;">
+        </li>
+        <li class="border-bottom">
+            <span class="title">
+                开户银行
+            </span>
+            <select ng-model="bank_id" ng-options="bank.bank_id as bank.bank_name for bank in banks" style="width: 100%;" ng-disabled="true">
+                <option value="">选择开户银行</option>
+            </select>
+        </li>
+        <li ng-show="is_other_bank" class="border-bottom">
+            <span class="title">
+                银行卡名称
+            </span>
+            <input type="text" placeholder="请填写银行卡名称" ng-model="other_bank_name">
+        </li>
+        <li>
+            <span class="title">
+                开户城市
+            </span>
+            <input type="text" placeholder="省, 市" disabled ng-model="showAddress.area_ids_desc">
+            <em></em>
+        </li>
+        <li class="border-bottom border-top">
+            <span class="title">
+                银行卡号
+            </span>
+            <input type="text" placeholder="6003 4318 7133 6949" ng-model="card_number" disabled>
+        </li>
+    </ul>
+    <div class="button">
+        <!--<input class="first-button" type="button" value="修改银行卡信息">-->
+        <!--<input class="small-button" type="button" value="确认">-->
+        <button class="first-button" ng-click="notVerify();">修改银行卡信息</button>
+        <button class="small-button" ng-click="postSubmit();">确认</button>
+    </div>
+</div>

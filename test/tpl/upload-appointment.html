@@ -1,0 +1,26 @@
+<div class="update-appointment">
+	<ul>
+		<li ng-click="updateClick()">
+			<span>
+				本次预约结果
+			</span>
+			<a href="javascript:void(0);">
+				{{typeContent[type].text}}
+			</a>
+		</li>
+		<li ng-show="type == 1" ng-click="updateTime()">
+			<span>
+				预约时间
+			</span>
+			<a href="javascript:void(0);">
+				{{appointmentTime[0]}}&nbsp;&nbsp;{{appointmentTime[1]}}:{{appointmentTime[2]}}
+			</a>
+		</li>							
+	</ul>
+	<div class="content">
+		<textarea ng-model="remarks" placeholder="(选填)输入备注信息"></textarea>
+	</div>
+	<div class="button">
+		<input class="small-button" type="button" value="提交" ng-click="submit()">
+	</div>
+</div>

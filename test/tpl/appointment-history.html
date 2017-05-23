@@ -1,0 +1,26 @@
+<div class="appointment-history">
+	<div class="express-info-list">
+		<ul>
+			<li ng-repeat="items in historyList">
+				<p class="icon between">
+					<span>{{app_type[items.ope_type]}}</span>
+					<small>{{items.add_time * 1000 | date:"yyyy-MM-dd HH:MM"}}</small>
+				</p>
+				<p></p>
+				<p class="b-border" ng-if="items.ope_type != 'WC' && items.ope_type != 'WCE'">
+					{{items.operation}}
+					<br ng-if="items.desc" />
+					<span ng-if="items.desc">备注：{{items.desc}}</span>
+				</p>
+				<p class="b-border" ng-if="items.ope_type == 'WC' || items.ope_type == 'WCE'">
+					{{items.operation}}
+					<br/>
+					<span ng-if="items.ope_type == 'WC'">原因：{{updates[items.type]}}</span>
+					<span ng-if="items.ope_type == 'WCE'">原因：{{returns[items.type]}}</span>
+					<br />
+					<span>备注：{{items.remarks ? items.remarks : '----'}}</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>

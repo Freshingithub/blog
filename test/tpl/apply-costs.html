@@ -1,0 +1,36 @@
+<div class="apply-costs">
+	<form>
+		<div class="money-status bg-color" ng-click="selectCostsType()">
+			<span>
+				费用类型
+			</span>
+			<input ng-model="formData.costsType" type="text" placeholder="请选择费用类型" disabled="disabled">
+			<em></em>
+		</div>
+		<div class="costs bg-color">
+			<span>
+				申请金额
+			</span>
+			<input type="number" placeholder="请输入金额" ng-model="formData.money">
+		</div>
+		<div class="upload-img bg-color">
+			<span>上传凭证</span>
+			<dl>
+				<dd ng-repeat="url in images track by $index">
+					<em ng-click="closeImg($index)"></em>
+					<wx-img></wx-img>
+				</dd>
+				<dd ng-click="selectPartImg()" ng-show="images.length < 3">
+					<img src="img/big_addphoto.png">
+				</dd>
+			</dl>
+		</div>
+		<div class="remarks bg-color">
+			<span>备注</span>
+			<textarea placeholder="(选填)输入备注信息" ng-model="formData.worker_remarks"></textarea>
+		</div>
+		<div class="button">
+			<input class="small-button" type="button" value="提交" ng-click="submit()">
+		</div>
+	</form>
+</div>

@@ -1,0 +1,41 @@
+<div class="recipients-info">
+	<div class="tab-title">
+		<span>默认地址</span>
+		<div class="key">
+			<a ng-class="{'cur': type == 2}" ng-click="selectTab(2)" href="javascript:void(0)">用户地址</a>
+			<a ng-class="{'cur': type == 1}" ng-click="selectTab(1)" href="javascript:void(0)">我的店铺</a>
+		</div>
+	</div>
+	<div class="user-content-info">
+		<ul>
+			<li>
+				<span class="title">
+					收件人
+				</span>
+				<input ng-model="showAddress.full_name" type="text" placeholder="请填写收件人姓名">
+			</li>
+			<li>
+				<span class="title">
+					手机号码
+				</span>
+				<input ng-model="showAddress.tell" type="text" placeholder="请输入手机号码">
+			</li>
+			<li ng-click="selectAreas()">
+				<span class="title">
+					所在地区
+				</span>
+				<input ng-model="showAddress.area" type="text" placeholder="请选择所在的地区" disabled>
+				<em></em>
+			</li>
+			<li style="border-bottom:0;">
+				<span class="title">
+					详细地址
+				</span>
+				<input ng-model="showAddress.address" type="text" placeholder="请填写详细地址">
+			</li>
+		</ul>
+	</div>
+	<div class="button">
+		<input class="small-button" type="button" value="保存" ng-click="submit()">
+	</div>
+</div>

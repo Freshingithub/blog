@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+
+<head>
+    <meta charset="utf-8" />
+    <title>神州联保企业号</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- 禁用微信浏览器缓存 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--禁止自动识别电话号码-->
+    <meta name="format-detection" content="telephone=no" />
+    <!--禁止自动识别邮箱-->
+    <meta name="format-detection" content="email=no" />
+    <!--iphone中safari私有meta标签,允许全屏模式浏览,隐藏浏览器导航栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--iphone中safari顶端的状态条的样式black(黑色)-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+</head>
+
+<body ng-controller="AppCtrl" ng-cloak>
+    <!-- loading弹窗 -->
+    <div class="mask-loading" ng-show="loading" >
+      <div class="load">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <!-- /loading弹窗 -->
+    <div class="app bg-gray" id="app" ui-view style="height:100%;"></div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XUAfcxpaNnlgOvvIUYkai47Z"></script>
+    <script src="vendor/vendor.min.js"></script>
+    <!-- App -->
+</body>
+
+</html>

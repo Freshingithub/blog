@@ -1,0 +1,34 @@
+<div class="recipients-info">
+	<div class="user-content-info" style="margin-top:0;">
+		<ul>
+			<li>
+				<span class="title">
+					联系电话
+				</span>
+				<input ng-model="showAddress.phone" type="text" placeholder="输入联系电话">
+			</li>
+			<li>
+				<span class="title">
+					联系人
+				</span>
+				<input ng-model="showAddress.addressee" type="text" placeholder="输入联系人的姓名">
+			</li>
+			<li ng-click="selectAreas()">
+				<span class="title">
+					所在地区
+				</span>
+				<input ng-model="showAddress.area_ids_desc" type="text" placeholder="选择所在的地区" disabled>
+				<em></em>
+			</li>
+			<li>
+				<span class="title">
+					详细地址
+				</span>
+				<input ng-model="showAddress.detail_address" type="text" placeholder="填写详细地址">
+			</li>
+		</ul>
+	</div>
+	<div class="button">
+		<input class="small-button" type="button" value="保存" ng-click="submit()">
+	</div>
+</div>

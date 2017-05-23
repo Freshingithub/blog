@@ -1,0 +1,69 @@
+<style type="text/css">
+	select {
+		appearance:none;
+	    -moz-appearance:none;
+	    -webkit-appearance:none;
+	}
+</style>
+<div class="return-part">
+	<div class="address-info bg-white">
+		<div class="address-tips">
+			<h4>旧配件请寄回以下地址</h4>
+			<em ng-click="tishiClick();"></em>
+		</div>
+		<p>
+			<span>
+				{{factoryData.linkman}}
+			</span>
+			<span>
+				{{factoryData.linkphone}}
+			</span>
+		</p>
+		<p>
+			{{factoryData.factory_address}}{{factoryData.factory_detail_address}} <span ng-if="factoryData.cs_name">({{factoryData.cs_name}})</span>
+		</p>
+	</div>
+	<div class="express-info bg-white">
+		<div class="express-tips">
+			<h4>快递信息</h4>
+			<em ng-click="weixinSys()"></em>
+		</div>
+		<div class="form">
+			<span>物流单号</span>
+			<label for="txtNumber">
+				<input id="txtNumber" ng-model="formData.worker_sb_express_num" ng-change="isChange()" ng-keyup="keyups()" ng-blur="getExpressComList(true);" type="text" placeholder="输入物流单号">
+			</label>
+		</div>
+		<div class="form">
+			<span style="flex-shrink:0;padding-right:7px;">物流公司</span>
+			<label style="position:relative">
+				<select ng-model="worker_sb_com" style="width: 100%;" ng-options="com.name for com in com_list">
+					<option value="">请选择快递公司</option>
+				</select>
+				<p ng-show="worker_sb_com_is_change" class="shade"></p>
+			</label>
+			<em></em>
+		</div>
+	</div>
+	<div class="pay-info bg-white">
+		<div class="pay-type">
+			<span>支付方式</span>
+			<div class="key">
+				<a ng-class="{'cur':formData.worker_sb_paytype == 1}" ng-click="selectPayType(1)" href="javascript:void(0)">现付</a>
+				<a ng-class="{'cur':formData.worker_sb_paytype == 2}" ng-click="selectPayType(2)" href="javascript:void(0)">到付</a>
+			</div>
+		</div>
+		<div class="form" ng-if="formData.worker_sb_paytype == 1">
+			<span>配送费用</span>
+			<label for="txtCost">
+				<input ng-model="formData.worker_sb_cost" id="txtCost" type="number" placeholder="请输入金额">
+			</label>
+		</div>
+	</div>
+	<!-- <div class="fixed-button">
+		<a ng-click="submit()" href="javascript:void(0)">提交</a>
+	</div> -->
+	<div class="button ng-scope" style="padding:15px;">
+		<input ng-click="submit()" style="width:100%;height:50px;" class="small-button" type="button" value="保存">
+	</div>
+</div>

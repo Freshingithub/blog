@@ -1,0 +1,89 @@
+<div class="ask-for-part" ng-hide="showView">
+	<div class="recipient" ui-sref="app.ask-for-part.recipients-info">
+		<span class="title">
+			收件人
+		</span>
+		<div class="content" style="width:100%">
+			<div>
+				<p ng-bind="addressData.full_name + ' ' + addressData.tell"></p>
+				<p ng-bind="addressData.area + addressData.address"></p>
+			</div>
+			<em></em>
+		</div>
+	</div>
+	<div class="part-c-info">
+		<ul>
+			<li>
+				<span class="title">
+					配件名称
+				</span>
+				<div class="occupy">
+					<input type="text" ng-model="formData.acce_name" placeholder="输入配件名称" style="margin-top:-2px">
+				</div>
+			</li>
+			<li style="align-items:center;">
+				<span class="title">
+					数量
+				</span>
+				<div class="count-select occupy">
+					<span ng-click="numCount(2)">-</span>
+					<input style="opacity:1" type="text" name="name" ng-value="num" disabled>
+					<span ng-click="numCount(1)">+</span>
+				</div>
+			</li>
+			<li>
+				<span class="title">
+					描述
+				</span>
+				<div class="occupy">
+					<label for="remarks">
+						<textarea id="remarks" style="margin-top:-2px;" ng-model="formData.remarks" placeholder="为帮助您快速找到配件，请在此尽量描述配件特征"></textarea>
+					</label>
+				</div>
+			</li>
+			<li style="border-bottom:0;">
+				<span class="title">
+					编码
+				</span>
+				<div class="occupy">
+					<label for="number">
+						<input id="number" ng-model="formData.acce_code" type="text" placeholder="请填写配件贴纸上的配件编号" style="margin-top:-4px;">
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="upload-img">
+		<span class="title">
+			旧件照
+		</span>
+		<dl>
+			<dd ng-repeat="url in images track by $index">
+				<em ng-click="closeImg($index)"></em>
+				<wx-img></wx-img>
+			</dd>
+			<dd ng-click="selectPartImg()" ng-show="images.length < 3">
+				<img src="img/big_addphoto.png">
+			</dd>
+		</dl>
+	</div>
+	<div class="message">
+		<span class="title">
+			留言
+		</span>
+		<div class="occupy">
+			<label for="reason">
+				<textarea id="reason" style="margin-top:-2px;" ng-model="formData.apply_reason" placeholder="(选填)有什么想跟厂家说的。在这里留言吧"></textarea>
+			</label>
+		</div>
+	</div>
+
+	<!-- <div class="fixed-button-area"></div>
+	<div class="fixed-button">
+		<a ng-click="submitPartEntry()" href="javascript:void(0)">提交</a>
+	</div> -->
+	<div class="button ng-scope" style="padding:0 15px 20px;">
+		<input ng-click="submitPartEntry()" style="width:100%;height:50px;" class="small-button" type="button" value="保存">
+	</div>
+</div>
+<div class="below-view" ui-view ng-show="showView"></div>

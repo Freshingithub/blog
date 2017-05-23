@@ -1,0 +1,27 @@
+<div class="product-select">
+	<div class="title">
+		<b>请选择要处理的产品</b>
+	</div>
+	<ul>
+		<li ng-repeat="items in productsData" ng-click="select(items)" ng-if="items.wrong_lock_status != 1 && items.detail_is_complete != 1">
+			<div class="content">
+				<img ng-src="{{items.product_thumb_full}}">
+				<div>
+					<h4>{{items.servicebrand_desc}}  {{items.product_cate_name}}</h4>
+					<p>产品规格：{{items.stantard_desc}}</p>
+				</div>
+			</div>
+			<em></em>
+		</li>
+		<!-- <li>
+			<div class="content">
+				<img src="">
+				<div>
+					<h4>阿尔卑斯  电视机</h4>
+					<p>产品规格：50寸</p>
+				</div>
+			</div>
+			<em></em>
+		</li> -->
+	</ul>
+</div>

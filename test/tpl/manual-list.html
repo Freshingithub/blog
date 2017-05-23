@@ -1,0 +1,41 @@
+<div>
+	<div ng-hide="!datalist.length" class="container">
+		<div 
+		infinite-scroll='loadMore()' 
+	    infinite-scroll-disabled='busy' 
+	    infinite-scroll-immediate-check='false' 
+	    infinite-scroll-distance='0'>
+			<div class="manual-list" ng-repeat="items in datalist" ng-click="gotoContent(items.id)">
+            
+                <div style="height:17px;"></div>
+                <div class="manual-list-title">
+                	<div class="manual-list-read-state" ng-show="items.is_readed==1">
+                  	<img src="img/ico_redpoint.png" width="10px" higth="10px"/>
+                  </div>
+                  <div class="manual-list-title-l">
+                     <b>{{items.title}}</b>
+                  </div>
+                </div>
+                <div class="manual-list-content">
+                	 <div class="manual-list-content-c">
+                      {{items.summary}}
+                   </div>
+                   <div class="manual-list-content-t">
+                      {{items.addtime * 1000 | date:"yyyy-MM-dd"}}
+                   </div>
+                </div>
+                <div class="manual-list-line"></div>
+			</div>
+			<div ng-show='busy' class="loading">Loading...</div>
+           <div style="height:80px">&nbsp;</div>
+		</div>
+	</div>
+	<div ng-show="defaultList" class="view-null save-info-success">
+		<div class="content">
+			<div class="tips">
+				<img src="img/default_list.png">
+				<p>您暂时没收到操作指南</p>
+			</div>
+		</div>
+	</div>
+</div>

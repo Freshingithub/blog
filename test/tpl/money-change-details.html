@@ -1,0 +1,44 @@
+<div class="deal-flow-status bg-white">
+    <div class="items">
+        <span>
+            调整金额：
+        </span>
+        <span>
+            {{data.money}}
+        </span>
+    </div>
+    <div class="items" ng-click="checkOrderId(data.other);">
+        <span>
+            工单号：
+        </span>
+        <a>
+            <span class="span_blue">
+                {{data.orno}}
+            </span>
+            <span class="icon"></span>
+        </a>
+    </div>
+    <div class="items">
+        <span>
+            操作人：
+        </span>
+        <span>
+            神州联保财务
+        </span>
+    </div>
+    <div class="items">
+        <span>
+            操作时间：
+        </span>
+        <span>
+            {{data.add_time * 1000 | date:'yyyy' }}年{{data.add_time * 1000 | date:'MM' }}月{{data.add_time * 1000 | date:'dd' }}日&nbsp;{{data.add_time * 1000 | date:'HH:mm' }}
+        </span>
+    </div>
+    <div class="items">
+        <span>调整备注：</span>
+        <p>
+            {{data.remarks}}
+        </p>
+    </div>
+
+</div>
